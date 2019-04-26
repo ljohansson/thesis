@@ -1,0 +1,135 @@
+\contentsline {chapter}{\numberline {1}Introduction}{11}{chapter.1}
+\contentsline {section}{\numberline {1.1}A short history on chromosomes and DNA}{12}{section.1.1}
+\contentsline {section}{\numberline {1.2}Human genome variation}{13}{section.1.2}
+\contentsline {section}{\numberline {1.3}Conventional techniques for variant detection}{14}{section.1.3}
+\contentsline {section}{\numberline {1.4}Next-generation sequencing}{17}{section.1.4}
+\contentsline {section}{\numberline {1.5}Technical bias and error rates}{19}{section.1.5}
+\contentsline {section}{\numberline {1.6}DNA variant detection in genome diagnostics}{21}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Germline variants}{21}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Somatic variants}{22}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Prenatal testing}{23}{subsection.1.6.3}
+\contentsline {section}{\numberline {1.7}Aims of this thesis}{24}{section.1.7}
+\contentsline {subsection}{\numberline {1.7.1}PART 1: Germline variant detection (chapters 2, 3 and 4)}{25}{subsection.1.7.1}
+\contentsline {subsection}{\numberline {1.7.2}PART 2: Detection of somatic chromosomal translocations (chapter 5)}{26}{subsection.1.7.2}
+\contentsline {subsection}{\numberline {1.7.3}PART 3: Prenatal detection of trisomies (chapters 6, 7 and 8)}{26}{subsection.1.7.3}
+\contentsline {subsection}{\numberline {1.7.4}PART 4: Reflection and discussion (Chapters 9, 10 and 11)}{27}{subsection.1.7.4}
+\contentsline {chapter}{\numberline {2}targeted NGS can replace Sanger sequencing in clinical diagnostics}{29}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{30}{section.2.1}
+\contentsline {section}{\numberline {2.2}Material and Methods}{32}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Design of the Study}{32}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Patients/Samples}{33}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Targeted Enrichment Kit Design}{33}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Sample Preparation}{34}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Capturing/Enrichment}{35}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Sequencing}{36}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}Data Analysis and Variant Annotation}{36}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}Validation of Mutations by Sanger Sequencing}{37}{subsection.2.2.8}
+\contentsline {section}{\numberline {2.3}Results}{37}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Validation Phase}{37}{subsection.2.3.1}
+\contentsline {subsubsection}{Sequencing quality}{37}{section*.7}
+\contentsline {subsubsection}{Specificity and sensitivity of targeted NGS: confirmation of SS variants}{38}{section*.11}
+\contentsline {subsection}{\numberline {2.3.2}Application Phase}{40}{subsection.2.3.2}
+\contentsline {subsubsection}{Sequence specificity of targeted NGS: confirmation of NGS variants}{40}{section*.13}
+\contentsline {subsubsection}{Diagnostic yield}{41}{section*.14}
+\contentsline {subsection}{\numberline {2.3.3}Reproducibility of Targeted NGS}{41}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Discussion}{42}{section.2.4}
+\contentsline {section}{\numberline {2.5}Conclusion}{45}{section.2.5}
+\contentsline {section}{\numberline {2.6}Acknowledgments}{45}{section.2.6}
+\contentsline {subsubsection}{Disclosure Statement}{46}{section*.16}
+\contentsline {chapter}{\numberline {3}CoNVaDING: Single Exon Variation Detection in NGS data}{47}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{48}{section.3.1}
+\contentsline {section}{\numberline {3.2}Material and Methods}{49}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}General Workflow CoNVaDING}{49}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Input Data}{51}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Control Group Selection}{51}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}CNV Prediction Score Calculation}{52}{subsection.3.2.4}
+\contentsline {subsubsection}{Ratio score}{53}{section*.21}
+\contentsline {subsubsection}{Distribution score}{53}{section*.22}
+\contentsline {subsection}{\numberline {3.2.5}Quality Control Metrics}{54}{subsection.3.2.5}
+\contentsline {subsubsection}{Match QC}{54}{section*.23}
+\contentsline {subsubsection}{Sample QC}{54}{section*.24}
+\contentsline {subsubsection}{Target QC}{54}{section*.25}
+\contentsline {subsection}{\numberline {3.2.6}CNV Calling}{55}{subsection.3.2.6}
+\contentsline {subsubsection}{Filtered targets}{55}{section*.26}
+\contentsline {subsection}{\numberline {3.2.7}Implementation of CoNVaDING}{55}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.8}Validation of CoNVaDING}{56}{subsection.3.2.8}
+\contentsline {subsubsection}{Patients/samples}{56}{section*.27}
+\contentsline {subsubsection}{Data analysis}{56}{section*.28}
+\contentsline {subsection}{\numberline {3.2.9}Comparison to CoNIFER, XHMM, and CODEX}{57}{subsection.3.2.9}
+\contentsline {section}{\numberline {3.3}Results}{58}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Validation of CoNVaDING}{58}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Comparison to CoNIFER, XHMM and CODEX}{58}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Performance of CoNVaDING on Low-Coverage Data}{60}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Discussion}{61}{section.3.4}
+\contentsline {section}{\numberline {3.5}Acknowledgments}{62}{section.3.5}
+\contentsline {subsubsection}{Disclosure Statement}{63}{section*.31}
+\contentsline {subsubsection}{Supplemental Material}{63}{section*.32}
+\contentsline {chapter}{\numberline {4}Genetic test to detect translocations in acute leukemia using TLA}{65}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{67}{section.4.1}
+\contentsline {section}{\numberline {4.2}Material and Methods}{68}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Patient bone marrow cells and cell lines}{68}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}TLA acute leukemia gene panel}{69}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Multiplex TLA methods}{69}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Routine genetic and cytogenetic methods}{70}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Validation of the multiplex TLA method}{70}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Results}{71}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Validation of the TLA multiplex panel - Training set}{71}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Validation of the TLA multiplex panel - Test set}{72}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Discussion}{75}{section.4.4}
+\contentsline {section}{\numberline {4.5}Acknowledgments}{77}{section.4.5}
+\contentsline {subsubsection}{Authors\IeC {\textquoteright } Disclosures or Potential Conflicts of Interest}{77}{section*.35}
+\contentsline {section}{\numberline {4.6}Online data supplement}{78}{section.4.6}
+\contentsline {chapter}{\numberline {5}Novel algorithms for improved sensitivity in NIPT}{79}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{81}{section.5.1}
+\contentsline {section}{\numberline {5.2}Material and Methods}{82}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Chi-squared-based variation reduction}{82}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Regression-based Z-score}{84}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Match QC score}{85}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Validation of algorithms}{86}{subsection.5.2.4}
+\contentsline {subsubsection}{Samples}{86}{section*.38}
+\contentsline {subsubsection}{Plasma isolation, sample preparation and sequencing}{87}{section*.39}
+\contentsline {subsubsection}{Read alignment}{87}{section*.40}
+\contentsline {subsubsection}{Variation reduction}{88}{section*.41}
+\contentsline {subsubsection}{Peak correction}{88}{section*.42}
+\contentsline {subsubsection}{GC-correction}{88}{section*.43}
+\contentsline {subsubsection}{Trisomy prediction}{89}{section*.44}
+\contentsline {subsubsection}{Comparison of the algorithms}{90}{section*.45}
+\contentsline {subsubsection}{Algorithm combinations tested}{90}{section*.46}
+\contentsline {subsubsection}{Match QC score}{90}{section*.47}
+\contentsline {section}{\numberline {5.3}Results}{91}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Effect of peak correction}{91}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Effects of the two GC correction methods}{92}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Effect of chi-squared-based variation reduction}{92}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Effect of trisomy prediction algorithms}{93}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Match QC score}{95}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Discussion}{97}{section.5.4}
+\contentsline {section}{\numberline {5.5}Supplementary material}{99}{section.5.5}
+\contentsline {section}{\numberline {5.6}Supplement 1: $\chi $2VR for chromosome 21}{100}{section.5.6}
+\contentsline {section}{\numberline {5.7}Supplement 3: Regression model for chromosome 13}{103}{section.5.7}
+\contentsline {chapter}{\numberline {6}NIPTeR: an R package for NIPT analysis}{107}{chapter.6}
+\contentsline {section}{\numberline {6.1}Background}{108}{section.6.1}
+\contentsline {section}{\numberline {6.2}Implementation}{109}{section.6.2}
+\contentsline {section}{\numberline {6.3}Results}{113}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Workflow}{113}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Prediction and control group statistics}{113}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Quality control}{114}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Performance}{115}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Conclusion}{116}{section.6.4}
+\contentsline {section}{\numberline {6.5}Availability and requirements}{116}{section.6.5}
+\contentsline {section}{\numberline {6.6}Additional files}{117}{section.6.6}
+\contentsline {chapter}{\numberline {7}NIPTRIC: a tool for clinical interpretation of NIPT results}{119}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{121}{section.7.1}
+\contentsline {section}{\numberline {7.2}Results}{122}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Performance of the PPR calculator}{124}{subsection.7.2.1}
+\contentsline {section}{\numberline {7.3}Discussion}{124}{section.7.3}
+\contentsline {section}{\numberline {7.4}Material and Methods}{129}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}The PPR calculator}{129}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}A priori risk}{130}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Z-score}{130}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Percentage of foetal DNA}{130}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {7.4.5}Coefficient of variation}{131}{subsection.7.4.5}
+\contentsline {subsection}{\numberline {7.4.6}Examples of the use of the PPR calculator}{133}{subsection.7.4.6}
+\contentsline {subsection}{\numberline {7.4.7}Performance of the PPR calculator}{133}{subsection.7.4.7}
+\contentsline {chapter}{Bibliography}{135}{section*.77}
+\contentsline {chapter}{List of Tables}{155}{section*.78}
+\contentsline {chapter}{List of Figures}{157}{section*.79}

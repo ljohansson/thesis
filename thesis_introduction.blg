@@ -1,0 +1,11 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis_introduction.aux
+The style file: plain.bst
+Database file #1: references.bib
+I was expecting a `,' or a `}'---line 460 of file references.bib
+ : 
+ : @article{XX_XX, title={}, journal={}, volume={}, pages={}, author={}, year={}}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty journal in Goodwin_2016
+Warning--empty journal in Saiki_1988
+(There was 1 error message)

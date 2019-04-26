@@ -1,0 +1,6 @@
+latex thesis_NIPT_algorithms.tex
+bibtex thesis_NIPT_algorithms
+latex thesis_NIPT_algorithms.tex
+latex thesis_NIPT_algorithms.tex
+dvips -t a5 thesis_NIPT_algorithms.dvi
+ps2pdf thesis_NIPT_algorithms.ps

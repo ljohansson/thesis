@@ -1,0 +1,114 @@
+\begin{thebibliography}{10}
+
+\bibitem{Allyse_2015}
+Megan Allyse, Mollie Minear, Margaret Rote, Anthony Hung, Subhashini
+  Chandrasekharan, Elisa Berson, and Shilpa Sridhar.
+\newblock Non-invasive prenatal testing: a review of international
+  implementation and challenges.
+\newblock {\em International Journal of Women’s Health}, page 113, Jan 2015.
+
+\bibitem{Chen_2011}
+Eric~Z. Chen, Rossa W.~K. Chiu, Hao Sun, Ranjit Akolekar, K.~C.~Allen Chan,
+  Tak~Y. Leung, Peiyong Jiang, Yama W.~L. Zheng, Fiona M.~F. Lun, Lisa Y.~S.
+  Chan, and et~al.
+\newblock Noninvasive prenatal diagnosis of fetal trisomy 18 and trisomy 13 by
+  maternal plasma dna sequencing.
+\newblock {\em PLoS ONE}, 6(7):e21791, Jul 2011.
+
+\bibitem{Chen_2011b}
+Z.~Chen.
+\newblock {\em Development of Bioinformatics Algorithms for Trisomy 13 and 18
+  Detection by Next Generation Sequencing of Maternal Plasma DNA}.
+\newblock The Chinese University of Hong Kong, 2011.
+
+\bibitem{Chiu_2008}
+R.~W.~K. Chiu, K.~C.~A. Chan, Y.~Gao, V.~Y.~M. Lau, W.~Zheng, T.~Y. Leung,
+  C.~H.~F. Foo, B.~Xie, N.~B.~Y. Tsui, F.~M.~F. Lun, and et~al.
+\newblock Noninvasive prenatal diagnosis of fetal chromosomal aneuploidy by
+  massively parallel genomic sequencing of dna in maternal plasma.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  105(51):20458–20463, Dec 2008.
+
+\bibitem{Fan_2010}
+H.~Christina Fan and Stephen~R. Quake.
+\newblock Sensitivity of noninvasive prenatal detection of fetal aneuploidy
+  from maternal plasma using shotgun sequencing is limited only by counting
+  statistics.
+\newblock {\em PLoS ONE}, 5(5):e10439, May 2010.
+
+\bibitem{Hall_2014}
+Megan~P. Hall, Matthew Hill, Bernhard Zimmermann, Styrmir Sigurjonsson,
+  Margaret Westemeyer, Jennifer Saucier, Zachary Demko, and Matthew Rabinowitz.
+\newblock Non-invasive prenatal detection of trisomy 13 using a single
+  nucleotide polymorphism- and informatics-based approach.
+\newblock {\em PLoS ONE}, 9(5):e96677, May 2014.
+
+\bibitem{Johansson_2017}
+L.~F. Johansson, E.~N. de~Boer, H.~A. de~Weerd, F.~van Dijk, M.~G. Elferink,
+  G.~H. Schuring-Blom, R.~F. Suijkerbuijk, R.~J. Sinke, G.~J. te~Meerman, R.~H.
+  Sijmons, and et~al.
+\newblock Novel algorithms for improved sensitivity in non-invasive prenatal
+  testing.
+\newblock {\em Scientific Reports}, 7(1), May 2017.
+
+\bibitem{Johansson_2016}
+Johansson L.F. and de~Weerd~H.A.
+\newblock Nipter vignette., 2016.
+
+\bibitem{Li_2009}
+H.~Li, B.~Handsaker, A.~Wysoker, T.~Fennell, J.~Ruan, N.~Homer, G.~Marth,
+  G.~Abecasis, and R.~Durbin.
+\newblock The sequence alignment/map format and samtools.
+\newblock {\em Bioinformatics}, 25(16):2078–2079, Jun 2009.
+
+\bibitem{Liu_2016}
+Baohong Liu, Xiaoyan Tang, Feng Qiu, Chunmei Tao, Junhui Gao, Mengmeng Ma,
+  Tingyan Zhong, JianPing Cai, Yixue Li, and Guohui Ding.
+\newblock Dasaf: An r package for deep sequencing-based detection of fetal
+  autosomal abnormalities from maternal cell-free dna.
+\newblock {\em BioMed Research International}, 2016:1–7, 2016.
+
+\bibitem{Lo_2014}
+Kitty~K. Lo, Christopher Bous~tred, Lyn~S. Chitty, and Vincent Plagnol.
+\newblock Rapidr: an analysis package for non-invasive prenatal testing of
+  aneuploidy.
+\newblock {\em Bioinformatics}, 30(20):2965–2967, Jul 2014.
+
+\bibitem{Phan_2018}
+Minh-Duy Phan, Thong~V. Nguyen, Huong N.~T. Trinh, Binh~T. Vo, Truc~M. Nguyen,
+  Nguyen~H. Nguyen, Tho T.~Q. Nguyen, Thuy T.~T. Do, Tuyet T.~D. Hoang, Kiet~D.
+  Truong, and et~al.
+\newblock Establishing and validating noninvasive prenatal testing procedure
+  for fetal aneuploidies in vietnam.
+\newblock {\em The Journal of Maternal-Fetal \& Neonatal Medicine}, page 1–7,
+  Jul 2018.
+
+\bibitem{Sauk_2018}
+Martin Sauk, Olga Žilina, Ants Kurg, Eva-Liina Ustav, Maire Peters, Priit
+  Paluoja, Anne~Mari Roost, Hindrek Teder, Priit Palta, Nathalie Brison, and
+  et~al.
+\newblock Niptmer: rapid k-mer-based software package for detection of fetal
+  aneuploidies.
+\newblock {\em Scientific Reports}, 8(1), Apr 2018.
+
+\bibitem{Sehnert_2011}
+A.~J. Sehnert, B.~Rhees, D.~Comstock, E.~de~Feo, G.~Heilek, J.~Burke, and R.~P.
+  Rava.
+\newblock Optimal detection of fetal chromosomal abnormalities by massively
+  parallel dna sequencing of cell-free fetal dna from maternal blood.
+\newblock {\em Clinical Chemistry}, 57(7):1042–1049, Apr 2011.
+
+\bibitem{Straver_2013}
+Roy Straver, Erik~A. Sistermans, Henne Holstege, Allerdien Visser, Cees B.~M.
+  Oudejans, and Marcel J.~T. Reinders.
+\newblock Wisecondor: detection of fetal aberrations from shallow sequencing
+  maternal plasma based on a within-sample comparison scheme.
+\newblock {\em Nucleic Acids Research}, 42(5):e31–e31, Oct 2013.
+
+\bibitem{Yang_2017}
+Jianfeng Yang, Xiaofan Ding, and Weidong Zhu.
+\newblock Improving the calling of non-invasive prenatal testing on
+  13-/18-/21-trisomy by support vector machine discrimination.
+\newblock Nov 2017.
+
+\end{thebibliography}

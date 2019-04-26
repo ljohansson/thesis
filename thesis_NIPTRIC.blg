@@ -1,0 +1,34 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis_NIPTRIC.aux
+The style file: plain.bst
+Database file #1: references.bib
+Warning--entry type for "Perinatalquality_org" isn't style-file defined
+--line 142 of file references.bib
+Repeated entry---line 159 of file references.bib
+ : @article{Fan_2008
+ :                  , title={Noninvasive diagnosis of fetal aneuploidy by shotgun sequencing DNA from maternal blood}, volume={105}, ISSN={1091-6490}, url={http://dx.doi.org/10.1073/pnas.0808319105}, DOI={10.1073/pnas.0808319105}, number={42}, journal={Proceedings of the National Academy of Sciences}, publisher={Proceedings of the National Academy of Sciences}, author={Fan, H. C. and Blumenfeld, Y. J. and Chitkara, U. and Hudgins, L. and Quake, S. R.}, year={2008}, month={Oct}, pages={16266–16271}}
+I'm skipping whatever remains of this entry
+Repeated entry---line 160 of file references.bib
+ : @article{Chiu_2008
+ :                   , title={Noninvasive prenatal diagnosis of fetal chromosomal aneuploidy by massively parallel genomic sequencing of DNA in maternal plasma}, volume={105}, ISSN={1091-6490}, url={http://dx.doi.org/10.1073/pnas.0810641105}, DOI={10.1073/pnas.0810641105}, number={51}, journal={Proceedings of the National Academy of Sciences}, publisher={Proceedings of the National Academy of Sciences}, author={Chiu, R. W. K. and Chan, K. C. A. and Gao, Y. and Lau, V. Y. M. and Zheng, W. and Leung, T. Y. and Foo, C. H. F. and Xie, B. and Tsui, N. B. Y. and Lun, F. M. F. and et al.}, year={2008}, month={Dec}, pages={20458–20463}}
+I'm skipping whatever remains of this entry
+Repeated entry---line 161 of file references.bib
+ : @article{Zimmermann_2012
+ :                         , title={Noninvasive prenatal aneuploidy testing of chromosomes 13, 18, 21, X, and Y, using targeted sequencing of polymorphic loci}, volume={32}, ISSN={0197-3851}, url={http://dx.doi.org/10.1002/pd.3993}, DOI={10.1002/pd.3993}, number={13}, journal={Prenatal Diagnosis}, publisher={Wiley-Blackwell}, author={Zimmermann, Bernhard and Hill, Matthew and Gemelos, George and Demko, Zachary and Banjevic, Milena and Baner, Johan and Ryan, Allison and Sigurjonsson, Styrmir and Chopra, Nikhil and Dodd, Michael and et al.}, year={2012}, month={Oct}, pages={1233–1241}}
+I'm skipping whatever remains of this entry
+Repeated entry---line 164 of file references.bib
+ : @article{Wang_2014
+ :                   , title={Discordant noninvasive prenatal testing and cytogenetic results: a study of 109 consecutive cases}, volume={17}, ISSN={1530-0366}, url={http://dx.doi.org/10.1038/gim.2014.92}, DOI={10.1038/gim.2014.92}, number={3}, journal={Genetics in Medicine}, publisher={Springer Nature}, author={Wang, Jia-Chi and Sahoo, Trilochan and Schonberg, Steven and Kopita, Kimberly A. and Ross, Leslie and Patek, Kyla and Strom, Charles M.}, year={2014}, month={Aug}, pages={234–236}}
+I'm skipping whatever remains of this entry
+Repeated entry---line 169 of file references.bib
+ : @article{Norton_2012
+ :                     , title={Non-Invasive Chromosomal Evaluation (NICE) Study: results of a multicenter prospective cohort study for detection of fetal trisomy 21 and trisomy 18}, volume={207}, ISSN={0002-9378}, url={http://dx.doi.org/10.1016/j.ajog.2012.05.021}, DOI={10.1016/j.ajog.2012.05.021}, number={2}, journal={American Journal of Obstetrics and Gynecology}, publisher={Elsevier BV}, author={Norton, Mary E. and Brar, Herb and Weiss, Jonathan and Karimi, Ardeshir and Laurent, Louise C. and Caughey, Aaron B. and Rodriguez, M. Hellen and Williams, John and Mitchell, Michael E. and Adair, Charles D. and et al.}, year={2012}, month={Aug}, pages={137.e1–137.e8}}
+I'm skipping whatever remains of this entry
+Repeated entry---line 174 of file references.bib
+ : @article{Lau_2012
+ :                  , title={Noninvasive prenatal diagnosis of common fetal chromosomal aneuploidies by maternal plasma DNA sequencing}, volume={25}, ISSN={1476-4954}, url={http://dx.doi.org/10.3109/14767058.2011.635730}, DOI={10.3109/14767058.2011.635730}, number={8}, journal={The Journal of Maternal-Fetal and Neonatal Medicine}, publisher={Informa UK Limited}, author={Lau, Tze Kin and Chen, Fang and Pan, Xiaoyu and Pooh, Ritsuko K. and Jiang, Fuman and Li, Yihan and Jiang, Hui and Li, Xuchao and Chen, Shengpei and Zhang, Xiuqing}, year={2012}, month={Feb}, pages={1370–1374}}
+I'm skipping whatever remains of this entry
+Name 1 in "Norwitz E.R., and Levy, B." has a comma at the end for entry Norwitz_2013
+while executing---line 1049 of file plain.bst
+Name 1 in "Norwitz E.R., and Levy, B." has a comma at the end for entry Norwitz_2013
+while executing---line 1090 of file plain.bst
+(There were 8 error messages)

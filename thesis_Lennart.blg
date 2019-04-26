@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis_Lennart.aux
+The style file: plain.bst
+Database file #1: references.bib
+Repeated entry---line 74 of file references.bib
+ : @article{Ng_2009
+ :                 , title={Targeted capture and massively parallel sequencing of 12 human exomes}, volume={461}, ISSN={1476-4687}, url={http://dx.doi.org/10.1038/nature08250}, DOI={10.1038/nature08250}, number={7261}, journal={Nature}, publisher={Springer Nature}, author={Ng, Sarah B. and Turner, Emily H. and Robertson, Peggy D. and Flygare, Steven D. and Bigham, Abigail W. and Lee, Choli and Shaffer, Tristan and Wong, Michelle and Bhattacharjee, Arindam and Eichler, Evan E. and et al.}, year={2009}, month={Aug}, pages={272–276}}
+I'm skipping whatever remains of this entry
+Warning--entry type for "Fromer_2012b" isn't style-file defined
+--line 86 of file references.bib
+Warning--entry type for "Krumm_2012b" isn't style-file defined
+--line 87 of file references.bib
+Warning--entry type for "Picard_nd" isn't style-file defined
+--line 89 of file references.bib
+Warning--entry type for "Smit_2013" isn't style-file defined
+--line 111 of file references.bib
+Repeated entry---line 124 of file references.bib
+ : @article{Li_2010
+ :                 , title={Fast and accurate long-read alignment with Burrows–Wheeler transform}, volume={26}, ISSN={1367-4803}, url={http://dx.doi.org/10.1093/bioinformatics/btp698}, DOI={10.1093/bioinformatics/btp698}, number={5}, journal={Bioinformatics}, publisher={Oxford University Press (OUP)}, author={Li, Heng and Durbin, Richard}, year={2010}, month={Jan}, pages={589–595}}
+I'm skipping whatever remains of this entry
+Repeated entry---line 125 of file references.bib
+ : @article{Li_2009
+ :                 , title={The Sequence Alignment/Map format and SAMtools}, volume={25}, ISSN={1460-2059}, url={http://dx.doi.org/10.1093/bioinformatics/btp352}, DOI={10.1093/bioinformatics/btp352}, number={16}, journal={Bioinformatics}, publisher={Oxford University Press (OUP)}, author={Li, H. and Handsaker, B. and Wysoker, A. and Fennell, T. and Ruan, J. and Homer, N. and Marth, G. and Abecasis, G. and Durbin, R.}, year={2009}, month={Jun}, pages={2078–2079}}
+I'm skipping whatever remains of this entry
+Warning--entry type for "Perinatalquality_org" isn't style-file defined
+--line 140 of file references.bib
+Repeated entry---line 157 of file references.bib
+ : @article{Zimmermann_2012
+ :                         , title={Noninvasive prenatal aneuploidy testing of chromosomes 13, 18, 21, X, and Y, using targeted sequencing of polymorphic loci}, volume={32}, ISSN={0197-3851}, url={http://dx.doi.org/10.1002/pd.3993}, DOI={10.1002/pd.3993}, number={13}, journal={Prenatal Diagnosis}, publisher={Wiley-Blackwell}, author={Zimmermann, Bernhard and Hill, Matthew and Gemelos, George and Demko, Zachary and Banjevic, Milena and Baner, Johan and Ryan, Allison and Sigurjonsson, Styrmir and Chopra, Nikhil and Dodd, Michael and et al.}, year={2012}, month={Oct}, pages={1233–1241}}
+I'm skipping whatever remains of this entry
+Repeated entry---line 165 of file references.bib
+ : @article{Norton_2012
+ :                     , title={Non-Invasive Chromosomal Evaluation (NICE) Study: results of a multicenter prospective cohort study for detection of fetal trisomy 21 and trisomy 18}, volume={207}, ISSN={0002-9378}, url={http://dx.doi.org/10.1016/j.ajog.2012.05.021}, DOI={10.1016/j.ajog.2012.05.021}, number={2}, journal={American Journal of Obstetrics and Gynecology}, publisher={Elsevier BV}, author={Norton, Mary E. and Brar, Herb and Weiss, Jonathan and Karimi, Ardeshir and Laurent, Louise C. and Caughey, Aaron B. and Rodriguez, M. Hellen and Williams, John and Mitchell, Michael E. and Adair, Charles D. and et al.}, year={2012}, month={Aug}, pages={137.e1–137.e8}}
+I'm skipping whatever remains of this entry
+Repeated entry---line 170 of file references.bib
+ : @article{Lau_2012
+ :                  , title={Noninvasive prenatal diagnosis of common fetal chromosomal aneuploidies by maternal plasma DNA sequencing}, volume={25}, ISSN={1476-4954}, url={http://dx.doi.org/10.3109/14767058.2011.635730}, DOI={10.3109/14767058.2011.635730}, number={8}, journal={The Journal of Maternal-Fetal and Neonatal Medicine}, publisher={Informa UK Limited}, author={Lau, Tze Kin and Chen, Fang and Pan, Xiaoyu and Pooh, Ritsuko K. and Jiang, Fuman and Li, Yihan and Jiang, Hui and Li, Xuchao and Chen, Shengpei and Zhang, Xiuqing}, year={2012}, month={Feb}, pages={1370–1374}}
+I'm skipping whatever remains of this entry
+Warning--entry type for "Mitelman_2017" isn't style-file defined
+--line 188 of file references.bib
+Warning--entry type for "Leibniz_REH_2017" isn't style-file defined
+--line 189 of file references.bib
+Warning--entry type for "Leibniz_FKH1_2017" isn't style-file defined
+--line 190 of file references.bib
+Warning--entry type for "van_den_Berg_2017" isn't style-file defined
+--line 191 of file references.bib
+Warning--entry type for "Snijder_2015" isn't style-file defined
+--line 199 of file references.bib
+Warning--entry type for "Johansson_2016" isn't style-file defined
+--line 228 of file references.bib
+Warning--I didn't find a database entry for "Jongbloed_2011"
+Warning--I didn't find a database entry for "Ng_2010"
+Warning--I didn't find a database entry for "Wang_2014"
+Warning--I didn't find a database entry for "Byelas_2013"
+Name 2 in "van Dongen, J.J. and MacIntyre, E.A., and Delabesse, E. and Rossi, V. and Saglio, G. and et al." has a comma at the end for entry van_Dongen_1999
+while executing---line 1049 of file plain.bst
+Name 1 in "Norwitz E.R., and Levy, B." has a comma at the end for entry Norwitz_2013
+while executing---line 1049 of file plain.bst
+Name 1 in "Norwitz E.R., and Levy, B." has a comma at the end for entry Norwitz_2013
+while executing---line 1090 of file plain.bst
+Name 2 in "van Dongen, J.J. and MacIntyre, E.A., and Delabesse, E. and Rossi, V. and Saglio, G. and et al." has a comma at the end for entry van_Dongen_1999
+while executing---line 1090 of file plain.bst
+Warning--empty journal in van_Dongen_1999
+Warning--empty year in van_Dongen_1999
+Warning--empty journal in Yang_2017
+(There were 10 error messages)

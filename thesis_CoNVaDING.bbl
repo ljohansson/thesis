@@ -1,0 +1,169 @@
+\begin{thebibliography}{10}
+
+\bibitem{Aird_2011}
+Daniel Aird, Michael~G Ross, Wei-Sheng Chen, Maxwell Danielsson, Timothy
+  Fennell, Carsten Russ, David~B Jaffe, Chad Nusbaum, and Andreas Gnirke.
+\newblock Analyzing and minimizing pcr amplification bias in illumina
+  sequencing libraries.
+\newblock {\em Genome Biology}, 12(2):R18, 2011.
+
+\bibitem{Backenroth_2014}
+Daniel Backenroth, Jason Homsy, Laura~R. Murillo, Joe Glessner, Edwin Lin,
+  Martina Brueckner, Richard Lifton, Elizabeth Goldmuntz, Wendy~K. Chung, and
+  Yufeng Shen.
+\newblock Canoes: detecting rare copy number variants from whole exome
+  sequencing data.
+\newblock {\em Nucleic Acids Research}, 42(12):e97–e97, Apr 2014.
+
+\bibitem{Durbin_2010}
+Richard~M. Durbin, David~L. Altshuler, Richard~M. Durbin, Gonçalo~R. Abecasis,
+  David~R. Bentley, Aravinda Chakravarti, Andrew~G. Clark, Francis~S. Collins,
+  Francisco~M. De~La~Vega, Peter Donnelly, and et~al.
+\newblock A map of human genome variation from population-scale sequencing.
+\newblock {\em Nature}, 467(7319):1061–1073, Oct 2010.
+
+\bibitem{Ebenazer_2013}
+Andrew Ebenazer, Simon Rajaratnam, and Rekha Pai.
+\newblock Detection of large deletions in the vhl gene using a real-time pcr
+  with sybr green.
+\newblock {\em Familial Cancer}, 12(3):519–524, Feb 2013.
+
+\bibitem{Francioli_2014}
+Laurent~C Francioli, Androniki Menelaou, Sara~L Pulit, Freerk van Dijk,
+  Pier~Francesco Palamara, Clara~C Elbers, Pieter B~T Neerincx, Kai Ye, Victor
+  Guryev, and et~al.
+\newblock Whole-genome sequence variation, population structure and demographic
+  history of the dutch population.
+\newblock {\em Nature Genetics}, 46(8):818–825, Jun 2014.
+
+\bibitem{Fromer_2012}
+Menachem Fromer, Jennifer L. Moran, Kimberly Chambert, Eric Banks, Sarah E.
+  Bergen, Douglas M. Ruderfer, Robert E. Handsaker, Steven A. McCarroll,
+  Michael C. O’Donovan, Michael J. Owen, and et~al.
+\newblock Discovery and statistical genotyping of copy-number variation from
+  whole-exome sequencing depth.
+\newblock {\em The American Journal of Human Genetics}, 91(4):597–607, Oct
+  2012.
+
+\bibitem{Gilissen_2014}
+Christian Gilissen, Jayne~Y. Hehir-Kwa, Djie~Tjwan Thung, Maartje van~de Vorst,
+  Bregje W.~M. van Bon, Marjolein~H. Willemsen, Michael Kwint, Irene~M.
+  Janssen, Alexander Hoischen, Annette Schenck, and et~al.
+\newblock Genome sequencing identifies major causes of severe intellectual
+  disability.
+\newblock {\em Nature}, 511(7509):344–347, Jun 2014.
+
+\bibitem{Guo_2013}
+Yan Guo, Quanghu Sheng, David~C. Samuels, Brian Lehmann, Joshua~A. Bauer,
+  Jennifer Pietenpol, and Yu~Shyr.
+\newblock Comparative study of exome copy number variation estimation tools
+  using array comparative genomic hybridization as control.
+\newblock {\em BioMed Research International}, 2013:1–7, 2013.
+
+\bibitem{Jiang_2015}
+Yuchao Jiang, Derek~A. Oldridge, Sharon~J. Diskin, and Nancy~R. Zhang.
+\newblock Codex: a normalization and copy number variation detection method for
+  whole exome sequencing.
+\newblock {\em Nucleic Acids Research}, 43(6):e39–e39, Jan 2015.
+
+\bibitem{Krumm_2012}
+N.~Krumm, P.~H. Sudmant, A.~Ko, B.~J. O’Roak, M.~Malig, B.~P. Coe, A.~R.
+  Quinlan, D.~A. Nickerson, and E.~E. Eichler.
+\newblock Copy number variation detection and genotyping from exome sequence
+  data.
+\newblock {\em Genome Research}, 22(8):1525–1532, May 2012.
+
+\bibitem{Li_2009}
+H.~Li, B.~Handsaker, A.~Wysoker, T.~Fennell, J.~Ruan, N.~Homer, G.~Marth,
+  G.~Abecasis, and R.~Durbin.
+\newblock The sequence alignment/map format and samtools.
+\newblock {\em Bioinformatics}, 25(16):2078–2079, Jun 2009.
+
+\bibitem{Li_2010}
+Heng Li and Richard Durbin.
+\newblock Fast and accurate long-read alignment with burrows–wheeler
+  transform.
+\newblock {\em Bioinformatics}, 26(5):589–595, Jan 2010.
+
+\bibitem{Li_2012}
+Jason Li, Richard Lupat, Kaushalya~C. Amarasinghe, Ella~R. Thompson, Maria~A.
+  Doyle, Georgina~L. Ryland, Richard~W. Tothill, Saman~K. Halgamuge, Ian~G.
+  Campbell, and Kylie~L. Gorringe.
+\newblock Contra: copy number analysis for targeted resequencing.
+\newblock {\em Bioinformatics}, 28(10):1307–1313, Apr 2012.
+
+\bibitem{Fromer_2012b}
+Fromer M. and Purcell S.
+\newblock Xhmm, 2012.
+
+\bibitem{Magi_2013}
+Alberto Magi, Lorenzo Tattini, Ingrid Cifola, Romina D’Aurizio, Matteo
+  Benelli, Eleonora Mangano, Cristina Battaglia, Elena Bonora, Ants Kurg, Marco
+  Seri, and et~al.
+\newblock Excavator: detecting copy number variants from whole-exome sequencing
+  data.
+\newblock {\em Genome Biology}, 14(10):R120, 2013.
+
+\bibitem{McKenna_2010}
+A.~McKenna, M.~Hanna, E.~Banks, A.~Sivachenko, K.~Cibulskis, A.~Kernytsky,
+  K.~Garimella, D.~Altshuler, S.~Gabriel, M.~Daly, and et~al.
+\newblock The genome analysis toolkit: A mapreduce framework for analyzing
+  next-generation dna sequencing data.
+\newblock {\em Genome Research}, 20(9):1297–1303, Jul 2010.
+
+\bibitem{MRC_Holland_2014}
+MRC Holland.
+\newblock {\em MLPA DNA Protocol version MDP-005; last revised on September 22
+  2014}, 2014.
+
+\bibitem{Krumm_2012b}
+Krumm N.
+\newblock Conifer tutorial, n.d.
+
+\bibitem{Picard_nd}
+Picard.
+\newblock Picard, n.d.
+
+\bibitem{Schouten_2002}
+J.P. Schouten, McElgunn C.J., Waaijer R., Zwijnenburg D., and Pals G.
+\newblock Relative quantification of 40 nucleic acid sequences by multiplex
+  ligation-dependent probe amplification.
+\newblock {\em Nucleic Acids Res.}, 30(12):e57, 2002.
+
+\bibitem{Sikkema_Raddatz_2013}
+Birgit Sikkema-Raddatz, Lennart~F. Johansson, Eddy~N. de~Boer, Rowida Almomani,
+  Ludolf~G. Boven, Maarten~P. van~den Berg, Karin~Y. van Spaendonck-Zwarts,
+  J.~Peter van Tintelen, Rolf~H. Sijmons, Jan D.~H. Jongbloed, and et~al.
+\newblock Targeted next-generation sequencing can replace sanger sequencing in
+  clinical diagnostics.
+\newblock {\em Human Mutation}, 34(7):1035–1042, Apr 2013.
+
+\bibitem{Tan_2014}
+Renjie Tan, Yadong Wang, Sarah~E. Kleinstein, Yongzhuang Liu, Xiaolin Zhu,
+  Hongzhe Guo, Qinghua Jiang, Andrew~S. Allen, and Mingfu Zhu.
+\newblock An evaluation of copy number variation detection tools from
+  whole-exome sequencing data.
+\newblock {\em Human Mutation}, 35(7):899–907, May 2014.
+
+\bibitem{Vasson_2013}
+Aurélie Vasson, Céline Leroux, Lucie Orhant, Mathieu Boimard, Aurélie
+  Toussaint, Chrystel Leroy, Virginie Commere, Tiffany Ghiotti, Nathalie
+  Deburgrave, Yoann Saillour, and et~al.
+\newblock Custom oligonucleotide array-based cgh: a reliable diagnostic tool
+  for detection of exonic copy-number changes in multiple targeted genes.
+\newblock {\em European Journal of Human Genetics}, 21(9):977–987, Jan 2013.
+
+\bibitem{Wang_2014}
+Yan Wang, Yao Yang, Jing Liu, Xiao-Chun Chen, Xin Liu, Chun-Zhi Wang, and Xi-Yu
+  He.
+\newblock Whole dystrophin gene analysis by next-generation sequencing: a
+  comprehensive genetic diagnosis of duchenne and becker muscular dystrophy.
+\newblock {\em Molecular Genetics and Genomics}, 289(5):1013–1021, Apr 2014.
+
+\bibitem{Zhao_2013}
+Min Zhao, Qingguo Wang, Quan Wang, Peilin Jia, and Zhongming Zhao.
+\newblock Computational tools for copy number variation (cnv) detection using
+  next-generation sequencing data: features and perspectives.
+\newblock {\em BMC Bioinformatics}, 14(Suppl 11):S1, 2013.
+
+\end{thebibliography}

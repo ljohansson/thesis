@@ -1,0 +1,35 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Human genome variation}}{15}{figure.caption.2}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces DNA Next-generation sequencing workflows}}{18}{figure.caption.3}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Overview of the topics addressed in the thesis chapters }}{25}{figure.caption.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Average coverage per exon cardiomyopathy 48 gene panel}}{38}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Coverage profile of single target \textit {LDB3} exon 9}}{39}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Summary of the results of our confirmation analyses}}{40}{figure.caption.12}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces CoNVaDING workflow}}{50}{figure.caption.18}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces CoNVaDING match control group}}{52}{figure.caption.20}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces CNV detections CoNVaDING, XHMM, CoNIFER, and CODEX}}{59}{figure.caption.29}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Flowchart NIPT analysis steps}}{83}{figure.caption.37}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Effect of peak correction}}{91}{figure.caption.48}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparison of the effect of two GC correction methods}}{92}{figure.caption.49}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Effect of chi-squared-based variation reduction control samples CV.}}{93}{figure.caption.50}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Effect of the different prediction algorithms}}{94}{figure.caption.51}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Z-scores for three trisomies}}{95}{figure.caption.52}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Match QC scores and Z-scores}}{96}{figure.caption.53}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Example effect $\chi $2VR on bin counts}}{100}{figure.caption.55}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Example CV per bin with and without $\chi $2VR}}{100}{figure.caption.56}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Example Z-score normal distribution sum chi-squared value}}{101}{figure.caption.57}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Example $\chi $2VR correction factor}}{102}{figure.caption.58}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Example Weighted read counts after $\chi $2VR}}{102}{figure.caption.59}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Relative fractions chromosome 21 before and after $\chi $2VR}}{103}{figure.caption.60}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Example of regression model chromosome 13}}{104}{figure.caption.62}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Correlation between normalized read counts of chromosomes}}{105}{figure.caption.63}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Ratios observed / predicted and Z-scores for chromosome 13}}{106}{figure.caption.64}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Workflow and functions of NIPTeR}}{110}{figure.caption.66}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces PPR at low and high risk}}{123}{figure.caption.73}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces PPR at different risks}}{127}{figure.caption.75}
