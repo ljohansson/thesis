@@ -1,0 +1,39 @@
+\documentclass[10pt]{book}
+\usepackage[fontsize=9pt]{scrextend}
+\usepackage[a5paper,top=26mm,bottom=20mm]{geometry}
+\usepackage{mathpazo} % font style
+\usepackage{gensymb} % extra symbols including degree
+\usepackage{textcomp} %enables midtilde
+\newcommand{\textapprox}{\raisebox{0.5ex}{\texttildelow}} %enables midtilde
+\linespread{1.05} % Palatino needs more leading (space between lines)
+\renewcommand{\familydefault}{\sfdefault}
+\input{usepackages.tex} % load required packages
+\raggedbottom % prevent spreading out paragraphs with lots of whitespace inbetween
+
+\begin{document}
+
+\pagestyle{empty}
+
+\setcounter{page}{1}
+
+\tableofcontents
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancyfoot[LE,RO]{\thepage}
+
+\input{chapter10.tex}
+
+\bibliographystyle{plain}
+
+\cleardoublepage
+\leftwatermark{}\rightwatermark{} % stop printing the thumb indexes
+\phantomsection\footnotesize{\bibliography{references}{}}
+\cleardoublepage\phantomsection\listoftables
+\cleardoublepage\phantomsection\listoffigures
+
+
+
+\end{document}
