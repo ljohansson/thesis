@@ -1,0 +1,305 @@
+\chapter[What can I know?]{What can I know? \newline {\fontsize{18}{32}\selectfont An epistemological investigation of NGS-based DNA analysis}}
+\chaptermark{What should I do?}
+\label{chap:ethics}
+
+{ \Large \leftwatermark{
+		\put(-67,-66.5){ 1 }
+		\put(-67,-91.5){ 2 }
+		\put(-67,-116.5){ 3 }
+		\put(-67,-141.5){ 4 }
+		\put(-67,-166.5){ 5 }
+		\put(-67,-191.5){ 6 }
+		\put(-67,-216.5){ 7 }
+		\put(-67,-241.5){ 8 }
+		\put(-76.5,-275){\includegraphics[scale=0.8]{img/thumbindex.eps}} \put(-67,-266.5){ {\color{white} 9 }}
+		\put(-67,-291.5){ 10 }
+		\put(-67,-316.5){ 11 }
+		
+	} \rightwatermark{
+		\put(350.5,-66.5){ 1 }
+		\put(350.5,-91.5){ 2 }
+		\put(350.5,-116.5){ 3 }
+		\put(350.5,-141.5){ 4 }
+		\put(350.5,-166.5){ 5 }
+		\put(350.5,-191.5){ 6 }
+		\put(350.5,-216.5){ 7 }
+		\put(350.5,-241.5){ 8 }
+		\put(346.5,-275){\includegraphics[scale=0.8]{img/thumbindex.eps}} \put(350.5,-266.5){ {\color{white} 9 }}
+		\put(350.5,-291.5){ 10 }
+		\put(350.5,-316.5){ 11 }
+}}
+
+
+\newpage
+
+\noindent LET OP HEEL VEEL TEKST IN ITALICS. OOK VET (A-B-C etc.) CONTROLEREN!!!! PUT INTO DOCUMENT CALLED PART4! The introduction of next-generation sequencing (NGS) techniques has revolutionized the field of genomics. 
+It enabled the “1000 dollar genome” [Rincon, 2014] and the analysis of whole panels of genes associated with a specific phenotype. 
+It has also enabled large-scale bulk and single-cell RNA analyses [van der Wijst et al., 2018], as well as epigenetics analysis [Jiang and Mortazavi, 2018; Le Dily et al., 2017; Andrews et al., 2018]. 
+In this thesis we have shown how NGS techniques can be applied in different types of DNA analysis, focusing on detection of germline variants and somatic chromosomal translocations and non-invasive prenatal testing (NIPT). 
+In addition to creating optimized laboratory protocols for NGS sample preparation, we have created a number of new algorithms to extract biologically relevant information from the data produced. 
+These allow us to look through the noise created during the laboratory process – such as batch-effects, PCR-efficiency, capturing efficiency and effects of combining primers in a multiplex – and the biological noise present in the sample itself, such as the presence of non-aberrant cells in detection of somatic chromosomal translocations or the presence of a high percentage of maternal cell-free DNA compared to cell-free fetal DNA in the mother’s blood. 
+
+The growing list of NGS applications, and their use in diagnostics and research, have shown that NGS can already compete with or improve on conventional techniques for genetic analysis, most notably Sanger sequencing. 
+In the years to come, sample preparation methods, sequencing strategies and analysis algorithms will develop further, and this will create opportunities to fill in the current gaps in NGS that lead to conventional techniques still being the preferred approach for some questions, such as structural variant calling and variant detection in extended regions that appear more than once in the genome (although those techniques each have their own gaps). 
+
+However, the methodology of NGS techniques, as well as the social effects of its comprehensive results, requires more discussion. 
+I will therefore use a scientific philosophical perspective framed by the three questions posed by Immanuël Kant in his Kritik der reinen Vernunft published in 1781/1787: “what can we know?”, “what should I do?” and “what may I hope?” [Kant 1781/1787a][p. 728]. 
+My application of these questions is of a more profane nature than their original intent. 
+The first question I will discuss, in chapter 9, is ‘What can we know? ‘. 
+I will use this question to reflect on the nature of the data analyzed. 
+The discussion in this chapter will remain on an abstract level, and the practical solutions or methods to address the issues broached here will be discussed later. 
+In chapter 10 I will explore answers to Kant’s second question ‘What should I do?’ to discuss ethical issues of genetic analysis, in particular the analyses introduced in this thesis. 
+Finally, in chapter 11 I will use the question ‘What may I hope?’ to discuss how to fill in remaining gaps regarding variant detection using existing techniques, deliberate upon future perspectives and look forward towards yet another next generation of sequencing techniques.
+UNTIL HERE!!!!!!
+
+\noindent The reader may be somewhat puzzled by this chapter because it is a philosophical essay rather than a biomedical scientific discussion as traditionally seen in PhD theses in our field. 
+In this essay, reasoning will question many assumptions that are taken for granted in biomedical scientific practice. 
+For example, the assumption that you can see material things through the microscope is false, because what in fact is seen are the reflections of such things [van Fraassen, 2008][p. 105]. 
+In this chapter I will investigate the foundation of the scientific knowledge produced regarding the DNA sequence and name what we do observe in NGS analysis. 
+The debate on the relation between representation and the real things represented has been ongoing at least since Plato’s allegory of the cave [Plato, ~380 BC], and there are many different conceptions in current philosophical debate on scientific representation [Frigg and Nguyen, 2018]. 
+This chapter is not meant to give full insight into the different views present in current debate, but rather to reflect on the epistemological status of NGS-based DNA analysis. 
+In other words: what is the justification of our beliefs regarding the knowledge obtained through such analysis? Here, as a catalyst for my reflection, I use one of those conceptions, the ‘constructive empiricism’ theory as posed by Bas van Fraassen in his book Scientific Representation [van Fraassen, 2008]. 
+In van Fraassen’s anti-realist view, a scientific theory does not make truth claims about reality or unobservables (that what is not perceivable by humans using unaided senses [Chakravartty, 2017]), but aims to produce empirically adequate theories to shape our beliefs [Monton, Bradley and Mohler, 2017]. 
+Constructive empiricism combines the elements ‘constructivism’ and ‘empiricism’. The first of these notions was conceived by Bruno Latour, and entails that we have a ‘slow and progressive access to objectivity’ [Latour, 2003], in which this access can be obtained through well-designed scientific experiments. 
+The second term focuses on the process used that is based upon experiments and observation. 
+The answer to the question ‘What can I know?’, as presented in this section, should be read from the perspective of this anti-realist view. 
+In my opinion this constructive empiricist view gives the fairest picture of science, enabling us to believe theories to be true, while not obligating us to claim to have knowledge about the unobservable. 
+
+I invite the reader to follow me in this reflection on the foundations of the knowledge produced through DNA analysis and to join in the search for what is the true subject of our analyses to see if we can form an accurate representation of the DNA sequence through our measurements.
+
+\section{Perspectives and measurements} \label{Perspectives}
+In Scientific Representation, van Fraassen investigates what representation is and what its role is in science. 
+He states that ‘[d]etection by means of instruments is to be distinguished from observation, in the sense in which I use that term: observation is perception, and perception is something possible for us, if at all, without instruments’ [p. 93]. 
+Instead, the material to observe and our perception are mediated by a measurement and a measurement outcome. 
+This measurement outcome shows not what the object is like “in itself” but what it “looks like” in that measurement setup. 
+The user of the measurement instrumentation must express the outcome in a judgment of the form “that is how it is from here”’ [p. 92]. 
+In genetics, the goal is to analyze genetic material such as DNA. 
+However, we have never seen DNA, except perhaps as a slimy white substance. 
+Instead we use various instruments, such as microscopes, gel electroforesis apparatus and sequencers, to create reflections of chromosomes, bands on a gel or fluorescent signals. 
+Each of these instruments performs some kind of measurement and gives us a different perspective on DNA. 
+Subsequently, the measurement outcomes produced can then be interpreted. 
+In next-generation sequencing (NGS), for instance, the Illumina instrument detects a fluorescent signal produced during a chemical reaction. 
+These signals are transformed to images by a computer, and this is the first part of the analysis that can be perceived. 
+In practice, computers further transform these images to create so-called fastq files, which contain the sequence reads accompanied by quality information to account for sequencing errors. 
+These fastq files are often termed ‘raw data’, but are in fact the measurement outcome. 
+At this point – during data analysis – new perspectives can be taken on the data stored in the fastq files, giving different measurement outcomes.
+Among these, as described in this thesis, are SNV and indels, Copy Number Variations (CNVs), aneuploidies and translocations. 
+
+An important issue to consider at this point is what Ludvig Wittgenstein called the logical space, meaning that each proposition has a truth-value corresponding to a certain state of affairs in the world and that there is a logical connection between the propositions. 
+Wittgenstein states that: \newline
+
+
+\hfill\begin{minipage}{\dimexpr\textwidth-1cm}
+It would, so to speak, appear as an accident, when to a thing that could exist alone on its own account, subsequently a state of affairs could be made to fit.
+If things can occur in atomic facts, this possibility must already lie in them.
+(A logical entity cannot be merely possible. Logic treats of every possibility, and all possibilities are its facts.)
+Just as we cannot think of spatial objects at all apart from space, or temporal objects apart from time, so we cannot think of any object apart from the possibility of its connexion with other things.
+If I can think of an object in the context of an atomic fact, I cannot think of it apart from the possibility of this context. [Wittgenstein, 1933; 2.0121]
+\end{minipage} \newline \newline
+
+\noindent Van Fraassen states that ‘[t]he act of measurement is an act – performed in accordance with certain operational rules – of locating an item in a logical space’ [van Fraassen, 2008] [p. 165]. 
+The logical space in DNA analysis not only consists of biological connections, such as the connection with protein sequences and RNA expression, but also within the measurement and analysis. 
+In both cases there is some degree of circularity based on assumptions of knowledge of the state of affairs of the human genome. 
+Probes and primers are designed based on sequences on or around the genomic region of interest. 
+At least, it is assumed that they are. 
+Therefore, the measurement outcome can only be interpreted in context of the experimental set-up.
+ 
+At first sight this paragraph may seem to give a disturbing message. 
+If we are not analyzing DNA, but rather measurement outcomes, what is the epistemological status of the results of our genetic analyses? 
+In my opinion, for large parts of the genome, it is justified to believe that NGS analysis is able to give an accurate representation of the DNA sequence. 
+This I base on the fact that representations produced by NGS pass the coherence constraint [p. 152], meaning that there is an internal and external coherence between measurements. 
+NGS seems to pass this criterion. 
+Given sufficient quality, subsequent measurements and analyses using the same machine have a high concordance. 
+Importantly, there is also high concordance between NGS platforms, although all platforms have different strong and weak points [Rieber et al., 2013] and each type of sample preparation and sequencing platform is prone to certain types of bias [Aird, 2011; Ross, 2013]. 
+Because the different platforms use different sample preparation techniques and different physical correlates to represent DNA – such as fluorescent light for Illumina and PacBio, change in acidity for Ion Torrent, and change in current for NanoPore – the systematic errors will likely be different too. 
+Moreover, their measurement procedures are also different; some observe nucleotides one by one, some in stretches or in sliding 5-nucleotide k-mers. 
+As discussed in chapter 5 there is even a concordance between multiplex TLA-based NGS and microscopy-based karyotyping for the detection of chromosomal translocations. 
+In other words, these techniques take different perspectives on the DNA and for large parts of the genome the statement holds that DNA sequence “looks the same from here and from there”.
+
+Studies such as the Genome In A Bottle (GIAB) consortium show that a high percentage of SNVs and indels are called using different measurement methods [Zook et al,. BioRXiV; 2018] and, as we have seen in this thesis, there is a concordance between NGS and Sanger for SNP and indel calling, between NGS and MLPA or array for CNV calling, and between NGS, FISH and karyotyping for translocations and trisomies. 
+Moreover, predictions for protein amino acid change by specific DNA variants match the protein measurement results – although differences are also observed, for which RNA/protein editing mechanisms are hypothesized [Wu et al., 2012]. 
+Furthermore, actual human-observable effects are present in exon-skipping that overcomes the effect of a DNA mutation to rescue protein function. 
+This can result, for instance, in improved muscle function that is humanly observable through faster running times [Nichols, 2016]. 
+Further support for the adequacy of NGS measurement outcomes as a representation of the DNA sequence is that detected variants are in concordance with the laws of segregation. 
+In trio analysis – father, mother and child – most variants found in the child are also detected in one or both of the parents [Francioli et al., 2014]. 
+
+Van Fraassen describes empirical facts as: \newline
+
+\hfill\begin{minipage}{\dimexpr\textwidth-1cm}
+the very stability in the procedures found in [...] historical development, and the reliability of the predictions concerning these and their correlation with other measurement procedures derived from the mature theory in which they are now theoretically embedded. [p. 124]
+\end{minipage} \newline \newline
+
+\noindent In my opinion DNA variation detection passes this definition, which would mean that DNA sequences, and variation therein, can be considered as empirical facts if we adhere to this constructive empiricist definition. 
+However, representation does not necessarily equal accurate representation [Nguyen, 2016]. 
+For instance, the GIAB consortium have labelled variants high confidence or low confidence. 
+This means that for some of the variants there is a higher chance of them not representing the DNA sequence accurately, for instance if analyses using different platforms or duplicate analyses on the same platform disagree on the nucleotide present on a specific location. 
+In most laboratories DNA analysis is done using a single run on a single platform, leading to fewer possibilities to distinguish high and low confidence calls based on the data itself. 
+Quality metrics (base quality, mapping quality, and genotype quality) only tell a part of the story, since only the quality from the sequencer onwards is taken into account. 
+This does not need to be a problem so long as the strengths and weaknesses of the technique and bioinformatics analysis used are understood. 
+
+\section{Assumptions and biases in next-generation sequencing} \label{Assumptions and biases in next-generation sequencing}
+In this section I want to focus on the noise that stands between the final analysis outcome and the DNA sequence that we are trying to determine. 
+In total, we can distinguish four types of such noise: A. biological noise, B. laboratory-induced noise, C. sequencing noise and D. data analysis noise. 
+Each category can be further subdivided into concrete issues that have to be overcome to obtain a representation that can be considered as accurate as possible. 
+As an example of the noise present in sequencing procedures, I want to use an abstracted workflow for an Illumina Sequencing-By-Synthesis capturing-based WES experiment based on white blood cells (BOX 9.1). 
+The exact issues differ per procedure used, but similar procedures will have comparable biases. The categories A-D are connected to the four noise types, although DNA isolation and sequencing can also be considered as laboratory techniques. 
+Each of the four blocks described have their own propositions for the ideal world, but various types of errors/bias can occur to obscure the accuracy of the representation (BOX 9.2). 
+In the remainder of this section, the sources of noise in the four categories are described in more detail.
+
+A. White blood cells will generally yield good quality DNA, but other materials, such as bone-marrow cells or FFPE material, can result in low quality or degraded DNA. 
+Furthermore, the DNA bases in materials that have been stored for a long period can change over time, resulting in an increasing number of false positive SNV calls [Guyard et al, 2017]. 
+In analysis of cell-free DNA (cfDNA) or circulating tumor DNA (ctDNA) using blood plasma, white blood cells have to be stabilized or removed quickly to prevent dilution with wild-type genomic DNA, which could cause false negative results [Diaz et al., 2016]. 
+An issue arises in analyses of mixed DNA from different cell populations, such as tumor-normal or fetus-mother, because the normal and maternal DNA can impede detection of variants in the tumor of fetal DNA. 
+Moreover, in NIPT, maternal variants, most notably microdeletions and monosomy X, can cause false positive results [Mather et al, 2016; Reiss et al,. 2017]. 
+
+MAKEN IN OFFICIELE BOX. ZIE JOERI'S THESIS
+BOX 1: Abstracted workflow of variant detection using Illumina Sequencing-By-Synthesis capturing based WES experiment, based on white blood cells.
+A. DNA isolation
+1.	Extraction of a tube of blood from a person
+2.	Cell lysis
+3.	Removal of protein, RNA and other contaminants
+4.	DNA recovery
+B. Sample preparation
+5.	DNA fragmentation
+6.	Sequence adapter attachment
+7.	DNA fragment size selection
+8.	PCR enrichment of DNA fragments with adapters on both ends
+9.	Capturing of exonic regions using DNA- or RNA-baits complementary to sequences of interest
+10.	PCR enrichment of captured DNA fragments (using barcodes for sample multiplexing)
+C. Sequencing
+11.	Attachment of adapter-ligated DNA fragments to the sequencing flow-cell
+12.	Cluster formation by bridge-amplification of the attached DNA fragments
+13.	Sequencing-by-synthesis using fluorescent labelled nucleotides (A, C, G, T) and cameras
+D. Data processing
+14.	Creation of sequence reads by combining measured fluorescent signal intensities per coordinate over all cycles
+15.	Alignment of short reads against a reference genome to create consensus genome
+16.	Detection of differences between the consensus and the reference genome
+
+
+
+MAKEN IN OFFICIELE BOX. ZIE JOERI'S THESIS
+BOX 2: Assumptions and forms of bias in next-generation sequencing
+Category	Assumptions ideal world	Forms of bias
+		
+A. Biology	The complete DNA of interest is isolated as high-molecular DNA, without any contaminants present, and is representative of the tested person’s DNA sequence.	- Presence of other DNA (transplantation donor or maternal)
+- Degraded DNA
+- Presence of storage-induced mutations
+B. Laboratory	All sequences of interest are evenly present, represented by one instance per original DNA fragment, without off-target sequences, and ready for sequencing.	 - PCR efficiency (GC bias)
+ - Imperfect capturing efficiency
+ - Duplicate reads
+ - Run-to-run differences
+C. Sequencing	All sequences of interest result in clear fluorescent signals at the correct position, without interference of other signals	 - Run-to-run/lane-to-lane differences
+ - Phasing error
+ - Error by motif
+D. Data analysis	D1. Sequence of the DNA fragment is correctly inferred.	- Wrongly inferred intensity
+	D2. Reference genome has a close match in sequence to my sample of interest.	- Inadequate reference sequence for the person analyzed
+	D3. The short-read sequences can be correctly and uniquely placed onto the reference genome,	- Low mappability
+	D4. The differences between consensus and reference genome can be correctly inferred.	- Difficult variant types that are not  mapped correctly
+		
+
+B. After sample preparation, the samples will be ready for sequencing. 
+However, as we have seen in chapters 2 and 3 and other studies [Ross, 2013], the coverage in targeted NGS is not evenly distributed between captured regions (mainly based on GC percentage), capturing efficiency is not perfect and PCR causes duplicate reads [Head, 2014]. 
+In cases where too few reads are captured for a specific region, false negative results can occur. 
+Furthermore, PCR procedures that cause uneven distribution can even induce higher false positive rates at higher coverages [Wall, 2014]. 
+The severity of this bias differs between sequencing runs. 
+In WGS, no capturing is needed, leaving one fewer source for bias, and this is also the case in the PacBio procedure, which has an amplification-free procedure [Quail, 2012]. 
+In general, a higher library complexity will result in less bias [Head, 2014]. 
+Yet duplicate reads can also be used to our advantage. 
+One often-used strategy  is to use Unique Molecule Identifiers, or UMIs. 
+These can be used to identify duplicate reads, thus reducing the number of duplicate reads while also increasing the quality of base-calls within the read, solving some of the C/D1 issues [Smith et al., 2017]. 
+With UMIs, the higher the number of duplicate reads, the higher the base quality. 
+This is especially important when you are interested in somatic variants that are only present in a small percentage of sequenced DNA (or RNA) fragments. 
+However, even when collapsing all duplicate reads into one, or removing all but one of these sequences, coverage bias is present from sample to sample, hampering comparison between samples.
+
+C. In Illumina sequencing (as well as with other platforms) errors can occur during sequencing  due to a failure to identify (fluorescent) signals correctly. 
+These errors can differ from run to run and from lane to lane [Aird et al., 2011]. 
+Often, errors occur at homopolymers, where the number of nucleotides present is determined incorrectly due to incorrect phasing in Illumina sequencing, or small differences in signal intensity in SOLiD or IonTorrent technologies. 
+In Illumina sequencing, there is a notable difference between the 4-channel sequencing (Miseq, Hiseq) and the 2-channel chemistry (NextSeq500, NovaSeq, MiniSeq), with the latter being much more prone to wrong base identification [Andrews, 2016]. 
+In addition, several sequence motifs (specific base composition categories) have been associated with sequencing bias [Ross, 2013]. 
+
+D1. It is debatable whether misidentification of the sequence from data is caused by unclear fluorescent signals, or by the failure to correctly infer the fragment sequence. 
+For all platforms, the assignment of a specific base to a position in the read is a prediction, with a reliability represented by the quality scores. 
+For Illumina Phred based scores, these are calibrated using a large set of known sequences. 
+Based on this empirical evidence, base quality scores are calculated for new, unknown, sequences [Illumina technote]. 
+However, these probabilities only hold true as far as the sequencing process itself. 
+Changes in sequence introduced during steps A to C are really present during the sequencing process and, even if correctly inferred, are still not representative of the tested individual’s DNA sequence. 
+
+
+D2. For short-read Illumina sequencing, a reference genome is most often used. 
+The exact sequence between genome builds has changed over the years [Schneider et al., 2017], and for some more difficult to sequence regions, the sequence has changed dramatically. 
+For the interpretation of an individual’s genomic sequence, this means that the placement of sequenced reads can differ from build to build. 
+Some highly variable regions have several contigs that each represent a possible reference sequence. 
+Furthermore, repetitive elements, such as Alu repeats, make up a large part of the genome. 
+Nor is a correct reference genome always available for those sequences [Wildschutte, 2015]. 
+In addition, because individuals differ, no reference genome is perfect for all individuals, leading to possible misinterpretation. 
+For instance, it is known that 0.26% of the population has a SMAD4 pseudogene [Millson et al., 2015]. 
+Because this pseudogene is not present in the general reference, reads from \textsl{SMAD4} pseudogene DNA fragments will map to \textsl{SMAD4} with high mapping quality and can seemingly result in a high-quality \textsl{SMAD4} variant call. 
+Alternatively, de novo assembly can be used as an assumption-free strategy to infer the most likely genomic sequence. 
+However, when using short read sequencing, only short contigs can be created, making this strategy impractical. 
+For long-read sequencing, as discussed in the final part of this discussion, this may be a viable option.
+
+D3. Even when a correct reference sequence is present for a genomic sequence, we’re not out of the woods. 
+It has been estimated that approximately half to two thirds of the human genome is repetitive in nature [de Koning et al., 2011], meaning these areas are prevalent around the genome. 
+For instance, if sequenced fragments are around 250 bp long, a non-unique sequence over 500 bp length will have an ‘unmappable’ region in the middle. 
+Thus, many reads can map onto different locations of the reference genome, either in non-coding sequences, homologous genes, pseudogenes, or within the same gene [Mandelker, 2016]. 
+Some of those locations are located within coding sequences of genes that have a clear association with hereditary disease. 
+Notably, four of the genes mentioned, \textsl{MYH6}, \textsl{MYH7}, \textsl{TTN} and \textsl{PMS2}, are included in our gene panels related cardiomyopathy/pulmonary arterial hypertension and familial cancer gene panels as discussed in chapters 1 to 3. ##NOOT STAAT DIT INDERDAAD IN DE INTRODUCTIE?
+When the perspective is changed by using longer reads, a larger part of the genome will be covered uniquely, as will be discussed in chapter 11. 
+
+D4. The bias introduced during the previous steps results in a second issue. 
+Can the correct DNA sequence be inferred? 
+Even though alignment and variant calling procedures have developed further since we established the procedure described in chapter 2, recent research has shown that variants in non-unique regions, as well as some types of variants such as indels of around 100 bp and variants in tandem repeats, are often still not detected by short-read sequencing [Lincoln et al., 2018]. 
+The same data may give different sensitivity and specificity for different types of variants. 
+For instance, sensitivity to detect SNVs is generally higher than for indel detection [Elferink et al., 2017]. 
+Because a different analysis perspective is taken on the data produced – using read depth rather than base differences from the reference genome – CNV and translocation detection (as described in this thesis) provide a completely different representation of the human genome than SNV and indel detection. 
+Because the noise affects different types of analyses differently, a single dataset can be of sufficient quality for detection of one type of variant, but of low quality for detection of another type. 
+Moreover, the detection of each possible specific variant has its own sensitivity and specificity that is related both to the general characteristics of the assay and to the performance of the specific test performed, which may have more noise to obscure the variant of interest or less noise making it more easily visible. 
+To identify regions and variants that are more (or less) reliable for variant calling, most tools include quality metrics, such as base quality, mapping quality, coefficients of variance and genotype quality that try to provide information regarding sample-specific and genomic-position-specific quality and, as such, the predictive value of called or non-called variants. 
+Following the recommendations of the Genome Analysis Tool Kit (GATK), low mapping quality for the unmappable regions result in low MAPQ scores that will result in fewer reads used for variant calling [GATK Documentation, 2017]. 
+Unfortunately, this means that these regions are indeed ‘dead zones’, using the terminology of Mandelker et al. [Mandelker et al,. 2016]. 
+In practice the called variants are not so problematic. Their presence can be confirmed by another technique and a well-advised conclusion can be made. 
+Genomic positions without a variant call are often more problematic. 
+The assumption is that if no call is present, the sample sequence matches the reference. 
+But this is not necessarily true. There may also be insufficient power for a variant call, or the test may even have failed for the specific region of interest. 
+It is therefore important to provide quality information on each prediction, even for a position that is predicted to be ‘normal’. 
+For SNV analysis and short indels, such information is present, but in NGS, CNV callers often give quality information of positive results only. 
+
+A third issue arises when a statistical test is used for variant prediction, such as in CNV detection and NIPT, even when no bias is present. 
+As discussed in chapter 8, the prevalence of the variant of interest in the population will affect the positive predictive value of the analysis. 
+When a specific variant of interest has different prevalences in two populations, a test with the same sensitivity and specificity will have different predictive values for each population.
+
+Therefore, all variant calling based on a single sequencing technique, using a single perspective, should be approached with caution. 
+When interpreting NGS DNA sequencing results for known difficult regions, technicians, laboratory specialists and researchers should not forget that we don’t live in the ideal world and that biases are present, even if we have tried to look through all the noise. 
+Nonetheless, NGS is a reliable technique in general. 
+In practice, sensitivity and specificity are high for a large part of the analyzed data, at least when comparing results with other techniques that take different perspectives.
+
+From a more philosophical view, we can now come to a more clear view of the term ‘noise’ that is so prominent in the title of this thesis. 
+In general, we can define noise as everything that, from a certain perspective, blocks the path between reality and measurement outcome. 
+In sequencing, everything that has a negative effect on the truth-value of a proposed sequence for a specific individual is noise. 
+As we have seen, we can distinguish four types of such noise: A. biological noise, B. laboratory induced noise, C. sequencing noise and D. data analysis noise. 
+
+\section{From genotype to phenotype} \label{From genotype to phenotype}
+Now that we have determined to what extent NGS can give an accurate representation of the DNA sequence, we can take a look at what variation in this sequence actually means. The noise does not stop at the moment a DNA variant is detected, and we can add a fourth layer to the question ‘what can we know?’.
+
+Can we know what a DNA variant means with regard to the phenotype? According to C. Kenneth Waters (2007) DNA is the ‘specific actual difference maker’ (SAD) [Waters, 2007]. For Waters, “to be the actual difference making cause of an actual difference in a population, the value of the variable must actually differ and this variation must bring about the actual differences among the entities in the population” [Waters, 2007 p.17]. DNA works in conjunction with a network of other molecules that are also causes, but (variation in the) DNA is the root cause of actual differences in the end. Differences in DNA sequence first result in differences in the RNA sequences produced and then, if the DNA is protein coding, often in differences in amino acid sequences. Waters states that there are other SADs, such as splicing agents, but these are not on par with DNA. 
+
+This framework in which single DNA variants cause actual differences between individuals seems to fit nicely with the classical monogenic, Mendelian, heredity framework. A five-class system – labeling variants Benign, Likely Benign, Variant of Unknown Significance (VUS), Likely Pathogenic or Pathogenic – is the current standard for reporting the clinical interpretation of these variants  [Richards et al., 2015].  But is it wise to force all DNA variants into a framework that labels every single variant by itself without regard for further genomic context? In contrast, and still in line with the interpretation of DNA as the SAD, are genetic risk scores [Jostins and Barret, 2011; Yoo et al., 2015]. These predict the risk of developing a certain phenotype based not on a single DNA variant, but on a group of variants, and help with strategies to predict the development of complex disease. Many variants considered to be pathogenic are not fully penetrant and, as is already incorporated in the term ‘risk score’, not all people carrying specific variants will develop a given phenotype. Griffitz and Stotz [2013] argue that environment plays a more important role in the development of a phenotype than the SAD framework allows [Griffitz and Stotz, 2013; p81/p199]. Other genes and (regulatory) variants and environmental factors can be an explanation for the variations in penetrance level of pathogenic variants. These so-called ‘potential difference makers’ discussed by Waters and Griffitz & Stotz may explain why one person does develop a disease, while another with the same DNA variant does not. Illuminating these factors is important if we want to know what carrying a specific DNA variant will mean for a specific person, and will form a further step towards personalized medicine. 
+
+It seems then, from the perspective of hereditary disorders, that DNA variants can be considered as SADs that have predictive value for disease risk or prognosis. However, the question of penetrance remains. The answer regarding penetrance of variants in causing a disease will partly lie in a more complex genetic profile explaining the disease risk, instead of a mutation in a single gene. A further part of the explanation will lie in a difference of environment, which will or will not trigger potential difference makers. For instance alcohol consumption, malnutrition and smoking during pregnancy can induce epigenetic changes in the unborn child that alter neurodevelopmental processes [Portales-Casamar et al., 2016; Banik et al,. 2017]. Because of these environmental stimuli that enhance or silence gene expression, the child can develop a congenital disorder. One of the big  challenges for clinical genetics is not only to detect genetic variants, but to also understand their effect on the phenotype in context of each other and of the environment, creating a clearer picture of the clinical relevance of each person’s genetic profile.
+
+\section{Conclusion} \label{Conclusion}
+In this section I have identified four different discussions related to the question ‘What can I know?’
+1.	What can I know about the origin of DNA variations? (e.g. placental or fetal)
+2.	What can I know about the DNA sequence based on NGS measurements?
+3.	What can I know about the predictive value of a statistical test for a particular variant to be present in a particular individual?
+4.	What can I know about the relation between genotype and phenotype?
+By no means do I claim I have provided the full scope of answers to these questions, if this was even possible. However, if this discussion has planted a few seeds in the heads of the readers regarding the assumptions that are made during analysis of DNA measurement data and what we are actually analyzing, the purpose of this part of the discussion is met. Moreover, not knowing everything does not need to be problematic. As long as you acknowledge that a measurement is performed from a specific perspective (i.e. the methods and techniques used) and is affected by several types of noise, the representation of the DNA or chromosomes of the tested person can be as accurate as possible. Despite that, knowing the assumptions and biases of used methods and techniques is no guarantee for reaching the correct interpretation of the measurement data regarding what it represents. The chance of obtaining an accurate representation is higher when measurements and analyses are performed from different perspectives. Therefore, this discussion can be used as a philosophical basis for performing confirmatory tests for detected variants, using a different method. 
+This being said, we can continue our struggle to understand the nature of the data we produce, the perspective that was used and the bias that was produced, all of which creates the noise between the unobservable DNA and the observable measurement outcomes. The ultimate goal is to get as close as possible to an accurate representation, closer to the ideal world, in which noise is cancelled out or corrected for and empirical adequacy aligns perfectly with reality. Although, even if we did get there, we could never know for sure. 
+
+
+
+INSPIRATION
+\sectionmark{Does genomic information belong to your family?} % extra to get the top mark okay..
+\section{Does information about your genome belong to your family? }
+\sectionmark{Does genomic information belong to your family?}
+In the following paragraph I will digress from my discussion of genetic analysis to question if you are the sole owner of your own genetic information, or whether we should consider ownership to be shared between family members. 
