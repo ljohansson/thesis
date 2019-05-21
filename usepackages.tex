@@ -1,3 +1,6 @@
+%\usepackage{array,booktabs,arydshln,xcolor} %Allow creation of box in chapter9. Has to be loaded first, because of clash with tabulary
+\usepackage{array,booktabs,arydshln} %Allow creation of box in chapter9. Has to be loaded first, because of clash with tabulary
+
 \usepackage[utf8]{inputenc} % allow direct utf8 input
 \usepackage[font=small,labelfont=bf]{caption} % make figure captions smaller and label bold
 \usepackage{graphicx} % allow figures
@@ -48,3 +51,5 @@
 % plus:
 %\nocite{*} % nocite will add ?..? to bibliography label when an entry is unused
 %\bibliography{references}{}
+
+\newcommand\VRule[1][\arrayrulewidth]{\vrule width #1} %Allow creation of box in chapter9 Combines with \usepackage{array,booktabs,arydshln}
