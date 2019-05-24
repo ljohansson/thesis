@@ -1,0 +1,6 @@
+latex thesis_opportunistic_screening.tex
+bibtex thesis_opportunistic_screening
+latex thesis_opportunistic_screening.tex
+latex thesis_opportunistic_screening.tex
+dvips -t a5 thesis_opportunistic_screening.dvi
+ps2pdf thesis_opportunistic_screening.ps

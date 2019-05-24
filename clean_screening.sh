@@ -1,0 +1,12 @@
+rm thesis_opportunistic_screening.aux
+rm thesis_opportunistic_screening.dvi
+rm thesis_opportunistic_screening.lot
+rm thesis_opportunistic_screening.ps
+rm thesis_opportunistic_screening.bbl
+rm thesis_opportunistic_screening.lof
+rm thesis_opportunistic_screening.out
+rm thesis_opportunistic_screening.blg
+rm thesis_opportunistic_screening.log
+rm thesis_opportunistic_screening.pdf
+rm thesis_opportunistic_screening.toc
+
