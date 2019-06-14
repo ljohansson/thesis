@@ -53,3 +53,18 @@
 %\bibliography{references}{}
 
 \newcommand\VRule[1][\arrayrulewidth]{\vrule width #1} %Allow creation of box in chapter9 Combines with \usepackage{array,booktabs,arydshln}
+%----------------------------------------
+%COMMAND FOR DOING SIDE CAPTION.
+\newcommand{\sidebysidecaption}[4]{
+	\raggedright
+	\begin{minipage}[t]{#1}
+		\vspace*{0pt}
+		#3
+	\end{minipage}
+	\hfill%
+	\begin{minipage}[t]{#2}
+		\vspace*{0pt}
+		#4
+	\end{minipage}%
+}
+%%End commands sidecaption
