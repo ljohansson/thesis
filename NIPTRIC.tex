@@ -1,5 +1,5 @@
 \chapter[NIPTRIC: a tool for clinical interpretation of NIPT results]{NIPTRIC: an online tool for clinical interpretation of non-invasive prenatal testing (NIPT) results}
-\chaptermark{NIPTRIC: clinical interpretation of NIPT results}
+\chaptermark{NIPTRIC: interpretation of NIPT results}
 \label{chap:NIPTRIC}
 
 { \Large \leftwatermark{
@@ -109,7 +109,7 @@ Figure \ref{fig:NIPTRICFig2} illustrates the impact of different percentages of 
 
 \begin{figure}[!htb]
 	\sidebysidecaption{0.555\linewidth}{0.42\linewidth}{\includegraphics[width=1.0 \linewidth]{img/NIPTRIC_Fig2}}
-	{\caption[PPR at different risks]{\textbf{Estimation of the PPR given an observed Z-score and percentage of foetal DNA at a coefficient of variation of 0.5\%.} \textbf{(a)} a priori risk of 0.1 (1:10); \textbf{(b)} a priori risk of 0.01(1:100); and \textbf{(c)} a priori risk of 0.01(1:1000). x-axis: Z-score range 1–7. y-axis: Personalised a posteriori risk (\%). After a positive NIPT result at a Z-score of 3 and at 4\% foetal DNA, the low-risk woman has a 5\% chance of carrying a foetus with Down syndrome and thus a 95\% chance of the result being false-positive. In contrast, the higher-risk women have a 36\% (1:100) and an 86\% (1:10) chance of carrying a foetus with Down syndrome. Thus, the chance of a false-positive result at a risk of 1:100 and 1:10 is 64\% and 14\%, respectively.}
+	{\caption[PPR at different risks]{\textbf{Estimation of the PPR given an observed Z-score and percentage of foetal DNA at a coefficient of variation of 0.5\%.} \textbf{(a)} \textsl{a priori} risk of 0.1 (1:10); \textbf{(b)} \textsl{a priori} risk of 0.01(1:100); and \textbf{(c)} a priori risk of 0.01(1:1000). x-axis: Z-score range 1–7. y-axis: Personalised \textsl{a posteriori} risk (\%). After a positive NIPT result at a Z-score of 3 and at 4\% foetal DNA, the low-risk woman has a 5\% chance of carrying a foetus with Down syndrome and thus a 95\% chance of the result being false-positive. In contrast, the higher-risk women have a 36\% (1:100) and an 86\% (1:10) chance of carrying a foetus with Down syndrome. Thus, the chance of a false-positive result at a risk of 1:100 and 1:10 is 64\% and 14\%, respectively.}
 	\label{fig:NIPTRICFig2}}
 \end{figure}
 
@@ -190,7 +190,7 @@ First, a low percentage reduces the PPR far more in low-risk pregnancies than in
 This is partly in line with Bianchi et al.\cite{Bianchi_2012}, who considered a Z-score between 2.5 and 4 as a borderline value.
 
 Thus, false-negative results might be obtained if the actual percentage of foetal DNA is low and the coefficient of variation is higher than our default settings due to a lower sensitivity of the NIPT test. 
-Measuring (and reporting) the percentage of foetal DNA28, and knowing the coefficient of variation, are therefore important prerequisites for the accurate interpretation of NIPT results \cite{Chiu_2008,Lau_2012} now that easy-to-use methods are available \cite{Straver_2016}.
+Measuring (and reporting) the percentage of foetal DNA \cite{Canick_2012}, and knowing the coefficient of variation, are therefore important prerequisites for the accurate interpretation of NIPT results \cite{Chiu_2008,Lau_2012} now that easy-to-use methods are available \cite{Straver_2016}.
 
 False-positive results can also be obtained, because the NIPT result might only reflect the genetic status of the placenta and not that of the foetus due to confined placenta mosaicism \cite{Choi_2012,Wang_2013,Mao_2014}. 
 This is relevant in trisomy 21, which results in a larger standard variation for trisomic samples. 
@@ -277,7 +277,7 @@ The post-test probability or personalised a posteriori risk (PPR) is calculated 
 \vspace{2mm}
 \textrm{PPR range} = 
 \begin{equation*}
-	\frac{\int^{Upp Zexp}_{Low Zexp}\frac{e^\frac{-(Zexp - Zobs)^2}{2}}{Upp Zexp - Low Zexp}Zexp \times Papr}{(\int^{Upp Zexp}_{Low Zexp}\frac{e^\frac{-(Zexp - Zobs)^2}{2}}{Upp Zexp - Low Zexp}Zexp \times Papr) + (1 - Papr) \times e^{\frac{-(Zobs)^2}{2}}}
+	\frac{\int^{Upp Zexp}_{Low Zexp}\frac{e^\frac{-(Zexp - Zobs)^2}{2}}{Upp Zexp - Low Zexp}dZexp \times Papr}{(\int^{Upp Zexp}_{Low Zexp}\frac{e^\frac{-(Zexp - Zobs)^2}{2}}{Upp Zexp - Low Zexp}dZexp \times Papr) + (1 - Papr) \times e^{\frac{-(Zobs)^2}{2}}}
 \end{equation*}
 \vspace{5mm}
 PPR range A:
