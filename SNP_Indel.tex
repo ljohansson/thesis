@@ -50,7 +50,7 @@ Received 2013 Jan 9; Accepted revised manuscript 2013 Apr 2; Published online 20
 
 
 \section*{Abstract}\label{abstract}
-Mutation detection through exome sequencing allows simultaneous analysis of all coding sequences of genes. 
+Mutation\footnote{In this chapter we adhere to the terms used in the original publication. However, the term 'mutation' is replaced by the more neutral term 'variant' in current HGVS nomenclature \cite{den_Dunnen_2016}} detection through exome sequencing allows simultaneous analysis of all coding sequences of genes. 
 However, it cannot yet replace Sanger sequencing (SS) in diagnostics because of incomplete representation and coverage of exons leading to missing clinically relevant mutations. 
 Targeted next-generation sequencing (NGS), in which a selected fraction of genes is sequenced, may circumvent these shortcomings. 
 We aimed to determine whether the sensitivity and specificity of targeted NGS is equal to those of SS. 
@@ -241,7 +241,7 @@ In the NextGENe software (v2.2.1; Softgenetics, State College, PA), we performed
 \item the fastQ output file was converted into a FASTA file to eliminate reads that were not “paired” and that did not meet the criteria of the default settings; it was also checked for “Paired Reads Data”;
 \item duplicate reads were removed; 
 \item reads from the converted unique FASTA file were aligned to the reference genome (Human\_v37.2). The default settings were extra checked for load-paired end, library size range 200–500 bases, and allowing one mismatch or using seeds. After alignment a *.pjt file was created and opened in the NextGENe Viewer;
-\item a mutation report was created using the coordinates from the targeted enrichment kit as a *.bed file to enable calling of SNPs and indels in the regions of interest. 
+\item a mutation report was created using the coordinates from the targeted enrichment kit as a *.bed file to enable calling of SNPs\footnote{In this chapter we adhere to the terms used in the original publication. However, the term 'polymorphism' is replaced by the more neutral term 'variant' in current HGVS nomenclature \cite{den_Dunnen_2016}. Therefore the current terminology is SNVs} and indels in the regions of interest. 
 Data analyses were limited to $\pm$20 bp of exon-flanking intronic sequences;
 \item an expression report was created from which the mean, minimal, and maximal coverage per target and targeted nucleotide was calculated. The coverage was defined as the average number of reads representing a given nucleotide in the reconstructed sequence;
 \item a mutation report (*.vcf file) was created annotating all variants.
