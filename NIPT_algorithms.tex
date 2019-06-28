@@ -46,7 +46,7 @@ L.F. Johansson\textsuperscript{1,2,*}, E.N. de Boer\textsuperscript{1,*}, H.A. d
 
 
 \noindent
-Received 2017 Jan 6; Revised 2017 Apr 4; Published online May 12.
+Received 2017 Jan 6; Accepted 2017 Apr 4; Published online May 12.
 \\~\\
 * Contributed equally
 
@@ -56,10 +56,10 @@ Received 2017 Jan 6; Revised 2017 Apr 4; Published online May 12.
 Non-invasive prenatal testing (NIPT) of cell-free DNA in maternal plasma, which is a mixture of maternal DNA and a low percentage of fetal DNA, can detect fetal aneuploidies using massively parallel sequencing. 
 Because of the low percentage of fetal DNA, methods with high sensitivity and precision are required. 
 However, sequencing variation lowers sensitivity and hampers detection of trisomy samples. 
-Therefore, we have developed three algorithms to improve sensitivity and specificity: the chi-squared-based variation reduction ($\chi$2VR), the regression-based Z-score (RBZ) and the Match QC score. 
-The $\chi$2VR reduces variability in sequence read counts per chromosome between samples, the RBZ allows for more precise trisomy prediction, and the Match QC score shows if the control group used is representative for a specific sample. We compared the performance of $\chi$2VR to that of existing variation reduction algorithms (peak and GC correction) and that of RBZ to trisomy prediction algorithms (standard Z-score, normalized chromosome value and median-absolute-deviation-based Z-score). 
-$\chi$2VR and the RBZ both reduce variability more than existing methods, and thereby increase the sensitivity of the NIPT analysis. 
-We found the optimal combination of algorithms was to use both GC correction and $\chi$2VR for pre-processing and to use RBZ as the trisomy prediction method.
+Therefore, we have developed three algorithms to improve sensitivity and specificity: the chi-squared-based variation reduction ($\chi$\textsuperscript{2}VR), the regression-based Z-score (RBZ) and the Match QC score. 
+The $\chi$\textsuperscript{2}VR reduces variability in sequence read counts per chromosome between samples, the RBZ allows for more precise trisomy prediction, and the Match QC score shows if the control group used is representative for a specific sample. We compared the performance of $\chi$\textsuperscript{2}VR to that of existing variation reduction algorithms (peak and GC correction) and that of RBZ to trisomy prediction algorithms (standard Z-score, normalized chromosome value and median-absolute-deviation-based Z-score). 
+$\chi$\textsuperscript{2}VR and the RBZ both reduce variability more than existing methods, and thereby increase the sensitivity of the NIPT analysis. 
+We found the optimal combination of algorithms was to use both GC correction and $\chi$\textsuperscript{2}VR for pre-processing and to use RBZ as the trisomy prediction method.
 
 \section{Introduction}\label{introduction}
 The discovery of cell-free fetal DNA (cffDNA) fragments in the maternal bloodstream \cite{Lo_1997} in combination with the development of massively parallel sequencing has made it possible to perform non-invasive prenatal testing (NIPT). 
@@ -79,17 +79,17 @@ We used the latter method in combination with a peak correction that removes reg
 Variability can also be reduced by adapting the Z-score calculation, for instance by using the normalized chromosome value (NCV) \cite{Lau_2012,Sehnert_2011} or the median absolute deviation (MAD) based Z-score \cite{Stumm_2013}.
 
 Our aim here was to further decrease variability and thus increase the sensitivity of NIPT. 
-We therefore developed three new algorithms: the chi-squared-based variation reduction ($\chi$2VR), the regression-based Z-score (RBZ), and the Match QC score. 
-The $\chi$2VR reduces the weight of the number of reads in regions that have a higher variation than expected by chance, regardless of the origin of the bias. 
+We therefore developed three new algorithms: the chi-squared-based variation reduction ($\chi$\textsuperscript{2}VR), the regression-based Z-score (RBZ), and the Match QC score. 
+The $\chi$\textsuperscript{2}VR reduces the weight of the number of reads in regions that have a higher variation than expected by chance, regardless of the origin of the bias. 
 The RBZ uses a model based on forward regression for prediction. 
 The Match QC score calculates whether the non-trisomy control set is representative for the analyzed sample.
 
-We compared the performance of our algorithms against and in combination with existing algorithms. 
+We compared the performance of our algorithms against and in combination with existing algorithms.
 Furthermore, we show that the Match QC score can indicate whether a sample fits within a control set.
 
 
 \section{Material and Methods}\label{Methods}
-To assess the added value of the $\chi$2VR, RBZ and the Match QC score to the sensitivity and quality control of trisomy prediction, the performance of the algorithms was compared to that of existing variation reduction methods (peak correction and bin or LOESS GC correction) and trisomy prediction methods (standard Z-score, NCV and MAD-based Z-score) (Figure:)\ref{fig:Algorithms_NIPT_Fig1}). 
+To assess the added value of the $\chi$\textsuperscript{2}VR, RBZ and the Match QC score to the sensitivity and quality control of trisomy prediction, the performance of the algorithms was compared to that of existing variation reduction methods (peak correction and bin or LOESS GC correction) and trisomy prediction methods (standard Z-score, NCV and MAD-based Z-score) (Fig. \ref{fig:Algorithms_NIPT_Fig1}). 
 We included all methods used, except peak correction and the MAD-based Z-score, in NIPTeR, an R package publicly available under the GNU GPL open source license on CRAN and at https://github.com/molgenis/NIPTeR.
 
 We focused on whole genome sequencing analysis, in which the fraction of sequenced reads originating from the chromosome of interest in the sample is compared with that of a set of non-trisomy control samples. 
@@ -100,16 +100,16 @@ In each bin, the number of reads aligned to the forward and reverse strands read
 
 \begin{figure}
 	\includegraphics[width=0.6\linewidth]{img/Algorithms_NIPT_Fig1}
-	\caption[Flowchart NIPT analysis steps]{Flowchart showing the analysis steps. (a) First, sequenced reads are aligned, partitioned into 50,000 bp bins and counted. These bins are the units for further analysis and data quality can be improved using zero or more variation reduction methods. (b) Peak correction removes bins showing an unusually high coverage compared with the average coverage of bins on the same chromosome. GC correction corrects for coverage differences between bins having a different GC percentage, using one of two methods: ‘bin’ or ‘LOESS’ GC-correction. The chi-squared variation reduction corrects bins showing a higher variation in read counts between samples than expected by chance. Analysis is performed based on (corrected) read counts. (c) The Match QC indicates whether a control-group is informative for the analyzed sample. (d) Various algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value and Regression-based Z-score) are used for predicting trisomy.}
+	\caption[Flowchart NIPT analysis steps]{Flowchart showing the analysis steps. \textbf{(a)} First, sequenced reads are aligned, partitioned into 50,000 bp bins and counted. These bins are the units for further analysis and data quality can be improved using zero or more variation reduction methods. \textbf{(b)} Peak correction removes bins showing an unusually high coverage compared with the average coverage of bins on the same chromosome. GC correction corrects for coverage differences between bins having a different GC percentage, using one of two methods: ‘bin’ or ‘LOESS’ GC-correction. The chi-squared variation reduction corrects bins showing a higher variation in read counts between samples than expected by chance. Analysis is performed based on (corrected) read counts. \textbf{(c)} The Match QC indicates whether a control-group is informative for the analyzed sample. \textbf{(d)} Various algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value and Regression-based Z-score) are used for predicting trisomy.}
 	\label{fig:Algorithms_NIPT_Fig1}
 \end{figure}
 
 \subsection{Chi-squared-based variation reduction}
-The novel $\chi$2VR reduces the weight of the number of reads in bins that have a higher variation than expected by chance and thus reduces the impact of these bins on the chromosomal fractions. 
+The novel $\chi$\textsuperscript{2}VR reduces the weight of the number of reads in bins that have a higher variation than expected by chance and thus reduces the impact of these bins on the chromosomal fractions. 
 No prior knowledge on the origin of the variation is needed. 
-The $\chi$2VR performs a sum of squares calculation: per bin, the sum of the chi-squared value is calculated over all the selected control samples. 
+The $\chi$\textsuperscript{2}VR performs a sum of squares calculation: per bin, the sum of the chi-squared value is calculated over all the selected control samples. 
 For this calculation, the observed read counts $o$ are first normalized by multiplying them with a normalization factor. 
-This factor is the mean number of observed total read counts for all autosomal bins i of all control samples j divided by the mean number of observed total read counts for all autosomal bins of the sample s. 
+This factor is the mean number of observed total read counts for all autosomal bins $i$ of all control samples $j$ divided by the mean number of observed total read counts for all autosomal bins of the sample $s$. 
 In short, the observed normalized read count for a specific bin ($on_i$ ) can be calculated as follows:
 
 \begin{equation*}
@@ -125,7 +125,7 @@ The sum chi-squared value is calculated by adding up the chi-squared values of a
 	\sum^n_{j=1}\chi_{ij}^2 = \frac{(\mu_{ij} - on_{ij})^2}{\mu_{ij}}
 \end{equation*}
 
-\noindent The sum chi-squared value for each bin is transformed to a standard normal distribution N(0, 1) by subtracting the degrees of freedom $df$ (number of control samples minus one) from the sum chi-squared value and dividing this by the square root of two times the degrees of freedom.
+\noindent The sum chi-squared value for each bin is transformed to a standard normal distribution $N(0, 1)$ by subtracting the degrees of freedom $df$ (number of control samples minus one) from the sum chi-squared value and dividing this by the square root of two times the degrees of freedom.
 
 \begin{equation*}
 	N(0,1) = \frac{(\sum^n_{j=1}\chi_{ij}^2) - df} {\sqrt{2df}}
@@ -148,8 +148,8 @@ For each chromosome of interest, the four best predictor sets, which each consis
 The predictors can have either a positive or a negative correlation with the chromosome of interest. 
 Within each predictor set only one predictor can be selected from each chromosome, limiting the risk of introducing bias.
 
-Using the models created for each control sample s the expected chromosomal fraction (ef) is calculated for the chromosome of interest. 
-Subsequently, the observed chromosomal fraction of the total read count of the chromosome of interest (of) is divided by this expected fraction. 
+Using the models created for each control sample s the expected chromosomal fraction ($ef$) is calculated for the chromosome of interest. 
+Subsequently, the observed chromosomal fraction of the total read count of the chromosome of interest ($of$) is divided by this expected fraction. 
 In combination with the standard deviation of the prediction, a Z-score is calculated for each sample. 
 Because the mean of the control group after regression is one, the coefficient of variation of the control group has the same value as the SD.
 
@@ -159,7 +159,7 @@ In short, the RBZ can be formulated as:
 	\frac{of_s / ef_s - 1}{\sqrt{\sum^n_{j=1}(of_j / ef_j - \overline{of/ef})^2 / n - 1}}
 \end{equation*}
 
-\noindent where s is the sample of interest, j is an individual control sample and n is the total number of control samples.
+\noindent where $s$ is the sample of interest, $j$ is an individual control sample and $n$ is the total number of control samples.
 
 The RBZ not only uses information from chromosomes having a positive correlation of read counts with the chromosome of interest, but also from chromosomes showing a negative correlation. 
 An overview of an example RBZ calculation is shown in Supplement 3\footnote{added at the end of this chapter}.
@@ -169,13 +169,13 @@ For the sample of interest, the novel Match QC score algorithm calculates how we
 If the pattern of the sample differs too much from that of the controls, the sample does not fit within the control group, making the control set non-representative for the sample. 
 Cut-offs are control-group-specific and can be set using the Match QC scores of the individual control group samples. 
 The Match QC score uses the data used for trisomy prediction as input. 
-Variation reduction, e.g. GC-correction or $\chi$2VR, is applied before calculating the Match QC score.
+Variation reduction, e.g. GC-correction or $\chi$\textsuperscript{2}VR, is applied before calculating the Match QC score.
 
-To obtain the Match QC score, first the chromosomal fractions (of) are calculated for the sample and all control samples. 
+To obtain the Match QC score, first the chromosomal fractions ($of$) are calculated for the sample and all control samples. 
 This is done by dividing the (weighted or corrected) total read count of each chromosome by the total read count of all autosomal chromosomes, excluding chromosomes 13, 18 and 21. 
 Subsequently, for each control sample, the sum of squared differences of the chromosomal fractions between the sample and the control for all autosomal chromosomes, excluding chromosomes 13, 18 and 21, is calculated.
 
-In short, the Match QC score between a sample of interest s and an individual control sample j can be formulated as:
+In short, the Match QC score between a sample of interest $s$ and an individual control sample $j$ can be formulated as:
 
 \begin{equation*}
 	\sum^n_{k=1}(of_{ks} - of_{kj})^2
@@ -198,7 +198,7 @@ To assess the effects of different variation reduction and trisomy prediction al
 A further 34 non-trisomy samples had an alternative plasma-isolation and were sequenced on a HiSeq. 
 The trisomy status of all samples was determined using karyotyping or quantitative fluorescence PCR following amniocentesis or chorionic villi biopsy.
 
-Samples were selected in accordance with and as part of the trial by Dutch laboratories for evaluation of non-invasive prenatal testing (TRIDENT) program, supported by the Dutch Ministry of Health, Welfare and Sport (11016-118701-PG). 
+Samples were selected in accordance with and as part of the \underline{tri}al by \underline{D}utch laboratories for \underline{e}valuation of \underline{n}on-invasive prenatal \underline{t}esting (TRIDENT) program, supported by the Dutch Ministry of Health, Welfare and Sport (11016-118701-PG). 
 The program was also approved by the Ethics Committee of the University Medical Center Groningen. 
 All participants signed an informed consent form.
 
@@ -232,7 +232,7 @@ The Bam files were filtered using Sambamba v0.4.5 \cite{Tarasov_2015} to retain 
 After filtering and removal of duplicate reads, the total autosomal read count was on average 20.2 million (SD 5.6 million) for SOLiD data and 12.5 million (SD 2.2 million) for Illumina data.
 
 \subsubsection{Variation reduction}
-Aligned reads were divided into 50,000 bp bins and variation between samples was reduced using all possible combinations of zero or more variation reduction methods: peak correction, GC-correction and $\chi$2VR. 
+Aligned reads were divided into 50,000 bp bins and variation between samples was reduced using all possible combinations of zero or more variation reduction methods: peak correction, GC-correction and $\chi$\textsuperscript{2}VR. 
 When more than one method was used, they were performed in the order described above (Fig. 1). 
 A maximum of one GC-correction method was used. Since the LOESS GC-correction has been described more often \cite{Chen_2011,Lau_2012,Palomaki_2012,Liang_2013} than the weighted bin GC-correction \cite{Fan_2010}, we used LOESS GC-correction to evaluate the other variation reduction and prediction methods.
 
@@ -261,7 +261,7 @@ The result is then divided by the SD of the fraction in the control set.
 
 The NCV does not use all the autosomal chromosomes to calculate the fraction of the chromosome of interest, instead using the most informative chromosomes, which were selected using a training set \cite{Sehnert_2011}. 
 All combinations of denominator chromosomes were tested for both the Illumina and SOLiD datasets, and the combinations yielding the lowest CVs were selected. 
-The NCV is sometimes compared to using an internal reference6 because, during analysis, the selected reference chromosomes behave similarly to the chromosome of interest. 
+The NCV is sometimes compared to using an internal reference \cite{Lau_2012} because, during analysis, the selected reference chromosomes behave similarly to the chromosome of interest. 
 This positive correlation results in less sample to sample variation, reduces the need for GC correction, and increases prediction precision.
 
 The MAD-based Z-score replaces the SD by 1.4826 * MAD, making the calculation more tolerant of outliers in the control set \cite{Stumm_2013}. 
@@ -283,14 +283,14 @@ This resulted in control group sizes of 142 for the Illumina and 128 for the SOL
 For all algorithms, the control group is only used when it is normally distributed as determined using the Shapiro Wilk statistical test (p \textgreater\: 0.05).
 
 \subsubsection{Algorithm combinations tested}
-We evaluated the effects of both peak correction and $\chi$2VR on the CV of the control samples, the effect of the two different GC correction methods in combination with all prediction methods on the CV, and the effect of the different prediction methods on CV and Z-scores in combination with all possible variation reduction methods, except peak correction and the bin GC correction. 
+We evaluated the effects of both peak correction and $\chi$\textsuperscript{2}VR on the CV of the control samples, the effect of the two different GC correction methods in combination with all prediction methods on the CV, and the effect of the different prediction methods on CV and Z-scores in combination with all possible variation reduction methods, except peak correction and the bin GC correction. 
 The consistency of the RBZ trisomy prediction was determined by estimating three additional trisomy prediction models for each analysis.
 
 \subsubsection{Match QC score}
 To provide a proof of principle for the Match QC score performance, we divided the Illumina control group into a training set of 85 and a test set of 57 samples. 
 The 34 Illumina samples that underwent a different plasma isolation protocol were used as an example of samples having undergone an alternative procedure.
 
-We then calculated the Match QC score for all samples, using uncorrected, $\chi$2VR, LOESS GC, and combined LOESS GC and $\chi$2VR-corrected data. 
+We then calculated the Match QC score for all samples, using uncorrected, $\chi$\textsuperscript{2}VR, LOESS GC, and combined LOESS GC and $\chi$\textsuperscript{2}VR-corrected data. 
 Cut-offs for the Match QC score were set on the average Match QC of the training set plus three SD. 
 For all samples Z-scores were calculated for chromosomes 13, 18 and 21 to determine whether the scores fall within three SD of the average of the control set.
 
@@ -303,12 +303,12 @@ To examine the effect of correcting bins with a coverage that deviates significa
 Peak correction reduced the CV in most analysis strategies (Fig. \ref{fig:Algorithms_NIPT_Fig2}). 
 The largest relative effect for all chromosomes was observed when a GC-correction was also performed. 
 The effect was largest in chromosome 21, which was the chromosome showing the lowest GC-bias when no correction was applied, suggesting that the influence of coverage peaks on variability only comes to light when GC-bias is limited. 
-In data that was also $\chi$2VR corrected, the variation did not further decrease but it did sometimes increase after use of a peak correction. 
-This suggests that the peak correction and the $\chi$2VR are partly correcting the same sources of bias.
+In data that was also $\chi$\textsuperscript{2}VR corrected, the variation did not further decrease but it did sometimes increase after use of a peak correction. 
+This suggests that the peak correction and the $\chi$\textsuperscript{2}VR are partly correcting the same sources of bias.
 
 \begin{figure}
 	\includegraphics[width=1.0\linewidth]{img/Algorithms_NIPT_Fig2}
-	\caption[Effect of peak correction]{Effect of peak correction on the CV of control samples. The effect is shown for SOLiD (white) and Illumina data (black) with no other correction, for data that also had a chi-squared correction, or LOESS GC correction, or both LOESS GC and chi-squared correction. For each type of correction the CV of four prediction algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value and regression-based Z-score) are shown for (a) chromosome 13, (b) chromosome 18 and (c) chromosome 21. –not peak corrected; *peak corrected.}
+	\caption[Effect of peak correction]{\textbf{Effect of peak correction on the CV of control samples}. The effect is shown for SOLiD (white) and Illumina data (black) with no other correction, for data that also had a chi-squared correction, or LOESS GC correction, or both LOESS GC and chi-squared correction. For each type of correction the CV of four prediction algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value and regression-based Z-score) are shown for \textbf{(a)} chromosome 13, \textbf{(b)} chromosome 18 and \textbf{(c)} chromosome 21. -not peak corrected; *peak corrected.}
 	\label{fig:Algorithms_NIPT_Fig2}
 \end{figure}
 
@@ -322,36 +322,36 @@ The data sets used made no difference to the performance of either GC-correction
 
 \begin{figure}
 	\includegraphics[width=1.0\linewidth]{img/Algorithms_NIPT_Fig3}
-	\caption[Comparison of the effect of two GC correction methods]{Comparison of the effect of two GC correction methods (bin GC correction and LOESS GC correction) on the CV of the control samples. SOLiD data (white) and Illumina data (black). For each type of correction the CVs of four prediction algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value and regression-based Z-score) are shown for (a) chromosome 13, (b) chromosome 18 and (c) chromosome 21. \#Chi-squared corrected; -not corrected; *peak corrected.}
+	\caption[Comparison of the effect of two GC correction methods]{\textbf{Comparison of the effect of two GC correction methods (bin GC correction and LOESS GC correction) on the CV of the control samples}. SOLiD data (white) and Illumina data (black). For each type of correction the CVs of four prediction algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value and regression-based Z-score) are shown for \textbf{(a)} chromosome 13, \textbf{(b)} chromosome 18 and \textbf{(c)} chromosome 21. \#Chi-squared corrected; -not corrected; *peak corrected.}
 	\label{fig:Algorithms_NIPT_Fig3}
 \end{figure}
 
 \subsection{Effect of chi-squared-based variation reduction}
-To examine the performance of the $\chi$2VR, we compared the control group CV using all other variation and prediction methods, with and without the $\chi$2VR (Fig. \ref{fig:Algorithms_NIPT_Fig4}).
-The $\chi$2VR resulted in a lower CV in most analysis strategies for all chromosomes. 
+To examine the performance of the $\chi$\textsuperscript{2}VR, we compared the control group CV using all other variation and prediction methods, with and without the $\chi$\textsuperscript{2}VR (Fig. \ref{fig:Algorithms_NIPT_Fig4}).
+The $\chi$\textsuperscript{2}VR resulted in a lower CV in most analysis strategies for all chromosomes. 
 The effect was most striking in chromosome 21, regardless of the other methods used.
 
 \begin{figure}
 	\includegraphics[width=1.0\linewidth]{img/Algorithms_NIPT_Fig4}
-	\caption[Effect of chi-squared-based variation reduction control samples CV.]{Effect of chi-squared-based variation reduction on the CV of control samples. SOLiD (white) and Illumina data (black) with no other correction, or with a peak correction, or LOESS GC correction or both LOESS GC and peak correction. For each type of correction the CVs of four prediction algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value and regression-based Z-score) are shown for (a) chromosome 13, (b) chromosome 18 and (c) chromosome 21. –not chi-squared corrected; \#chi-squared corrected.}
+	\caption[Effect of chi-squared-based variation reduction control samples CV.]{\textbf{Effect of chi-squared-based variation reduction on the CV of control samples}. SOLiD (white) and Illumina data (black) with no other correction, or with a peak correction, or LOESS GC correction or both LOESS GC and peak correction. For each type of correction the CVs of four prediction algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value and regression-based Z-score) are shown for \textbf{(a)} chromosome 13, \textbf{(b)} chromosome 18 and \textbf{(c)} chromosome 21. –not chi-squared corrected; \#chi-squared corrected.}
 	\label{fig:Algorithms_NIPT_Fig4}
 \end{figure}
 
 \subsection{Effect of trisomy prediction algorithms}
-To examine the effect of the prediction algorithms (standard Z-score, MAD-based Z-score, NCV and RBZ), we compared the CV using uncorrected, $\chi$2VR, LOESS GC, and combined $\chi$2VR and LOESS GC corrected data. 
-Since the peak correction provides no added value to the $\chi$2VR, it was not used for comparison. 
-The RBZ produced the lowest CV for all variation reduction methods except the SOLiD combined LOESS GC and $\chi$2VR corrected data, in which the MAD-based Z-score for chromosome 13 produced an even lower CV (Fig. \ref{fig:Algorithms_NIPT_Fig5}). 
+To examine the effect of the prediction algorithms (standard Z-score, MAD-based Z-score, NCV and RBZ), we compared the CV using uncorrected, $\chi$\textsuperscript{2}VR, LOESS GC, and combined $\chi$\textsuperscript{2}VR and LOESS GC corrected data. 
+Since the peak correction provides no added value to the $\chi$\textsuperscript{2}VR, it was not used for comparison. 
+The RBZ produced the lowest CV for all variation reduction methods except the SOLiD combined LOESS GC and $\chi$\textsuperscript{2}VR corrected data, in which the MAD-based Z-score for chromosome 13 produced an even lower CV (Fig. \ref{fig:Algorithms_NIPT_Fig5}). 
 The variation using the NCV is higher than that using the RBZ, but the CV is still much lower than the CVs of the methods that used all autosomal chromosomes. 
 The standard Z-score had the highest coefficient of variation in all models.
 
 \begin{figure}
 	\includegraphics[width=1.0\linewidth]{img/Algorithms_NIPT_Fig5}
-	\caption[Effect of the different prediction algorithms]{Effect of the different prediction algorithms on the CV of control samples. SOLiD data (white) and Illumina data (black). Results from the four different prediction algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value and regression-based Z-score) are shown for (a) chromosome 13, (b) chromosome 18 and (c) chromosome 21. –Variation was not reduced, \#chi-squared corrected, “ LOESS GC corrected, \#” both LOESS GC and chi-squared corrected before prediction.}
+	\caption[Effect of the different prediction algorithms]{\textbf{Effect of the different prediction algorithms on the CV of control samples}. SOLiD data (white) and Illumina data (black). Results from the four different prediction algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value and regression-based Z-score) are shown for \textbf{(a)} chromosome 13, \textbf{(b)} chromosome 18 and \textbf{(c)} chromosome 21. –Variation was not reduced, \#chi-squared corrected, “ LOESS GC corrected, \#” both LOESS GC and chi-squared corrected before prediction.}
 	\label{fig:Algorithms_NIPT_Fig5}
 \end{figure}
 
 A lower CV yields a more extreme Z-score, which means that in the case of a trisomy, the Z-score is more likely to be higher than the threshold, resulting in a higher sensitivity. 
-The Z-scores of the trisomy samples of the four prediction algorithms for the uncorrected, $\chi$2VR, LOESS GC, and combined $\chi$2VR and LOESS GC corrected data are listed in Supplement 7. 
+The Z-scores of the trisomy samples of the four prediction algorithms for the uncorrected, $\chi$\textsuperscript{2}VR, LOESS GC, and combined $\chi$\textsuperscript{2}VR and LOESS GC corrected data are listed in Supplement 7. 
 False-negative and false-positive results were determined for all the above combinations of variation reduction algorithms and prediction algorithms, based on a 99.7\% confidence interval (Z-score threshold of three) (Supplement 8).
 
 Of the 50 trisomic samples, a false-negative result was found in two trisomy 13 and three trisomy 18 samples for the Z-score or the MAD-based Z-score when no variation reduction was done. 
@@ -362,11 +362,11 @@ For all true-positive results, all four RBZ models showed a Z-score higher than 
 To better show the effect of the different variation reduction and prediction algorithms on the Z-score, we selected three samples, sequenced on the SOLiD platform, each having a trisomy 13, 18 or 21 (Fig. \ref{fig:Algorithms_NIPT_Fig6}). 
 Based on the Z-scores and CVs, each sample had an estimated fetal percentage of 5–6\%. 
 The NCV and RBZ consistently yielded higher Z-scores than the standard Z-score and the MAD-based Z-score. 
-The effect of the GC-correction is reflected in the results of the standard Z-score and the MAD-based Z-score for chromosome 13 and the effect of the $\chi$2VR shows in the chromosome 21 results.
+The effect of the GC-correction is reflected in the results of the standard Z-score and the MAD-based Z-score for chromosome 13 and the effect of the $\chi$\textsuperscript{2}VR shows in the chromosome 21 results.
 
 \begin{figure}
 	\includegraphics[width=1.0\linewidth]{img/Algorithms_NIPT_Fig6}
-	\caption[Z-scores for three trisomies]{Z-scores for three trisomies using different combinations of variation reduction and prediction algorithms. All three examples are based on SOLiD data. Results from the four different prediction algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value, and regression-based Z-score), in combination with uncorrected, chi-squared corrected, LOESS GC corrected, and both LOESS GC and chi-squared corrected are shown for (a) chromosome 13, (b) chromosome 18 and (c) chromosome 21.}
+	\caption[Z-scores for three trisomies]{\textbf{Z-scores for three trisomies using different combinations of variation reduction and prediction algorithms}. All three examples are based on SOLiD data. Results from the four different prediction algorithms (standard Z-score, MAD-based Z-score, Normalized Chromosome Value, and regression-based Z-score), in combination with uncorrected, chi-squared corrected, LOESS GC corrected, and both LOESS GC and chi-squared corrected are shown for \textbf{(a)} chromosome 13, \textbf{(b)} chromosome 18 and \textbf{(c)} chromosome 21.}
 	\label{fig:Algorithms_NIPT_Fig6}
 \end{figure}
 
@@ -379,28 +379,28 @@ For samples having a false-positive RBZ result, at least one of the additional R
 
 \subsection{Match QC score}
 To examine whether the Match QC score could accurately predict whether a sample fits within a control group, we calculated the Match QC scores and all the Z-scores for a training set, a test set of samples that had been prepared in the same manner as the training set, and a third set of samples originating from single centrifuged plasma. 
-For all three sets, we used uncorrected, $\chi$2VR, LOESS GC and combined $\chi$2VR- and LOESS GC-corrected data (Fig. \ref{fig:Algorithms_NIPT_Fig7}). 
+For all three sets, we used uncorrected, $\chi$\textsuperscript{2}VR, LOESS GC and combined $\chi$\textsuperscript{2}VR- and LOESS GC-corrected data (Fig. \ref{fig:Algorithms_NIPT_Fig7}). 
 Test set samples had Match QC scores in the same range as the training set samples and Z-scores that fell within three SD of the mean for all types of corrected data. 
-Single centrifuged samples, however, showed Match QC scores in the same range as the control group samples for uncorrected and $\chi$2VR corrected data, but above the three-SD threshold for LOESS GC corrected data and combined LOESS GC- and $\chi$2VR-corrected data.
+Single centrifuged samples, however, showed Match QC scores in the same range as the control group samples for uncorrected and $\chi$\textsuperscript{2}VR corrected data, but above the three-SD threshold for LOESS GC corrected data and combined LOESS GC- and $\chi$\textsuperscript{2}VR-corrected data.
 
 \begin{figure}
 	\includegraphics[width=0.8\linewidth]{img/Algorithms_NIPT_Fig7}
-	\caption[Match QC scores and Z-scores]{Match QC scores and Z-scores for matching and non-matching samples. (a) Match QC scores per sample for uncorrected, chi-squared corrected, LOESS GC corrected and both LOESS GC and chi-squared corrected data for the control group, matching samples, and non-matching samples. Chromosome 21 Z-scores for (b) uncorrected data, (c) chi-squared corrected data, (d) LOESS GC corrected data and (e) both LOESS GC and chi-squared corrected data. + and black line, control group samples; \^ and green line, samples that underwent the same sample preparation procedure; \~ and red line, single centrifugation plasma samples.}
+	\caption[Match QC scores and Z-scores]{\textbf{Match QC scores and Z-scores for matching and non-matching samples}. \textbf{(a)} Match QC scores per sample for uncorrected, chi-squared corrected, LOESS GC corrected and both LOESS GC and chi-squared corrected data for the control group, matching samples, and non-matching samples. Chromosome 21 Z-scores for \textbf{(b)} uncorrected data, \textbf{(c)} chi-squared corrected data, \textbf{(d)} LOESS GC corrected data and \textbf{(e)} both LOESS GC and chi-squared corrected data. + and black line, control group samples; $\wedge$ and green line, samples that underwent the same sample preparation procedure; $\sim$ and red line, single centrifugation plasma samples.}
 	\label{fig:Algorithms_NIPT_Fig7}
 \end{figure}
 
-Z-score distributions for the training set samples and the test set samples were indistinguishable for all correction methods, but Z-scores based on uncorrected or $\chi$2VR corrected data were not normally distributed for chromosomes 13 and 18. 
+Z-score distributions for the training set samples and the test set samples were indistinguishable for all correction methods, but Z-scores based on uncorrected or $\chi$\textsuperscript{2}VR corrected data were not normally distributed for chromosomes 13 and 18. 
 For the single centrifuged samples, Z-scores did not deviate from the normal distribution for the uncorrected data of chromosome 21. 
 Match QC scores for all the samples analyzed, thresholds and Z-score distributions for chromosomes 13, 18 and 21 are shown in Supplement 9.
 
 \section{Discussion}\label{Discussion}
-We show that both the $\chi$2VR and the RBZ reduced the variability of the NIPT result and thus increased its sensitivity in both Illumina and SOLiD data. 
+We show that both the $\chi$\textsuperscript{2}VR and the RBZ reduced the variability of the NIPT result and thus increased its sensitivity in both Illumina and SOLiD data. 
 Furthermore, we show that a Match QC exceeding a three-SD threshold, determined using control samples, identified those samples for which the controls were not representative. 
 Although the algorithms described in this study are designed to improve analysis of NIPT data, they may also be of use in similar types of analyses that need high sensitivity such as copy number variation detection in liquid biopsy data \cite{Chan_2012,Leary_2012}.
 
 The lower variability between samples decreases the percentage of fetal DNA needed for NIPT. 
 A low percentage of fetal DNA is an important contributor to false negative or inconclusive results \cite{Mackie_2016}. 
-Moreover, the average percentage of fetal DNA is lower in trisomy 13 and trisomy 18 pregnancies than in non-trisomy pregnancies \cite{Wegrzyn_2006}\cite{Ashoor_2012a}. 
+Moreover, the average percentage of fetal DNA is lower in trisomy 13 and trisomy 18 pregnancies than in non-trisomy pregnancies \cite{Wegrzyn_2006,Ashoor_2012a}. 
 A low variability is therefore even more important for these pregnancies for the test to have a high sensitivity. 
 Moreover, our novel algorithms produce a lower variability for a given number of reads, resulting in the need for fewer reads and lowering sequencing costs. 
 Alternatively, only DNA-fragments originating from regions of interest could be selected \cite{Sparks_2012b,Ashoor_2013,Zimmermann_2012}. 
@@ -410,18 +410,18 @@ Other studies have shown that variability can be introduced by bias present in t
 However, due to a higher number of available reads, better results were obtained using a non-repeat-masked reference genome \cite{Chen_2011,Palomaki_2012}. 
 For this reason, we did not mask any regions based on mappability tracks or blacklisted regions in our comparison.
 
-In our comparison the lowest CVs for chromosomes 13, 18 and 21 were produced using the combination of the weighted-bin-based GC-correction method and the $\chi$2VR with the RBZ. 
+In our comparison the lowest CVs for chromosomes 13, 18 and 21 were produced using the combination of the weighted-bin-based GC-correction method and the $\chi$\textsuperscript{2}VR with the RBZ. 
 However, each variation reduction algorithm we tested reduced the variability when used alone. 
-The effect of the peak variation reduction was small when combined with the $\chi$2VR. 
-This shows that the $\chi$2VR corrects bias caused by regions of extreme coverage. 
-Moreover, since the $\chi$2VR focuses on variation present in each specific bin, and not on chromosomal averages, it can correct for variation that is too subtle for peak correction. 
+The effect of the peak variation reduction was small when combined with the $\chi$\textsuperscript{2}VR. 
+This shows that the $\chi$\textsuperscript{2}VR corrects bias caused by regions of extreme coverage. 
+Moreover, since the $\chi$\textsuperscript{2}VR focuses on variation present in each specific bin, and not on chromosomal averages, it can correct for variation that is too subtle for peak correction. 
 And since no assumptions are made about the origin of the bias, no prior knowledge is needed for correction. 
-However, when using the $\chi$2VR on the X-chromosome, variability should be determined using only data from pregnancies of a female fetus to prevent variability in the fetal percentage adding to the total variability on that chromosome. 
-After application of GC-correction, $\chi$2VR reduced variation even further, suggesting that $\chi$2VR corrects for sources of bias other than that from GC. 
+However, when using the$\chi$\textsuperscript{2}VR on the X-chromosome, variability should be determined using only data from pregnancies of a female fetus to prevent variability in the fetal percentage adding to the total variability on that chromosome. 
+After application of GC-correction, $\chi$\textsuperscript{2}VR reduced variation even further, suggesting that $\chi$\textsuperscript{2}VR corrects for sources of bias other than that from GC. 
 Since up to 50\% of the human genome is repetitive \cite{Smit_2013}, we suggest that part of the extra corrected bias is due to repeat structures. 
 It has also been suggested that biological factors play a role in bias in NIPT \cite{van_den_Oever_2013,Chandrananda_2014}, so part of the corrected bias might have a biological origin.
 
-Where peak correction and $\chi$2VR only remove reads to reduce variation, GC-correction removes reads in bins having a GC-percentage containing more reads than average, but it adds virtual reads in bins with a GC-percentage containing fewer reads than average. 
+Where peak correction and $\chi$\textsuperscript{2}VR only remove reads to reduce variation, GC-correction removes reads in bins having a GC-percentage containing more reads than average, but it adds virtual reads in bins with a GC-percentage containing fewer reads than average. 
 Although, after GC correction, more reads seem to be present for several chromosomes, dispersion is still based on the original number of reads aligned to those chromosomes.
 
 We demonstrated that the prediction method used can also reduce variability and increase sensitivity. 
@@ -443,7 +443,7 @@ However, even when standard procedures are used, bias can vary between sequencin
 Prediction methods with a higher sensitivity are more vulnerable to the effects of unaccounted biological variation because deviations in the expected chromosomal fractions will more rapidly lead to false-positive results. 
 Sample quality metrics are therefore essential for reliable analysis.
 
-Our study shows that both the $\chi$2VR and the RBZ increase the sensitivity of NIPT compared to previously published methods. 
+Our study shows that both the $\chi$\textsuperscript{2}VR and the RBZ increase the sensitivity of NIPT compared to previously published methods. 
 Furthermore, we show that the Match QC score identifies samples for which the non-trisomy control set was not informative. 
 Moreover, these algorithms may have a broader applicability than NIPT analysis, for instance in analysis of copy number variations in liquid biopsy data. 
 We recommend our novel algorithms, as included in the NIPTeR package, as a useful addition to the NIPT analysis toolbox, resulting in a higher sensitivity, in theory making it possible to detect trisomies in blood with a fetal DNA amount as low as 2\%.
@@ -451,15 +451,24 @@ We recommend our novel algorithms, as included in the NIPTeR package, as a usefu
 \section*{Acknowledgments}\label{Acknowledgments} 
 We thank Jackie Senior and Kate Mc Intyre for editorial advice.
 
-\section{Supplementary material}\label{Supplementary material}
+\subsubsection{Author contributions}
+L.F.J. and E.N.d.B. wrote the manuscript and prepared the figures. L.F.J., E.N.d.B. and G.J.t.M. developed the methods and performed validation studies. H.A.d.W., L.F.J., F.v.D. and M.G.E. built the software packages and analysis pipeline. G.H.S.-B., R.F.S. and B.S. included the patients. R.J.S., G.J.t.M., R.H.S., M.A.S. and B.S. supervised the design and progress of this project. All authors read and approved the final manuscript.
+
+\subsubsection{Competing interests}
+The authors declare that they have no competing interests.
+
+\section*{Supplementary material}\label{Supplementary material}
 Supplements 1 and 3 are added as an addendum to this chapter. 
 The other supplements can be accessed online: 
-\sloppy{https://www.nature.com/articles/s41598-017-02031-5\#Sec24}
+
+\noindent{https://www.nature.com/articles/s41598-017-02031-5\#Sec24}
 
 \newpage
-\section[Supplement 1: $\chi$2VR for chromosome 21]{Supplement 1: Example of chi-squared based variation reduction for chromosome 21}\label{Supplement 1}
+\sectionmark{$\chi$\textsuperscript{2}VR for chromosome 21}
+\section[Supplement 1: $\chi$\textsuperscript{2}VR for chromosome 21]{Supplement 1: Example of $\chi$\textsuperscript{2}VR for chromosome 21}\label{Supplement 1}
+\sectionmark{$\chi$\textsuperscript{2}VR for chromosome 21}
 
-This supplement contains a series of graphs to visualize the effect of the chi-squared based variation reduction ($\chi$2VR). 
+This supplement contains a series of graphs to visualize the effect of the chi-squared based variation reduction ($\chi$\textsuperscript{2}VR). 
 
 
 \begin{figure}[h]
@@ -473,7 +482,7 @@ This supplement contains a series of graphs to visualize the effect of the chi-s
 		\includegraphics[width=1\linewidth]{img/NIPT_Supp1_Fig1_1b}
 		\label{fig:NIPT_Supp1_Fig1_1b}
 	\end{subfigure} 
-	\caption[Example effect $\chi$2VR on bin counts]{\textbf{Read counts bins chromosome 21 without $\chi$2VR of one of the Illumina control group samples} (a) uncorrected data. (b)LOESS GC corrected data.}
+	\caption[Example effect $\chi$\textsuperscript{2}VR on bin counts]{\textbf{Read counts bins chromosome 21 without $\chi$\textsuperscript{2}VR of one of the Illumina control group samples} \textbf{(a)} uncorrected data. \textbf{(b)}LOESS GC corrected data.}
 	\label{fig:NIPT_Supp1_Fig1_1}
 \end{figure}
 
@@ -488,11 +497,11 @@ This supplement contains a series of graphs to visualize the effect of the chi-s
 		\includegraphics[width=1\linewidth]{img/NIPT_Supp1_Fig1_2b}
 		\label{fig:NIPT_Supp1_Fig1_2b}
 	\end{subfigure} 
-	\caption[Example CV per bin with and without $\chi$2VR]{\textbf{Coefficient of variation bins chromosome 21 without $\chi$2VR of the Illumina control group samples} (a) uncorrected data. (b)LOESS GC corrected data.}
+	\caption[Example CV per bin with and without $\chi$\textsuperscript{2}VR]{\textbf{Coefficient of variation bins chromosome 21 without $\chi$\textsuperscript{2}VR of the Illumina control group samples} \textbf{(a)} uncorrected data. \textbf{(b)} LOESS GC corrected data.}
 	\label{fig:NIPT_Supp1_Fig1_2}
 \end{figure}
 
-The input of the $\chi$2VR are sample and control group, bin-counts of uncorrected data or data corrected using different variation reduction methods, such as GC correction (Figure \ref{fig:NIPT_Supp1_Fig1_1}). 
+\noindent The input of the $\chi$\textsuperscript{2}VR are sample and control group, bin-counts of uncorrected data or data corrected using different variation reduction methods, such as GC correction (Fig. \ref{fig:NIPT_Supp1_Fig1_1}). 
 The examples are based upon the 142 Illumina control samples. 
 In some images read counts of a single sample are shown. For these images a random sample was selected from the control group.
 
@@ -517,16 +526,16 @@ In some images read counts of a single sample are shown. For these images a rand
 		\includegraphics[width=1\linewidth]{img/NIPT_Supp1_Fig1_3d}
 		\label{fig:NIPT_Supp1_Fig1_3d}
 	\end{subfigure}  
-	\caption[Example Z-score normal distribution sum chi-squared value]{\textbf{Z-score sum chi-squared value after transformation to normal distribution for all bins chromosome 21 based upon the Illumina control group samples} (a) uncorrected data, total range. (b)LOESS GC corrected data, total range. (c) uncorrected data, plotted until a maximum Z-score of 10. (d) LOESS GC corrected data, pltoted until a maximum Z-score of 10.}
+	\caption[Example Z-score normal distribution sum chi-squared value]{\textbf{Z-score sum chi-squared value after transformation to normal distribution for all bins chromosome 21 based upon the Illumina control group samples} \textbf{(a)} uncorrected data, total range. \textbf{(b)} LOESS GC corrected data, total range. \textbf{(c)} uncorrected data, plotted until a maximum Z-score of 10. \textbf{(d)} LOESS GC corrected data, pltoted until a maximum Z-score of 10.}
 	\label{fig:NIPT_Supp1_Fig1_3}
 \end{figure}
 
-First the data is normalized by dividing the mean read count of the bin by the mean read count of all autosomal bins. 
+\noindent First the data is normalized by dividing the mean read count of the bin by the mean read count of all autosomal bins. 
 After this normalization sample read counts can be compared. 
 In some of the bins the normalized read count is consistent between samples, resulting in a low coefficient of variation (CV). 
-Other bins have a higher variability between samples, resulting in a higher CV (Figure \ref{fig:NIPT_Supp1_Fig1_2}).
+Other bins have a higher variability between samples, resulting in a higher CV (Fig. \ref{fig:NIPT_Supp1_Fig1_2}).
 A GC correction can correct part of the variation. However, even after GC correction some bins still show a high variation.
-After normalization for each bin the sum chi-squared value is calculated, using the control samples, and transformed to a standard normal distribution, resulting in a Z-score for each bin (Figure \ref{fig:NIPT_Supp1_Fig1_3}).
+After normalization for each bin the sum chi-squared value is calculated, using the control samples, and transformed to a standard normal distribution, resulting in a Z-score for each bin (Fig. \ref{fig:NIPT_Supp1_Fig1_3}).
 
 \begin{figure}[h]
 	\begin{subfigure}{.5\textwidth}
@@ -539,7 +548,7 @@ After normalization for each bin the sum chi-squared value is calculated, using 
 		\includegraphics[width=1\linewidth]{img/NIPT_Supp1_Fig1_4b}
 		\label{fig:NIPT_Supp1_Fig1_4b}
 	\end{subfigure} 
-	\caption[Example $\chi$2VR correction factor]{\textbf{$\chi$2VR correction factor bins chromosome 21 based upon Illumina control group} (a) uncorrected data. (b)LOESS GC corrected data.}
+	\caption[Example $\chi$\textsuperscript{2}VR correction factor]{\textbf{$\chi$\textsuperscript{2}VR correction factor bins chromosome 21 based upon Illumina control group} \textbf{(a)} uncorrected data. \textbf{(b)} LOESS GC corrected data.}
 	\label{fig:NIPT_Supp1_Fig1_4}
 \end{figure}
 
@@ -554,18 +563,18 @@ After normalization for each bin the sum chi-squared value is calculated, using 
 		\includegraphics[width=1\linewidth]{img/NIPT_Supp1_Fig1_5b}
 		\label{fig:NIPT_Supp1_Fig1_5b}
 	\end{subfigure} 
-	\caption[Example Weighted read counts after $\chi$2VR]{\textbf{Weighted read counts bins chromosome 21 for one of the Illumina control group samples} (a) uncorrected data. (b)LOESS GC corrected data.}
+	\caption[Example Weighted read counts after $\chi$\textsuperscript{2}VR]{\textbf{Weighted read counts bins chromosome 21 for one of the Illumina control group samples} \textbf{(a)} uncorrected data. \textbf{(b)} LOESS GC corrected data.}
 	\label{fig:NIPT_Supp1_Fig1_5}
 \end{figure}
 
-A threshold was set at a Z-score of 3.5. In the case all the variation was introduced by chance 99.9998\% of the bins show a Z-score below 3.5. 
+\noindent A threshold was set at a Z-score of 3.5. In the case all the variation was introduced by chance 99.9998\% of the bins show a Z-score below 3.5. 
 The variation in bins having a Z-score greater than 3.5 (overdispersed bins) is thus very unlikely to result from random variation and these bins
-have a higher variability than expected. The $\chi$2VR is based upon the assumption that there is still information present in the overdispersed bins. 
-Instead of ignoring those bins, those exceeding the threshold will be weighted by dividing them by a correction factor (Figure \ref{fig:NIPT_Supp1_Fig1_4}, Figure \ref{fig:NIPT_Supp1_Fig1_5}).
+have a higher variability than expected. The $\chi$\textsuperscript{2}VR is based upon the assumption that there is still information present in the overdispersed bins. 
+Instead of ignoring those bins, those exceeding the threshold will be weighted by dividing them by a correction factor (Fig. \ref{fig:NIPT_Supp1_Fig1_4}, Fig. \ref{fig:NIPT_Supp1_Fig1_5}).
 The correction factor consists of the sum chi-squared value divided by the degrees of freedom.
 
 Note that weighting read counts of overdispersed bins does not change the CV of those bins.
-Variability between samples is not affected at bin level. However, variability between chromosomal fractions is decreased after $\chi$2VR (Figure \ref{fig:NIPT_Supp1_Fig1_6}).
+Variability between samples is not affected at bin level. However, variability between chromosomal fractions is decreased after $\chi$\textsuperscript{2}VR (Fig. \ref{fig:NIPT_Supp1_Fig1_6}).
 The chromosomal fractions are defined as the number of (weighted) read counts on chromosome 21 divided by the (weighted) read count of all autosomes. 
 In figure \ref{fig:NIPT_Supp1_Fig1_6} the fractions of chromosome 21 are normalized by dividing the fraction of each sample by the mean fraction of its control group.
 
@@ -580,18 +589,20 @@ In figure \ref{fig:NIPT_Supp1_Fig1_6} the fractions of chromosome 21 are normali
 		\includegraphics[width=1\linewidth]{img/NIPT_Supp1_Fig1_6b}
 		\label{fig:NIPT_Supp1_Fig1_6b}
 	\end{subfigure} 
-	\caption[Relative fractions chromosome 21 before and after $\chi$2VR]{\textbf{Relative fractions chromosome 21 before and after $\chi$2VR of Illumina control group samples} (a) uncorrected data. (b)LOESS GC corrected data.}
+	\caption[Relative fractions chromosome 21 before and after $\chi$\textsuperscript{2}VR]{\textbf{Relative fractions chromosome 21 before and after $\chi$\textsuperscript{2}VR of Illumina control group samples} \textbf{(a)} uncorrected data. \textbf{(b)} LOESS GC corrected data.}
 	\label{fig:NIPT_Supp1_Fig1_6}
 \end{figure}
 
-\section{Supplement 3: Regression model for chromosome 13}\label{Supplement 3}
+\sectionmark{Regression model for chromosome 13}
+\section{Supplement 3: \\ Regression model for chromosome 13}\label{Supplement 3}
+\sectionmark{Regression model for chromosome 13}
 
 This supplement contains a series of graphs to visualize an example of a model upon which the RBZ is based. The input of the RBZ model are the chromosomal fractions of the control group samples. Chromosomal fractions of reads aligned to the forward strand and reads aligned to the reverse strand are considered as separate predictors, since there are consistent differences between those fractions (Supplement S2).  However, reads aligned to the forward or reverse strand are considered together for the chromosome of interest, because this yields the lowest CV. 
-Table \ref{table:regression_13} and \ref{fig:NIPT_Supp3_Fig3_1} show a regression model using four predictors to predict the expected chromosomal fraction of chromosome 13 based upon the 142 Illumina control samples, without any variation correction. 
+Table \ref{table:regression_13} and figure \ref{fig:NIPT_Supp3_Fig3_1} show a regression model using four predictors to predict the expected chromosomal fraction of chromosome 13 based upon the 142 Illumina control samples, without any variation correction. 
 
 \begin{table}[H] %the [H] is to force the footnotes on the same page as the table
 	\begin{minipage}{\textwidth}
-		\caption[Coefficients of regression model chromosome 13 Illumina]{\label{table:regression_13} Coefficients of regression model chromosome 13 Illumina}
+		\caption[Coefficients of regression model chromosome 13 Illumina]{\label{table:regression_13} \textbf{Coefficients of regression model chromosome 13 Illumina}}
 		\resizebox{\linewidth}{!}{\begin{tabulary}{\linewidth}{p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}}
 				\rule{0pt}{1ex} Coefficients & & & & & \\
 				\rule{0pt}{1ex} & Estimate & Std. Error & t & value & Pr (\textless  \textbar t\textbar) \\
@@ -609,13 +620,13 @@ Table \ref{table:regression_13} and \ref{fig:NIPT_Supp3_Fig3_1} show a regressio
 
 \begin{figure}[h]
 	\includegraphics[width=0.8\linewidth]{img/NIPT_Supp3_Fig3_1}
-	\caption[Example of regression model chromosome 13]{Regression model for prediction of expected read count for chromosome 13 based upon uncorrected Illumina control group samples}
+	\caption[Example of regression model chromosome 13]{\textbf{Regression model for prediction of expected read count for chromosome 13 based upon uncorrected Illumina control group samples}}
 	\label{fig:NIPT_Supp3_Fig3_1}
 \end{figure}
 
-The four predictors in the regression model are selected using stepwise regression with forward selection. 
+\noindent The four predictors in the regression model are selected using stepwise regression with forward selection. 
 Which predictors are selected depends on the control group. For the 142 Illumina control samples, the best predictors were reads aligned to the forward strands of chromosomes 1, 4, 6 and 16. 
-The reads aligned to chromosomes 4 and 6 showed a positive correlation with the number of reads on chromosome 13, while the reads aligned to chromosomes 1 and 16 showed a negative correlation (Figure \ref{fig:NIPT_Supp3_Fig3_2}).
+The reads aligned to chromosomes 4 and 6 showed a positive correlation with the number of reads on chromosome 13, while the reads aligned to chromosomes 1 and 16 showed a negative correlation (Fig.  \ref{fig:NIPT_Supp3_Fig3_2}).
 The read counts in the graphs are normalized by dividing them by the mean read count of the sample and multiplying them by the average mean read count of all control samples.
 
 \begin{figure}[h]
@@ -639,26 +650,26 @@ The read counts in the graphs are normalized by dividing them by the mean read c
 		\includegraphics[width=1\linewidth]{img/NIPT_Supp3_Fig3_2d}
 		\label{fig:NIPT_Supp3_Fig3_2d}
 	\end{subfigure}  
-	\caption[Correlation between normalized read counts of chromosomes]{\textbf{Correlation betweeen normalized read counts of predictor chromosomes and normalized read counts on chromosome 13 for 142 Illumina control samples} (a) Chromosome 1 (b) chromosome 4 (c) chromosome 6 and (d) chromosome 16.}
+	\caption[Correlation between normalized read counts of chromosomes]{\textbf{Correlation betweeen normalized read counts of predictor chromosomes and normalized read counts on chromosome 13 for 142 Illumina control samples} \textbf{(a)} Chromosome 1 \textbf{(b)} chromosome 4 \textbf{(c)} chromosome 6 and \textbf{(d)} chromosome 16.}
 	\label{fig:NIPT_Supp3_Fig3_2}
 \end{figure}
 
 
-The predicted chromosomal fraction is equal to the expected chromosomal fraction in a nontrisomy situation (ef). For each sample a ratio between predicted and observed chromosomal fraction is calculated, resulting in a ratio observed/predicted fraction (of/ef) (Figure \ref{fig:NIPT_Supp3_Fig3_3a}).
-Using these values a Z-score can be calculated for each sample (Figure \ref{fig:NIPT_Supp3_Fig3_3b}). The general structure of the formula is equal to the standard Z-score formula:
+\noindent The predicted chromosomal fraction is equal to the expected chromosomal fraction in a nontrisomy situation ($ef$). For each sample a ratio between predicted and observed chromosomal fraction is calculated, resulting in a ratio observed/predicted fraction ($of/ef$) (Fig. \ref{fig:NIPT_Supp3_Fig3_3}a).
+Using these values a Z-score can be calculated for each sample (Fig. \ref{fig:NIPT_Supp3_Fig3_3}b). The general structure of the formula is equal to the standard Z-score formula:
 
 \begin{equation*}
 \frac{x - \mu}{\sigma}
 \end{equation*}
 
-Because the mean of the control group after regression is one, the coefficient of variation of the control group has the same value as the SD. Using the same structure, the RBZ can be formulated as:
+\noindent Because the mean of the control group after regression is one, the coefficient of variation of the control group has the same value as the SD. Using the same structure, the RBZ can be formulated as:
 
 \begin{equation*}
 \frac{of_s / ef_s - 1}{\sqrt{\sum^n_{j=1}(of_j / ef_j - \overline{of/ef})^2 / n - 1}}
 \end{equation*}
 
-Where s is the sample of interest, j is an individual control sample and n is the total number of control samples. 
-The regression model for trisomy prediction for chromosome 13 in uncorrected Illumina data, described in table \ref{table:NIPT_Supp3_Fig3_1}, resulted in a mean fraction of 1.0000 and a CV of 0.0024 (0.24\%).
+\noindent Where $s$ is the sample of interest, $j$ is an individual control sample and $n$ is the total number of control samples. 
+The regression model for trisomy prediction for chromosome 13 in uncorrected Illumina data, described in table \ref{table:regression_13}, resulted in a mean fraction of 1.0000 and a CV of 0.0024 (0.24\%).
 
 \begin{figure}[h]
 	\begin{subfigure}{.5\textwidth}
@@ -671,7 +682,7 @@ The regression model for trisomy prediction for chromosome 13 in uncorrected Ill
 		\includegraphics[width=1\linewidth]{img/NIPT_Supp3_Fig3_3b}
 		\label{fig:NIPT_Supp3_Fig3_3b}
 	\end{subfigure} 
-	\caption[Ratios observed / predicted and Z-scores for chromosome 13]{\textbf{Ratios observed / predicted and Z-scores for chromosome 13 for 142 uncorrected Illumina control samples} (a) ratios observed / predicted (b)Z-scores.}
+	\caption[Ratios observed / predicted and Z-scores for chromosome 13]{\textbf{Ratios observed / predicted and Z-scores for chromosome 13 for 142 uncorrected Illumina control samples} \textbf{(a)} ratios observed / predicted \textbf{(b)} Z-scores.}
 	\label{fig:NIPT_Supp3_Fig3_3}
 \end{figure}
 
@@ -679,5 +690,6 @@ The number of predictors used in the RBZ can be as low as one or as high as all 
 However, we advise using a minimum of four predictor chromosomes, since an aberration in one of the other chromosomes (in mother or child) could influence the prediction. 
 The effect of such an aberration is larger when fewer predictors are used. 
 For the same reason we advise not using both the reads aligned to the forward strand and reads aligned to the reverse strand of the same chromosome in the same model.
+
 Different independent RBZ models can be created for each analysis. 
 We advise creating four different models, because reads originating from the same chromosome can be included in a maximum of two different models. Results affected by an aberration in one of the predictor chromosomes can be identified using the additional models.
