@@ -35,7 +35,7 @@
 \noindent The reader may be somewhat puzzled by this chapter because it is a philosophical essay rather than a biomedical scientific discussion as traditionally seen in PhD theses in our field. 
 In this essay, reasoning will question many assumptions that are taken for granted in biomedical scientific practice. 
 For example, the assumption that you can see material things through the microscope is false, because what in fact is seen are the reflections of such things \cite{Fraassen_2008}[p. 105]. 
-In this chapter I will investigate the foundation of the scientific knowledge produced regarding the DNA sequence and name what we do observe in NGS analysis. 
+In this chapter I will investigate the foundation of the scientific knowledge produced regarding the DNA sequence and name what we do observe in NGS analysis.
 The debate on the relation between representation and the real things represented has been ongoing at least since Plato’s allegory of the cave \cite{Plato_350BC}, and there are many different conceptions in current philosophical debate on scientific representation\cite{sep-scientific-representation}. 
 This chapter is not meant to give full insight into the different views present in current debate, but rather to reflect on the epistemological status of NGS-based DNA analysis. 
 In other words: what is the justification of our beliefs regarding the knowledge obtained through such analysis? Here, as a catalyst for my reflection, I use one of those conceptions, the ‘constructive empiricism’ theory as posed by Bas van Fraassen in his book \textsl{Scientific Representation} \cite{Fraassen_2008}. 
@@ -49,10 +49,10 @@ I invite the reader to follow me in this reflection on the foundations of the kn
 
 \section{Perspectives and measurements} \label{Perspectives}
 In \textsl{Scientific Representation}, van Fraassen investigates what representation is and what its role is in science. 
-He states that ‘[d]etection by means of instruments is to be distinguished from \textsl{observation}, in the sense in which I use that term: observation is perception, and perception is something possible for us, if at all, without instruments’[p. 93]. 
+He states that ‘[d]etection by means of instruments is to be distinguished from \textsl{observation}, in the sense in which I use that term: observation is perception, and perception is something possible for us, if at all, without instruments’[p.93]. 
 Instead, the material to observe and our perception are mediated by a measurement and a measurement outcome. 
 This measurement outcome shows not what the object is like “in itself” but what it “looks like” in that measurement setup. 
-The user of the measurement instrumentation must express the outcome in a judgment of the form “that is how it is \textsl{from here}”’[p. 92]. 
+The user of the measurement instrumentation must express the outcome in a judgment of the form “that is how it is \textsl{from here}”’[p.92]. 
 In genetics, the goal is to analyze genetic material such as DNA. 
 However, we have never seen DNA, except perhaps as a slimy white substance. 
 Instead we use various instruments, such as microscopes, gel electroforesis apparatus and sequencers, to create reflections of chromosomes, bands on a gel or fluorescent signals. 
@@ -65,19 +65,23 @@ These fastq files are often termed ‘raw data’, but are in fact the measureme
 At this point – during data analysis – new perspectives can be taken on the data stored in the fastq files, giving different measurement outcomes.
 Among these, as described in this thesis, are SNV and indels, Copy Number Variations (CNVs), aneuploidies and translocations. 
 
-An important issue to consider at this point is what Ludvig Wittgenstein called the logical space, meaning that each proposition has a truth-value corresponding to a certain state of affairs in the world and that there is a logical connection between the propositions. 
+An important issue to consider at this point is what Ludvig Wittgenstein called the \textsl{logical space}, meaning that each proposition has a truth-value corresponding to a certain state of affairs in the world and that there is a logical connection between the propositions. 
 Wittgenstein states that: \newline
 
 
 \hfill\begin{minipage}{\dimexpr\textwidth-1cm}
 It would, so to speak, appear as an accident, when to a thing that could exist alone on its own account, subsequently a state of affairs could be made to fit.
+
 If things can occur in atomic facts, this possibility must already lie in them.
+
 (A logical entity cannot be merely possible. Logic treats of every possibility, and all possibilities are its facts.)
+
 Just as we cannot think of spatial objects at all apart from space, or temporal objects apart from time, so we cannot think of \textsl{any} object apart from the possibility of its connexion with other things.
+
 If I can think of an object in the context of an atomic fact, I cannot think of it apart from the \textsl{possibility} of this context. \cite{Wittgenstein_1933}[2.0121]
 \end{minipage} \newline \newline
 
-\noindent Van Fraassen states that \textsl{‘[t]he act of measurement is an act – performed in accordance with certain operational rules – of locating an item in a logical space’} \cite{Fraassen_2008}[p. 165]. 
+\noindent Van Fraassen states that \textsl{‘[t]he act of measurement is an act – performed in accordance with certain operational rules – of locating an item in a logical space’} \cite{Fraassen_2008}[p.165]. 
 The logical space in DNA analysis not only consists of biological connections, such as the connection with protein sequences and RNA expression, but also within the measurement and analysis. 
 In both cases there is some degree of circularity based on assumptions of knowledge of the state of affairs of the human genome. 
 Probes and primers are designed based on sequences on or around the genomic region of interest. 
@@ -87,7 +91,7 @@ Therefore, the measurement outcome can only be interpreted in context of the exp
 At first sight this paragraph may seem to give a disturbing message. 
 If we are not analyzing DNA, but rather measurement outcomes, what is the epistemological status of the results of our genetic analyses? 
 In my opinion, for large parts of the genome, it is justified to believe that NGS analysis is able to give an accurate representation of the DNA sequence. 
-This I base on the fact that representations produced by NGS pass the \textsl{coherence constraint} [p. 152], meaning that there is an internal and external coherence between measurements. 
+This I base on the fact that representations produced by NGS pass the \textsl{coherence constraint} [p.152], meaning that there is an internal and external coherence between measurements. 
 NGS seems to pass this criterion. 
 Given sufficient quality, subsequent measurements and analyses using the same machine have a high concordance. 
 Importantly, there is also high concordance between NGS platforms, although all platforms have different strong and weak points \cite{Rieber_2013} and each type of sample preparation and sequencing platform is prone to certain types of bias \cite{Aird_2011,Ross_2013}. 
@@ -106,14 +110,16 @@ In trio analysis – father, mother and child – most variants found in the chi
 Van Fraassen describes empirical facts as: \newline
 
 \hfill\begin{minipage}{\dimexpr\textwidth-1cm}
-the very stability in the procedures found in [...] historical development, and the reliability of the predictions concerning these and their correlation with other measurement procedures derived from the mature theory in which they are now theoretically embedded. [p. 124]
+the very stability in the procedures found in [...] historical development, and the reliability of the predictions concerning these and their correlation with other measurement procedures derived from the mature theory in which they are now theoretically embedded. [p.124]
 \end{minipage} \newline \newline
 
 \noindent In my opinion DNA variation detection passes this definition, which would mean that DNA sequences, and variation therein, can be considered as empirical facts if we adhere to this constructive empiricist definition. 
 However, representation does not necessarily equal accurate representation \cite{Nguyen_2016}. 
 For instance, the GIAB consortium have labelled variants high confidence or low confidence. 
 This means that for some of the variants there is a higher chance of them not representing the DNA sequence accurately, for instance if analyses using different platforms or duplicate analyses on the same platform disagree on the nucleotide present on a specific location. 
-In most laboratories DNA analysis is done using a single run on a single platform, leading to fewer possibilities to distinguish high and low confidence calls based on the data itself. 
+In most laboratories DNA analysis is done using a single run on a single platform, leading to fewer possibilities to distinguish high and low confidence calls based on the data itself.
+
+
 
 \begin{table}[H] %the [H] is to force the footnotes on the same page as the table
 	\newcommand\setrow[1]{\gdef\rowmac{#1}#1\ignorespaces}
@@ -153,7 +159,7 @@ In most laboratories DNA analysis is done using a single run on a single platfor
 	\end{minipage}
 \end{table}
 
-Quality metrics (base quality, mapping quality, and genotype quality) only tell a part of the story, since only the quality from the sequencer onwards is taken into account. 
+\noindent Quality metrics (base quality, mapping quality, and genotype quality) only tell a part of the story, since only the quality from the sequencer onwards is taken into account. 
 This does not need to be a problem so long as the strengths and weaknesses of the technique and bioinformatics analysis used are understood. 
 
 \sectionmark{Assumptions and biases in NGS}
@@ -162,11 +168,11 @@ This does not need to be a problem so long as the strengths and weaknesses of th
 In this section I want to focus on the noise that stands between the final analysis outcome and the DNA sequence that we are trying to determine. 
 In total, we can distinguish four types of such noise: A. biological noise, B. laboratory-induced noise, C. sequencing noise and D. data analysis noise. 
 Each category can be further subdivided into concrete issues that have to be overcome to obtain a representation that can be considered as accurate as possible. 
-As an example of the noise present in sequencing procedures, I want to use an abstracted workflow for an Illumina Sequencing-By-Synthesis capturing-based WES experiment based on white blood cells (BOX 9.1). 
+As an example of the noise present in sequencing procedures, I want to use an abstracted workflow for an Illumina Sequencing-By-Synthesis capturing-based WES experiment based on white blood cells (BOX 1). 
 
 
 The exact issues differ per procedure used, but similar procedures will have comparable biases. The categories A-D are connected to the four noise types, although DNA isolation and sequencing can also be considered as laboratory techniques. 
-Each of the four blocks described have their own propositions for the ideal world, but various types of errors/bias can occur to obscure the accuracy of the representation (BOX 9.2). 
+Each of the four blocks described have their own propositions for the ideal world, but various types of errors/bias can occur to obscure the accuracy of the representation (BOX 2). 
 
 In the remainder of this section, the sources of noise in the four categories are described in more detail.
 
@@ -191,7 +197,7 @@ Moreover, in NIPT, maternal variants, most notably microdeletions and monosomy X
 			& & \\
 			\setrow{\bfseries}A. Biology & The complete DNA of & - Presence of other   \\
 			& interestis isolated as high- & DNA (transplantation  \\
-			& molecular DNA,without any  & donor or maternal)\\
+			& molecular DNA, without any  & donor or maternal)\\
 			& contaminants present, and  & - Degraded DNA  \\
 			& is representative of the  & - Presence of storage- \\
 			& tested person’s DNA & induced mutations \\
@@ -239,7 +245,7 @@ In WGS, no capturing is needed, leaving one fewer source for bias, and this is a
 In general, a higher library complexity will result in less bias \cite{Head_2014}. 
 Yet duplicate reads can also be used to our advantage. 
 One often-used strategy  is to use Unique Molecule Identifiers, or UMIs. 
-These can be used to identify duplicate reads, thus reducing the number of duplicate reads while also increasing the quality of base-calls within the read, solving some of the C/D1 issues \cite{Smith_2017a}. 
+These can be used to identify duplicate reads, thus reducing the number of duplicate reads while also increasing the quality of base-calls within the read, solving some of the \textbf{C/D1} issues \cite{Smith_2017a}. 
 With UMIs, the higher the number of duplicate reads, the higher the base quality. 
 This is especially important when you are interested in somatic variants that are only present in a small percentage of sequenced DNA (or RNA) fragments. 
 However, even when collapsing all duplicate reads into one, or removing all but one of these sequences, coverage bias is present from sample to sample, hampering comparison between samples.
@@ -276,7 +282,7 @@ It has been estimated that approximately half to two thirds of the human genome 
 For instance, if sequenced fragments are around 250 bp long, a non-unique sequence over 500 bp length will have an ‘unmappable’ region in the middle. 
 Thus, many reads can map onto different locations of the reference genome, either in non-coding sequences, homologous genes, pseudogenes, or within the same gene \cite{Mandelker_2016}. 
 Some of those locations are located within coding sequences of genes that have a clear association with hereditary disease. 
-Notably, four of the genes mentioned, \textsl{MYH6}, \textsl{MYH7}, \textsl{TTN} and \textsl{PMS2}, are included in our gene panels related cardiomyopathy/pulmonary arterial hypertension and familial cancer gene panels as discussed in chapters 1 to 3. %%NOOT STAAT DIT INDERDAAD IN DE INTRODUCTIE?
+Notably, four of the genes mentioned, \textsl{MYH6}, \textsl{MYH7}, \textsl{TTN} and \textsl{PMS2}, are included in our gene panels related cardiomyopathy/pulmonary arterial hypertension and familial cancer gene panels as discussed in chapters 2 to 4.
 When the perspective is changed by using longer reads, a larger part of the genome will be covered uniquely, as will be discussed in chapter 11. 
 
 \textbf{D4.} The bias introduced during the previous steps results in a second issue. 
@@ -328,7 +334,7 @@ But is it wise to force all DNA variants into a framework that labels every sing
 In contrast, and still in line with the interpretation of DNA as the SAD, are genetic risk scores \cite{Jostins_2011,Yoo_2015}. 
 These predict the risk of developing a certain phenotype based not on a single DNA variant, but on a group of variants, and help with strategies to predict the development of complex disease. 
 Many variants considered to be pathogenic are not fully penetrant and, as is already incorporated in the term ‘risk score’, not all people carrying specific variants will develop a given phenotype. 
-Griffitz and Stotz [2013] argue that environment plays a more important role in the development of a phenotype than the SAD framework allows \cite{Griffitz_2013}[p81/p199]. 
+Griffitz and Stotz argue that environment plays a more important role in the development of a phenotype than the SAD framework allows \cite{Griffitz_2013}[p81/p199]. 
 Other genes and (regulatory) variants and environmental factors can be an explanation for the variations in penetrance level of pathogenic variants. 
 These so-called ‘potential difference makers’ discussed by Waters and Griffitz \& Stotz may explain why one person does develop a disease, while another with the same DNA variant does not. 
 Illuminating these factors is important if we want to know what carrying a specific DNA variant will mean for a specific person, and will form a further step towards personalized medicine. 
@@ -343,18 +349,22 @@ One of the big  challenges for clinical genetics is not only to detect genetic v
 
 \section{Conclusion} \label{Conclusion}
 In this section I have identified four different discussions related to the question ‘What can I know?’
-1.	What can I know about the origin of DNA variations? (e.g. placental or fetal)
-2.	What can I know about the DNA sequence based on NGS measurements?
-3.	What can I know about the predictive value of a statistical test for a particular variant to be present in a particular individual?
-4.	What can I know about the relation between genotype and phenotype?
 
-By no means do I claim I have provided the full scope of answers to these questions, if this was even possible. 
-However, if this discussion has planted a few seeds in the heads of the readers regarding the assumptions that are made during analysis of DNA measurement data and what we are actually analyzing, the purpose of this part of the discussion is met. 
+\noindent 1.	What can I know about the origin of DNA variations? (e.g. placental or fetal) \\
+
+\noindent 2.	What can I know about the DNA sequence based on NGS measurements? \\
+
+\noindent 3.	What can I know about the predictive value of a statistical test for a particular variant to be present in a particular individual? \\
+
+\noindent 4.	What can I know about the relation between genotype and phenotype? \\
+
+\noindent By no means do I claim I have provided the full scope of answers to these questions, if this was even possible. 
+However, if this reflection has planted a few seeds in the heads of the readers regarding the assumptions that are made during analysis of DNA measurement data and what we are actually analyzing, the purpose of this reflection is met. 
 Moreover, not knowing everything does not need to be problematic. 
 As long as you acknowledge that a measurement is performed from a specific perspective (i.e. the methods and techniques used) and is affected by several types of noise, the representation of the DNA or chromosomes of the tested person can be as accurate as possible. 
 Despite that, knowing the assumptions and biases of used methods and techniques is no guarantee for reaching the correct interpretation of the measurement data regarding what it represents. 
 The chance of obtaining an accurate representation is higher when measurements and analyses are performed from different perspectives. 
-Therefore, this discussion can be used as a philosophical basis for performing confirmatory tests for detected variants, using a different method. 
+Therefore, this reflection can be used as a philosophical basis for performing confirmatory tests for detected variants, using a different method. 
 
 This being said, we can continue our struggle to understand the nature of the data we produce, the perspective that was used and the bias that was produced, all of which creates the noise between the unobservable DNA and the observable measurement outcomes. 
 The ultimate goal is to get as close as possible to an accurate representation, closer to the ideal world, in which noise is cancelled out or corrected for and empirical adequacy aligns perfectly with reality. 
