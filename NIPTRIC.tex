@@ -37,7 +37,7 @@
 \newpage
 
 \noindent
-B. Sikkema-Raddatz\textsuperscript{1}, L.F. Johansson\textsuperscript{1,2,*}, E.N. de Boer\textsuperscript{1,*}, Elles M.J. Boon\textsuperscript{3}, R.F. Suijkerbuijk\textsuperscript{1}, K. Bouman\textsuperscript{1}, C.M. Bilardo\textsuperscript{4}, M.A. Swertz\textsuperscript{2}, M. Dijkstra\textsuperscript{2}, I.M. van Langen\textsuperscript{1}, R.J. Sinke\textsuperscript{1}, G.J. te Meerman\textsuperscript{1} \\
+B. Sikkema-Raddatz\textsuperscript{1}, L.F. Johansson\textsuperscript{1,2}, E.N. de Boer\textsuperscript{1}, E.M.J. Boon\textsuperscript{3}, R.F. Suijkerbuijk\textsuperscript{1}, K. Bouman\textsuperscript{1}, C.M. Bilardo\textsuperscript{4}, M.A. Swertz\textsuperscript{2}, M. Dijkstra\textsuperscript{2}, I.M. van Langen\textsuperscript{1}, R.J. Sinke\textsuperscript{1}, G.J. te Meerman\textsuperscript{1} \\
 
 \noindent
 1. University of Groningen, University Medical Center Groningen, Department of Genetics, Groningen, The Netherlands\\
@@ -46,33 +46,33 @@ B. Sikkema-Raddatz\textsuperscript{1}, L.F. Johansson\textsuperscript{1,2,*}, E.
 4. University of Groningen, University Medical Center Groningen, Department of Obstetrics and Gynaecology, Groningen, The Netherlands\\
 
 \noindent
-Received 2016 May 17; Accepted 2016 Nov 9; Published online 2017 Dec 5.
+Received 2016 May 17; Accepted 2016 Nov 9; Published online 2016 Dec 5.
 \\~\\
 
 
 
 \section*{Abstract}\label{abstract}
-To properly interpret the result of a pregnant woman’s non-invasive prenatal test (NIPT), her a priori risk must be taken into account in order to obtain her personalised a posteriori risk (PPR), which more accurately expresses her true likelihood of carrying a foetus with trisomy. 
+To properly interpret the result of a pregnant woman’s non-invasive prenatal test (NIPT), her \textsl{a priori} risk must be taken into account in order to obtain her personalised \textsl{a posteriori} risk (PPR), which more accurately expresses her true likelihood of carrying a foetus with trisomy. 
 Our aim was to develop a tool for laboratories and clinicians to calculate easily the PPR for genome-wide NIPT results, using diploid samples as a control group. 
-The tool takes the a priori risk and Z-score into account. 
+The tool takes the \textsl{a priori} risk and Z-score into account. 
 Foetal DNA percentage and coefficient of variation can be given default settings, but actual values should be used if known. 
 We tested the tool on 209 samples from pregnant women undergoing NIPT. 
-For Z-scores \textless 5, the PPR is considerably higher at a high a priori risk than at a low a priori risk, for NIPT results with the same Z-score, foetal DNA percentage and coefficient of variation. However, the PPR is effectively independent under all conditions for Z-scores above 6. 
-A high PPR for low a priori risks can only be reached at Z-scores \textgreater 5. 
+For Z-scores \textless 5, the PPR is considerably higher at a high \textsl{a priori} risk than at a low \textsl{a priori} risk, for NIPT results with the same Z-score, foetal DNA percentage and coefficient of variation. However, the PPR is effectively independent under all conditions for Z-scores above 6. 
+A high PPR for low \textsl{a priori} risks can only be reached at Z-scores \textgreater 5. 
 Our online tool can assist clinicians in understanding NIPT results and conveying their true clinical implication to pregnant women, because the PPR is crucial for individual counselling and decision-making.
 
 \section{Introduction}\label{introduction}
 Non-invasive prenatal testing (NIPT) for foetal aneuploidies, by analysing cell-free DNA in maternal blood, has been offered to pregnant women increasingly since 2011 [reviews refs \cite{Benn_2013,Norwitz_2013,Gil_2013}]. 
 Large clinical studies including about 150,000 pregnancies have reported a sensitivity and specificity for NIPT of more than 99\% for foetal trisomy 13 or 21, and of 98\% for trisomy 18 [refs \cite{Zhang_2015} and \cite{Norton_2015}, reviews refs \cite{Benn_2013} and \cite{Norwitz_2013}]. 
-This performance of NIPT in the general population of pregnant women \cite{Gil_2013,Zhang_2015,Norton_2015,Dan_2012,Nicolaides_2012,Fairbrother_2013,Lau_2014,Bianchi_2014} appears to be similar for both low-risk and high-risk pregnancies \cite{Zhang_2015,Norton_2015,Bianchi_2014,Dar_2014}1.
+This performance of NIPT in the general population of pregnant women \cite{Gil_2013,Zhang_2015,Norton_2015,Dan_2012,Nicolaides_2012,Fairbrother_2013,Lau_2014,Bianchi_2014} appears to be similar for both low-risk and high-risk pregnancies \cite{Zhang_2015,Norton_2015,Bianchi_2014,Dar_2014}.
 
 NIPT can identify pregnancies at risk for a trisomy and is therefore a screening tool, not a diagnostic test. 
 For an individual woman, a positive NIPT result with a sensitivity and specificity of more than 99\% does not mean that she actually has more than a 99\% chance of carrying a foetus with a trisomy. 
-Her true likelihood depends not only on her NIPT result, but also on the prevalence of the anomaly in the population she belongs to \cite{Morain_2013}, which is expressed as an a priori risk. 
-Thus, her individual a priori risk for a specific foetal trisomy is based on her age, the gestational age at which NIPT is performed, and the results of other screening tests such as the first trimester combined test (FCT). 
+Her true likelihood depends not only on her NIPT result, but also on the prevalence of the anomaly in the population she belongs to \cite{Morain_2013}, which is expressed as an \textsl{a priori} risk. 
+Thus, her individual \textsl{a priori} risk for a specific foetal trisomy is based on her age, the gestational age at which NIPT is performed, and the results of other screening tests such as the first trimester combined test (FCT). 
 The result of a NIPT for an individual woman in most of the genome-wide methods is calculated as a Z-score, where the individual sample is compared with a control group of normal (diploid) samples. 
 However, presenting NIPT results to clinicians and pregnant women as “normal or abnormal” or as a Z-score makes it difficult for clinicians to interpret and use the result to correctly inform a pregnant woman of her true likelihood of carrying a foetus with a trisomy. 
-In order to properly counsel women about a positive result from a cell-free foetal DNA screening, it can be useful to express the result as a personalised a posteriori risk (PPR), which takes the woman’s a priori risk into account.
+In order to properly counsel women about a positive result from a cell-free foetal DNA screening, it can be useful to express the result as a personalised \textsl{a posteriori} risk (PPR), which takes the woman’s \textsl{a priori} risk into account.
 
 Although not all cell-free foetal DNA screening providers calculate a Z-score or need a priori risks, it is important for women to know their true chance of carrying a Down syndrome foetus after a positive test. 
 This chance might be far lower than that concluded from the Z-score percentile (e.g. 99\%) that might otherwise be a reason for them to undergo a confirmatory amniocentesis. 
@@ -82,14 +82,14 @@ Thus, in clinical counselling and decision-making following a (positive) NIPT re
 NIPT is currently dominated by commercial testing providers. 
 However, only a few of them provide the PPR with the NIPT result, nor is the calculation of the PPR published or straightforward for the clinician to understand \cite{Benn_2016}.
 
-We have therefore developed a web-based tool to calculate the PPR according to the a priori risk (for trisomy 13, 18, 21) of the mother in combination with the outcome of her NIPT test, expressed as a Z-score. 
+We have therefore developed a web-based tool to calculate the PPR according to the \textsl{a priori} risk (for trisomy 13, 18, 21) of the mother in combination with the outcome of her NIPT test, expressed as a Z-score. 
 Our tool can easily be used by cell-free foetal DNA screening providers and healthcare professionals.
 
 \section{Results}\label{results}
 Our tool is freely available online (www.niptric.eu). 
-To test the tool’s validity we calculated a PPR for a range of extreme values: for a specific a priori risk, given the observed Z-score but unknown percentage of foetal DNA and coefficient of variation (see also Supplementary Table 1).
-The PPR based on the observed Z-score and the known percentage of foetal DNA, at an assumed coefficient of variation of 0.5 and an a priori risk of 1:1000, 1:100, and 1:10 are given in Supplementary Tables 2, 3, and 4. 
-However, in the online tool, the PPR can be calculated for every combination of the four parameters (a priori risk, observed Z-score, percentage of foetal DNA and coefficient of variation).
+To test the tool’s validity we calculated a PPR for a range of extreme values: for a specific \textsl{a priori} risk, given the observed Z-score but unknown percentage of foetal DNA and coefficient of variation (see also Supplementary Table 1).
+The PPR based on the observed Z-score and the known percentage of foetal DNA, at an assumed coefficient of variation of 0.5 and an \textsl{a priori} risk of 1:1000, 1:100, and 1:10 are given in Supplementary Tables 2, 3, and 4. 
+However, in the online tool, the PPR can be calculated for every combination of the four parameters (\textsl{a priori} risk, observed Z-score, percentage of foetal DNA and coefficient of variation).
 
 The use of the PPR calculator and its interpretation is illustrated here by three examples. 
 We show how the PPR is calculated from the woman’s NIPT result to yield the likelihood of her carrying a foetus with Down syndrome: if she is at low risk (a priori risk of 1:1000), at high risk (a priori risk of 1:100), or at very high risk (a priori risk of 1:10). 
@@ -97,7 +97,7 @@ Here, the more general trends are shown for the impact of the four parameters.
 
 Figure \ref{fig:NIPTRIC_Fig1} shows the impact of variable a priori risk values and observed Z-scores on the PPR. 
 The PPR increases when the Z-score increases and the woman has a higher a priori risk. Thus, the increase of PPR at a Z-score between 3 and 4 is more striking in high-risk pregnancies than in low-risk pregnancies. 
-For a Z-score of 6 or higher, the PPR is approximately 100\%, and is therefore effectively independent of the a priori risk (see Supplementary Table 1) for a given coefficient of variation and foetal DNA percentage value.
+For a Z-score of 6 or higher, the PPR is approximately 100\%, and is therefore effectively independent of the \textsl{a priori} risk (see Supplementary Table 1) for a given coefficient of variation and foetal DNA percentage value.
 
 \begin{figure}
 	\includegraphics[width=1.0\linewidth]{img/NIPTRIC_Fig1}
@@ -105,12 +105,12 @@ For a Z-score of 6 or higher, the PPR is approximately 100\%, and is therefore e
 	\label{fig:NIPTRIC_Fig1}
 \end{figure}
 
-Figure \ref{fig:NIPTRICFig2} illustrates the impact of different percentages of foetal DNA on the PPR for different a priori risks and according to the Z-scores. At a Z-score of 3, the percentage of false-positive results is much higher for a woman who is at low a priori risk (1:1000) than for one at higher risk (1:100 or 1:10). Figure \ref{fig:NIPTRICFig2} also shows that, with the given foetal DNA percentages, the chance of carrying a foetus with Down syndrome is \textgreater99\% for both low-risk (1:1000) and high-risk (1:100 and 1:10) women if the Z-score is above 6 (see also Supplementary Tables 2, 3, and 4).
+Figure \ref{fig:NIPTRIC_Fig2} illustrates the impact of different percentages of foetal DNA on the PPR for different \textsl{a priori} risks and according to the Z-scores. At a Z-score of 3, the percentage of false-positive results is much higher for a woman who is at low \textsl{a priori} risk (1:1000) than for one at higher risk (1:100 or 1:10). Figure \ref{fig:NIPTRIC_Fig2} also shows that, with the given foetal DNA percentages, the chance of carrying a foetus with Down syndrome is \textgreater99\% for both low-risk (1:1000) and high-risk (1:100 and 1:10) women if the Z-score is above 6 (see also Supplementary Tables 2, 3, and 4).
 
 \begin{figure}[!htb]
 	\sidebysidecaption{0.555\linewidth}{0.42\linewidth}{\includegraphics[width=1.0 \linewidth]{img/NIPTRIC_Fig2}}
 	{\caption[PPR at different risks]{\textbf{Estimation of the PPR given an observed Z-score and percentage of foetal DNA at a coefficient of variation of 0.5\%.} \textbf{(a)} \textsl{a priori} risk of 0.1 (1:10); \textbf{(b)} \textsl{a priori} risk of 0.01(1:100); and \textbf{(c)} a priori risk of 0.01(1:1000). x-axis: Z-score range 1–7. y-axis: Personalised \textsl{a posteriori} risk (\%). After a positive NIPT result at a Z-score of 3 and at 4\% foetal DNA, the low-risk woman has a 5\% chance of carrying a foetus with Down syndrome and thus a 95\% chance of the result being false-positive. In contrast, the higher-risk women have a 36\% (1:100) and an 86\% (1:10) chance of carrying a foetus with Down syndrome. Thus, the chance of a false-positive result at a risk of 1:100 and 1:10 is 64\% and 14\%, respectively.}
-	\label{fig:NIPTRICFig2}}
+	\label{fig:NIPTRIC_Fig2}}
 \end{figure}
 
 
@@ -122,7 +122,7 @@ In the fourth sample, the parents refused invasive follow-up because of a PPR of
 No abnormalities were seen on ultrasound at 16 weeks’ gestation and a healthy child was born.
 
 \begin{sidewaystable}
-	\begin{tabular}{ p{1cm} p{3cm} p{2cm} p{2cm} p{2cm} p{2cm} }
+	\begin{tabular}{ p{1cm} p{3cm} p{1.9cm} p{1.9cm} p{1.5cm} p{2cm} }
 		\footnotesize{Sample} & \footnotesize{First trimester combined test risk for Trisomy 21} & \footnotesize{Coefficient of variation \#21} & \footnotesize{Z-score \#21} & \footnotesize{Posterior Risk (\%)} & \footnotesize{Confirmation by karyotyping in amniotic fluid} \\
 		\hline
 		1 & 1/4          & 0.40      & 13.7     & 99.9 & 47\#,+21 \\
@@ -141,42 +141,42 @@ No abnormalities were seen on ultrasound at 16 weeks’ gestation and a healthy 
 		14* & \#13 1:5000 & \#13 0.18 & \#13 4.4 & 4.0  & \footnotesize{No confirmation done, healthy baby born}\\
 		\hline
 	\end{tabular}
-	\caption[NIPTRIC Post-test probability summary table]{\label{table:summary} Summary of all samples with a Z-score \textgreater 3 for chromosomes 12, 18 or 21 in 209 samples on which NIPT was performed. \\
-	*A Z-score of 4.4 for chromosome 13 was detected, while the a priori risk for trisomy 21 was 1/121; no elevated risk was found for trisomy 13 after the first trimester combined test.}
+	\caption[NIPTRIC Post-test probability summary table]{\label{table:summary} \textbf{Summary of all samples with a Z-score \textgreater 3 for chromosomes 12, 18 or 21 in 209 samples on which NIPT was performed.} \\
+	*A Z-score of 4.4 for chromosome 13 was detected, while the \textsl{a priori} risk for trisomy 21 was 1/121; no elevated risk was found for trisomy 13 after the first trimester combined test.}
 \end{sidewaystable}
 
 \section{Discussion}\label{discussion}
 We present an easy-to-use online tool to assist cell-free foetal DNA screening providers and healthcare professionals in calculating a woman’s PPR after a positive NIPT result. 
 Our tool takes into account both test and patient characteristics. 
-The online program can be used to estimate the PPR of any NIPT result according to a woman’s personal a priori risk and Z-score.
+The online program can be used to estimate the PPR of any NIPT result according to a woman’s personal \textsl{a priori} risk and Z-score.
 
-Some screening services offering NIPT use dedicated proprietary algorithms to calculate an individual risk figure \cite{Samango_Sprouse_2013} or to discriminate between pregnancies with a low (\textless\:1\%) or high risk (\textgreater\:1\%) for a trisomy \cite{Sparks_2012a}; they take into account the combination of the Z- or likelihood score, a priori risk, and the percentage of foetal DNA in the NIPT test. 
+Some screening services offering NIPT use dedicated proprietary algorithms to calculate an individual risk figure \cite{Samango_Sprouse_2013} or to discriminate between pregnancies with a low (\textless\:1\%) or high risk (\textgreater\:1\%) for a trisomy \cite{Sparks_2012a}; they take into account the combination of the Z- or likelihood score, \textsl{a priori} risk, and the percentage of foetal DNA in the NIPT test. 
 However, most of these algorithms are not freely available and other services do not provide this essential information. 
-Existing PPR calculators give only general information, such as sensitivity, specificity, positive predictive value, and a priori risk \cite{Grace_2015,perinatalquality_org}. 
+Existing PPR calculators give only general information, such as sensitivity, specificity, positive predictive value, and \textsl{a priori} risk \cite{Grace_2015,perinatalquality_org}. 
 These numbers do not relate to the individual situation of a pregnant woman.
 
-To satisfy the need for a woman’s personalised a posteriori risk figure, our PPR calculator can be applied to the results of genome-wide NIPT methods using diploid control samples. 
+To satisfy the need for a woman’s personalised \textsl{a posteriori} risk figure, our PPR calculator can be applied to the results of genome-wide NIPT methods using diploid control samples. 
 Different NIPT methods have been developed based on whole genome sequencing \cite{Fan_2008,Chiu_2008} or on selected chromosome targeted-sequencing \cite{Zimmermann_2012,Sparks_2012b}. 
 Most of these methods compare the individual sample with a population of normal (diploid) control samples, with the outcome usually presented as a Z-score. This can be based either on the difference of a number of single nucleotide polymorphisms \cite{Zimmermann_2012}, or on a fraction of reads from whole genome sequencing \cite{Fan_2008,Chiu_2008} or from targeted-sequencing \cite{Sparks_2012b}. 
-Using this Z-score, the PPR can then be calculated in combination with the a priori risk in our calculator. If providers do not calculate an a posteriori risk they can easily add the PPR calculation using our tool as part of their service. 
-Those healthcare professionals who only receive a Z-score as the outcome from a NIPT test can then use our tool together with the individual woman’s a priori risk to gain a more accurate a posteriori risk for counselling the individual woman or parents.
+Using this Z-score, the PPR can then be calculated in combination with the \textsl{a priori} risk in our calculator. If providers do not calculate an \textsl{a posteriori} risk they can easily add the PPR calculation using our tool as part of their service. 
+Those healthcare professionals who only receive a Z-score as the outcome from a NIPT test can then use our tool together with the individual woman’s \textsl{a priori} risk to gain a more accurate \textsl{a posteriori} risk for counselling the individual woman or parents.
 
-The outcome is still, of course, a risk estimation, not an exact number. Moreover, our PPR calculator may be applied to detect any aneuploidy provided that the a priori risk for the particular aneuploidy is known for the gestation period in which the NIPT is performed. 
+The outcome is still, of course, a risk estimation, not an exact number. Moreover, our PPR calculator may be applied to detect any aneuploidy provided that the \textsl{a priori} risk for the particular aneuploidy is known for the gestation period in which the NIPT is performed. 
 However, a negative NIPT result may be falsely reassuring for women at high risk who also have nuchal translucency or ultrasound findings that cause concern if only chromosomes 13, 18 and 21 have been tested \cite{Smith_2014}.
 
 For each woman, the PPR of a diagnostic or screening test depends on the prevalence of the disease in her population \cite{Lalkhen_2008}. 
 Accordingly, we have shown that, after a positive NIPT result, the PPR is also influenced by the individual’s risk profile. 
-For Z-scores \textless 5, the PPR is considerably higher at a high a priori risk than at a low risk for a NIPT result with the same Z-score, coefficient of variation and foetal DNA percentage, while the PPR becomes effectively independent of these parameters for Z-scores \textgreater 6. 
+For Z-scores \textless 5, the PPR is considerably higher at a high \textsl{a priori} risk than at a low risk for a NIPT result with the same Z-score, coefficient of variation and foetal DNA percentage, while the PPR becomes effectively independent of these parameters for Z-scores \textgreater 6. 
 A high PPR for a low a priori risk can only be reached at Z-scores \textgreater 5. 
 In line with our calculations, Bianchi et al. \cite{Bianchi_2014} demonstrated that even at a high sensitivity and specificity for NIPT, the positive predictive values for trisomy 21 and trisomy 18 in low- or average risk pregnancies were only 45\% and 40\%, respectively, which means that the PPR for an individual woman is, on average, also equal to this percentage. 
 This was confirmed in a routine screening of a prenatal population (N = 15,841) with a positive predictive value of 80\% \cite{Norton_2015}, while Wang et al. \cite{Wang_2014b} estimated values for the less common trisomy 18 and trisomy 13 at 64\% and 44\%, respectively, compared to 94\% for trisomy 21. 
 As Borrell and Stergiotou (2015) stated, some referring physicians may think that NIPT is a diagnostic test and they may not realise they also need take into account that the positive predictive value may vary strongly for individual women \cite{Borrell_2015}. 
-Some authors \cite{Morain_2013,Sparks_2012a} suggest that, at minimum, the a priori risk should be incorporated in assessing a NIPT result. 
+Some authors \cite{Morain_2013,Sparks_2012a} suggest that, at minimum, the \textsl{a priori} risk should be incorporated in assessing a NIPT result. 
 Our calculations strongly support this suggestion.
 
 Our PPR calculator can even be used when the coefficient of variation and the percentage of cell-free foetal DNA in the maternal plasma are unknown or not given. 
 We included this option in our tool because some laboratories do not provide a foetal DNA percentage due to the difficulties in measuring samples in a pregnancy with a female foetus. 
-At minimum, a Z-score and the a priori risk are needed as input for our tool, whereas default settings for the percentage of DNA and coefficient of variation can be used. 
+At minimum, a Z-score and the \textsl{a priori} risk are needed as input for our tool, whereas default settings for the percentage of DNA and coefficient of variation can be used. 
 However, several studies have shown that low percentages of foetal DNA in maternal plasma are related to test failures and false-negative results \cite{Canick_2012,Bianchi_2013}. 
 Thus, a lower limit of 4\% foetal DNA was proposed as the cut-off for a reliable result \cite{Fairbrother_2013,Norton_2012}. 
 Our online tool gives extra weight to the extreme values of the DNA foetal percentage in the population compared to a normal distribution to yield a higher PPR prediction in the presence of low percentages of foetal DNA. 
@@ -186,7 +186,7 @@ Use of the actual percentage of foetal DNA and coefficient of variation further 
 Even when the percentage of foetal DNA is measured, a small range for the upper and lower limit is advisable because the measurement is not always precise. Without an estimation of the percentage of foetal DNA, we advise using 1\% as the lower limit and 23\% as the upper, which our tool has as default settings.
 
 Computations using our PPR calculator with relatively low percentages of foetal DNA in maternal blood have shown two trends. 
-First, a low percentage reduces the PPR far more in low-risk pregnancies than in high-risk ones, which could lead to more false-positive results. Second, in high-risk pregnancies, negative results are more likely to be false for Z-scores between 2 and 3 in combination with low percentages (\textless7\%) (e.g. PPR of 45\% at Z = 2.5, coefficient of variation 0.5, a priori risk 1:10, foetal percentage 4\%). 
+First, a low percentage reduces the PPR far more in low-risk pregnancies than in high-risk ones, which could lead to more false-positive results. Second, in high-risk pregnancies, negative results are more likely to be false for Z-scores between 2 and 3 in combination with low percentages (\textless7\%) (e.g. PPR of 45\% at Z = 2.5, coefficient of variation 0.5, \textsl{a priori} risk 1:10, foetal percentage 4\%). 
 This is partly in line with Bianchi et al.\cite{Bianchi_2012}, who considered a Z-score between 2.5 and 4 as a borderline value.
 
 Thus, false-negative results might be obtained if the actual percentage of foetal DNA is low and the coefficient of variation is higher than our default settings due to a lower sensitivity of the NIPT test. 
@@ -205,12 +205,12 @@ Our online software tool, figures and tables will help professionals and patient
 \section{Material and Methods}
 \subsection{The PPR calculator}
 The PPR for a foetal trisomy (13, 18, or 21) for an individual pregnancy is estimated using four input parameters. 
-By combining the a priori risk (calculated based on the mother’s age and gestation, or based on other screening tests) with the individual NIPT result (computed as a Z-score), the percentage of foetal DNA and the coefficient of variation of the control group, our tool can be used to calculate a meaningful personalised posterior risk (PPR) to aid interpretation of an individual NIPT result.
+By combining the \textsl{a priori} risk (calculated based on the mother’s age and gestation, or based on other screening tests) with the individual NIPT result (computed as a Z-score), the percentage of foetal DNA and the coefficient of variation of the control group, our tool can be used to calculate a meaningful personalised posterior risk (PPR) to aid interpretation of an individual NIPT result.
 
 \subsection{A priori risk}
 There are generally accepted risk tables for the population-based prevalence of trisomy 21 \cite{Snijders_1999}, trisomy 18, and trisomy 13 \cite{Snijders_1995}. 
-These tables are used in the PPR calculator, if necessary, using bivariate linear interpolation, to calculate the a priori risk from the maternal age in combination with the gestational age at which the NIPT was performed. 
-If the risk has been determined based on a first trimester combined test (FCT) or a previous child with a trisomy, this risk should be used because it reflects the individual a priori risk more precisely.
+These tables are used in the PPR calculator, if necessary, using bivariate linear interpolation, to calculate the \textsl{a priori} risk from the maternal age in combination with the gestational age at which the NIPT was performed. 
+If the risk has been determined based on a first trimester combined test (FCT) or a previous child with a trisomy, this risk should be used because it reflects the individual \textsl{a priori} risk more precisely.
 
 \subsection{Z-score}
 The result of a NIPT for an individual woman is expressed as a Z-score, where the individual sample is compared with a control group of normal (diploid) samples. 
@@ -279,12 +279,12 @@ The post-test probability or personalised a posteriori risk (PPR) is calculated 
 \begin{equation*}
 	\frac{\int^{Upp Zexp}_{Low Zexp}\frac{e^\frac{-(Zexp - Zobs)^2}{2}}{Upp Zexp - Low Zexp}dZexp \times Papr}{(\int^{Upp Zexp}_{Low Zexp}\frac{e^\frac{-(Zexp - Zobs)^2}{2}}{Upp Zexp - Low Zexp}dZexp \times Papr) + (1 - Papr) \times e^{\frac{-(Zobs)^2}{2}}}
 \end{equation*}
-\vspace{5mm}
+\vspace{0mm}
 PPR range A:
 \begin{equation*}
 	\textrm{full range lower to upper Zexp}
 \end{equation*}
-\vspace{2mm}
+\vspace{0mm}
 PPR range B: 
 \begin{equation*}
 	\textrm{lower Zexp = lower Zexp} + \frac{5}{22}\textrm{(upper Zexp - lower Zexp)}
@@ -298,10 +298,10 @@ PPR range B:
 \end{equation*}
 
 \subsection{Examples of the use of the PPR calculator}
-To demonstrate the use of the calculator and the effects of varying a priori risk values and observed Z-scores on the PPR, we have generated tables and concomitant figures. 
+To demonstrate the use of the calculator and the effects of varying \textsl{a priori} risk values and observed Z-scores on the PPR, we have generated tables and concomitant figures. 
 In order to clarify the calculations, we fixed the coefficient of variation at 0.5 and used a range of 1–23\% of cell-free foetal DNA. The PPR was calculated as a percentage for a priori risks of 0.0001, 0.0002, 0.0005, 0.0010, 0.0015, 0.0020, 0.0025, 0.0050, 0.0100, 0.0250, 0.0500 and 0.1000, for observed Z-scores of 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5 and 6.
 
-To demonstrate the additional effect on the PPR of variable foetal DNA percentages in maternal blood, the PPR was calculated for an a priori risk of 0.001, 0.01 and 0.1, for Z-scores varying from 0 to 7 and foetal DNA varying from 3\% to 10\%.
+To demonstrate the additional effect on the PPR of variable foetal DNA percentages in maternal blood, the PPR was calculated for an \textsl{a priori} risk of 0.001, 0.01 and 0.1, for Z-scores varying from 0 to 7 and foetal DNA varying from 3\% to 10\%.
 
 \subsection{Performance of the PPR calculator}
 To test the performance of our PPR calculator, we analysed 209 maternal blood samples obtained from pregnant women with an elevated risk for trisomy 13, 18 or 21 due to an FTC \textgreater\: 1:200 between 10 and 16 weeks of gestation. 
@@ -312,5 +312,11 @@ All participants signed an informed consent form.
 
 Data were obtained from massively parallel, shotgun sequencing of cell-free DNA from maternal plasma with a Solid Wildfire sequencing system (Life Technologies Ltd., Paisley, UK). 
 The sequencing data were used to calculate a Z-score. 
-For the calculation of the PPR, we used as input the a priori risk as determined at FTC, the Z-score, the actual coefficient of variation, and the default setting for the percentage of foetal DNA. 
+For the calculation of the PPR, we used as input the \textsl{a priori risk} as determined at FTC, the Z-score, the actual coefficient of variation, and the default setting for the percentage of foetal DNA. 
 The outcome of the NIPT was either confirmed in amniotic fluid by karyotyping or by follow-up after birth.
+
+\section*{Acknowledgments}\label{Acknowledgments} 
+We thank Jackie Senior and Kate Mc Intyre for editorial advice.
+
+\section*{Author contributions}
+B.S.R. wrote the manuscript. L.F.J., E.N.de.B., R.F.S., E.M.J.B. and G.J.te.M. developed the calculation for the NIPTRIC tool (PPR equation). MAS and MD built the web-based tool and prepared the figures. C.M.B., K.B. and I.M.van.L. included the patients and provided the counselling. R.J.S. and G.J.te.M. supervised the design and progress of this project. All authors: read and approved the final manuscript.
