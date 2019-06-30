@@ -1,5 +1,5 @@
 # PhD thesis of Leonard F. Johansson, 2019
-## "Looking through the Noise. Improved algorithms for genetic variation detection"
+## "Looking through the noise. Improved algorithms for genetic variation detection"
 
 Download this thesis and its propositions via the [University of Groningen](https://www.rug.nl/about-us/news-and-events/events/phd-ceremonies/???? "University of Groningen"). This work is open access and published in both printed and electronic form under ISBN ???-??-???-????-9 and 978-94-034-0350-2 respectively. Note that the PDF downloaded from the University does not feature front and back cover images.
 
