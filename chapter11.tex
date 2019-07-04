@@ -48,6 +48,7 @@ Before this, Sanger sequencing was the standard in DNA sequencing for Single Nuc
 Making use of the Miseq sequencer from Illumina, we designed a panel of genes (initially 48) associated with cardiomyopathies. 
 Our targeted NGS (tNGS) approach was implemented in genome diagnostics in the first half of 2013, which made us a frontrunner in the introduction of NGS as first-line test in routine genetic diagnostics. Because (all) relevant genes could be sequenced in parallel in a single test, lead times were substantially decreased and more patients received a diagnosis. 
 Following the cardiomyopathy gene panel approach, we designed other panels targeting genes related to other hereditary conditions, such as familial cancer, genetic skin diseases and epilepsy.
+
 Because, initially, only SNVs and small indels could be detected using our tNGS approach, multiplex-ligation dependent probe amplification (MLPA) was used to complement our analysis with detection of copy number variants (CNVs). 
 Unfortunately, like Sanger sequencing, MLPA can only analyze a limited set of targets in a single experiment. 
 Although tools were available to detect CNVs from NGS data, such as CoNIFER \cite{Krumm_2012}, XHMM \cite{Fromer_2012} and ExomeDepth \cite{Plagnol_2012}, these tools were based on analysis of read depth and had been created for exome data with a focus on research rather than diagnostics. 
@@ -56,12 +57,12 @@ In contrast, in targeted capturing, indel callers can only detect variants small
 Because the entire exon is affected, no breakpoint information is available for those CNVs, which makes these variants impossible to detect by indel callers such as the GATK Haplotype caller \cite{van_der_Auwera_2013}.
 Single-exon CNVs are thus too small for CNV detection tools, but too large for indel callers to detect.
 In diagnostics, however, there is also a need to detect variants at a single-exon level with high sensitivity and specificity and to see for which exons a reliable prediction can be made, particularly because known founder mutations consisting of a single-exon CNV are present in some cases \cite{Bayley_2009,Petrij_Bosch_1997}. 
-In other words, a negative result needs to be distinguished from no result. 
+In other words, a \underline{negative result} needs to be distinguished from \underline{no result}. 
 For this reason, in \textbf{chapter 3}, we introduced CoNVaDING, a tool optimized for the detection of single-exon germline CNVs in high-coverage tNGS data. 
 CoNVaDING adds to the existing CNV detection toolbox by providing exon-specific quality metrics. 
 Furthermore, the algorithms on which CoNVaDING is based take a different perspective than the other tools on the noise that affects read depth between samples and sequence runs, and therefore uses different strategies for
 reduction of variation in exon read-depth between samples. 
-Because of these different noisereduction strategies, false positive and false negative results will often differ between tools. 
+Because of these different noise reduction strategies, false positive and false negative results will often differ between tools. 
 We have shown in \textbf{chapters 3 and 4} that combining CoNVaDING and XHMM in a joint prediction strategy further increases the sensitivity and specificity of CNV analysis. 
 With the addition of CNV detection in tNGS analysis, we have taken a further step towards an all-in-one test for genetic variant detection.
 In \textbf{chapter 4} we show that, when combining all indications in hereditary cancer diagnostics, CNV detection adds 0.6\% diagnostic yield to the 9.5\% of pathogenic and likely pathogenic variants detected at single nucleotide level.
@@ -75,9 +76,9 @@ With our research we provide context for the debate on reporting secondary varia
 Whereas our research focused only on genes related to hereditary cancer, our findings add to the general discussion on the desirability of screening for pathogenic variants.
 
 
-\sectionmark{Detection of somatic chromosomal translocations} % extra to get the top mark okay..
-\section{Detection of somatic chromosomal translocations} \label{Somatic}
-\sectionmark{Detection of somatic chromosomal translocations}
+\sectionmark{Somatic chromosomal translocations} % extra to get the top mark okay..
+\section{Detection of somatic chromosomal \newline translocations} \label{Somatic}
+\sectionmark{Somatic chromosomal translocations}
 Using standard short-read sequencing, it is usually impossible to detect copy-neutral structural variations. 
 In part 2 of the thesis (\textbf{chapter 5}), we adapted the NGS short-read sequencing sample preparation protocol to detect translocations, making use of Targeted Locus Amplification (TLA) technology \cite{de_Vree_2014}. 
 TLA connects and amplifies DNA regions that are spatially close to each other through cross-linking, digestion and ligation. 
@@ -99,17 +100,17 @@ In principle our panel can also be used for the detection of inversions, but at 
 Currently, in our opinion, the TLA multiplex-panel is not suitable for introduction into diagnostics. 
 High-quality input material and standardization of laboratory procedures may create more stable results and allow for further optimization of protocols. 
 However, Cergentis was recently awarded a European Research Council Horizon 2020 grant to optimize and validate the TLA technology for the analysis of FFPE tumor biopsies. 
-This optimization may also benefit the multiplexpanel data quality \cite{Cergentis_2018}.
+This optimization may also benefit the multiplex-panel data quality \cite{Cergentis_2018}.
 
 \section{Prenatal detection of trisomies} \label{Prenatal}
 In part 3 of this thesis I focused on prenatal detection of trisomies, more specifically on non-invasive prenatal testing (NIPT) using low-coverage WGS. 
-In \textbf{chapter 6}, we improved NIPT data-analysis by introducing three novel algorithms: the chi-squared-based variation reduction ($\chi$2VR), the regressionbased Z-score (RBZ) and the Match QC score. 
+In \textbf{chapter 6}, we improved NIPT data-analysis by introducing three novel algorithms: the chi-squared-based variation reduction ($\chi$\textsuperscript{2}VR), the regressionbased Z-score (RBZ) and the Match QC score. 
 By determining if there is more variation than can be expected by chance, the regions that create variability between samples can be accurately determined and corrected for using $\chi$2VR.
 In addition, we have turned some of the bias present in NIPT data to our advantage by creating the RBZ, the first trisomy prediction algorithm that makes use of inverse correlation between chromosomal fractions (e.g if fewer reads are present on chromosome 13, more reads are present on chromosome 19).
 This means that, even without any noise correction, the RBZ can already make an accurate prediction. 
 In addition, the Match QC score indicates whether the control group being used is not suitable for the analysis of a specific sample. 
 In combination, these algorithms allow for optimal comparison of a sample with control samples. 
-In \textbf{chapter 7}, we make these algorithms available as the NIPTeR R package, together with other published algorithms for low-coverage WGS NIPT analysis. 
+In \textbf{chapter 7}, we make these algorithms available as the \textsl{NIPTeR} R package, together with other published algorithms for low-coverage WGS NIPT analysis. 
 In \textbf{chapter 8}, we transform the NIPT result into a personalized posterior risk in order to aid a clinical interpretation an NIPT analysis outcome.
 
 In the past few years NIPT has developed from being a test that was not allowed in the Netherlands into becoming the standard first-line test in the screening for prenatal trisomies. 
@@ -118,7 +119,7 @@ study that allowed NIPT in the Netherlands under strict criteria for women with 
 During this period, Dutch women not eligible for testing went to Belgium to undergo NIPT \cite{Visser_2014} because it allowed for prenatal trisomy detection without the risk of inducing miscarriage. 
 This situation changed when the TRIDENT-2 study started in 2017 and NIPT became available to all pregnant women in the Netherlands. 
 By the following year, 42\% of pregnant women in the Netherlands had opted for an NIPT \cite{niptconsortium_2018}. 
-Until NIPT was discontinued in the UMCG genome diagnostics laboratory because the analysis was centralized in the Netherlands, our NIPT data analysis was based on NIPTeR and NIPTRIC.
+Until NIPT was discontinued in the UMCG genome diagnostics laboratory because the analysis was centralized in the Netherlands, our NIPT data analysis was based on \textsl{NIPTeR} and \textsl{NIPTRIC}.
 
 \sectionmark{Balancing lab procedures and data analysis} % extra to get the top mark okay..
 \section[Balancing laboratory procedures and data analysis]{The intricate balance between laboratory \newline procedures and data analysis}\label{Balance}
@@ -168,7 +169,7 @@ If a lot of noise is present that can’t be corrected for, the sensitivity and/
 In CNV detection, for example, for some exons, the number of reads mapping to that exon is highly variable between samples, and this is reflected in the coefficient of variation. For those exons, a prediction of the presence of a deletion or duplication is less certain than for exons with lower variability between samples.
 
 \section{Towards a complete DNA sequencing procedure}\label{complete}
-Throughout this thesis the method of choice was short-read sequencing because it is the most costefficient and allows us to target regions of interest. 
+Throughout this thesis the method of choice was short-read sequencing because it is the most cost-efficient and allows us to target regions of interest. 
 Using different laboratory protocols, all affected by different noise, we were able to detect different types of variants for which we introduced several algorithms. 
 New laboratory procedures are developed all the time, necessitating the continuous development of new analysis methods. 
 But, in my opinion, we are reaching the limit of the possibilities of short-read sequencing, for several reasons. 
@@ -223,6 +224,7 @@ In addition, (short-read) WGS allows for more types of algorithms to be used.
 This is especially useful within SV calling, where, in addition to read-depth, the effect of a structural variation on reads themselves can also be analyzed, because it is more likely that a read will span (one of) the breakpoints involved \cite{Rausch_2012}. 
 However, even in WGS, the length of the short-read sequence leads to the inability to sequence part of the genome \cite{Mandelker_2016}.
 Given that over 50\% of the genome is made up of repeat-sequences, especially in the non-coding part \cite{Jain_2018a}, for many variants it is difficult – if not impossible – to attribute them to a specific place in the genome without further follow-up testing.
+
 A further limitation of standard short-read sequencing is that it uses bulk-isolated DNA as input. 
 In other words, the DNA of many cells is extracted and isolated as a mix. 
 This makes it impossible to distinguish DNA-fragments (reads) from different cells. 
@@ -245,6 +247,7 @@ Cytogenetic techniques, such as karyotyping and Fluorescence In Situ Hybridisati
 This is especially important in the search for complex karyotypes (with multiple aberrations present in the same cell), as is often the case in hematological malignancies or solid tumors with different subclones. 
 In contrast to standard (short-read) sequencing, with sc-seq all the variants detected can be assigned to a specific cell, allowing detection of complex genomic patterns. 
 This would make NGS suitable for use in such situations, and it would have an advantage over cytogenetic techniques as variants can be detected up to the single-nucleotide level.
+
 A further use of sc-seq can be in NIPD, as discussed in section 11.5.5
 
 \subsection{Long-read sequencing}
@@ -287,7 +290,7 @@ different techniques.
 A technique that has become a key player in these kinds of analyses is BioNano Next-generation Mapping \cite{Bionanogenomics_2018}. 
 BioNano can analyze extremely long DNA fragments over 1 Mb of length, but it is not a sequencing technique. 
 BioNano instead uses endonucleases or direct labelling to create a pattern of fluorescent labels along the DNA fragment to form so-called “molecules”. By aligning these molecules to each other, large haplotype blocks can be assembled. 
-This technique has been combined with Illumina 10xGenomics synthetic long read \cite{Mostovoy_2016, Levy_Sakin_2019}, as well as with Pacific Biosystems long read \cite{Pendleton_2015} and ONT Nanopore \cite{Ma_2018}, to phase reads and create haplotype blocks as long as entire chromosome arms. 
+This technique has been combined with Illumina 10xGenomics synthetic long read \cite{Mostovoy_2016, Levy_Sakin_2019}, as well as with Pacific Biosystems \cite{Pendleton_2015} and ONT Nanopore \cite{Ma_2018} long read, to phase reads and create haplotype blocks as long as entire chromosome arms. 
 For the same purpose, Illumina short reads prepared using TLA were combined with PacBio long reads \cite{Lawrence_2016}.
 
 On the road to a complete DNA sequencing technology, ONT has an extra feature: it allows for detection of epigenetic alterations of nucleotides during sequencing \cite{Jain_2018a}. 
@@ -373,7 +376,7 @@ If we take our wish list one step further and take our focus off of DNA analysis
 Going to an amplification-free single-cell DNA analysis technique with ultra-long reads will drastically reduce laboratory and sequencing noise and thereby data analysis noise. 
 However, it has no influence on biological noise and, for optimal results, the demands on the input material are high.
 If the input material contains fragmented DNA (e.g. FFPE material) the technique performs suboptimally, possibly leading to incomplete phasing of chromosomes. 
-In addition, variants that occur in the DNA through transversion (i.e. C $\leftrightarrow$ A or G $\leftrightarrow$ T change) that has occurred during longterm storage will be detected as real variants. On the other hand, a complete DNA sequencing technique would get the most out of the available input material.
+In addition, variants that occur in the DNA through transversion (i.e. C $\leftrightarrow$ A or G $\leftrightarrow$ T change) that has occurred during long-term storage will be detected as real variants. On the other hand, a complete DNA sequencing technique would get the most out of the available input material.
 I believe that point-of-care genetic testing will further develop for testing of specific (sets of) variants, such as in pharmacogenetics. 
 Mobile sequencers are already in existence and can be used almost anywhere on the planet. 
 These developments will help introduce genetic testing in currently underrepresented areas.
