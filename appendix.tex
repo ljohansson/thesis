@@ -1,106 +1,30 @@
 \begin{appendices}
 	
 	\chapter{Summary}
-	All organisms have a genome made of DNA (deoxyribonucleic acid).
-	The genome can be found in nearly every cell and is the blueprint for the growth, development, maintenance and repair of the body.
-	It performs these functions by transcribing small pieces of DNA, the genes, from the genome and translating them to proteins.
-	These proteins are the tiny workhorses of the body that break down food, give bones their strength, make muscles move, let brains think, and so on.
-	There are many thousands of different genes and proteins with each their own task.
+	An important goal of genome diagnostics is to detect genetic variants that can explain the presence of a disorder in a patient or in a family. This thesis describes the development and validation of various new tools and algorithms for DNA variant detection using next-generation sequencing (NGS) data.
+
+	The introduction, \textbf{chapter 1}, presents the different types of genetic variants and the techniques available to detect them.
+
+	In the first part of this thesis the focus lies on the detection of germline variants. \textbf{Chapter 2} describes the development of an NGS-based gene panel, targeting all exons of the genes included, and its validation as a stand-alone diagnostic test for detection of single nucleotide variants (SNVs) and insertions or deletions of one or a few nucleotides (indels). Earlier methods to detect these types of variants could only sequence a short stretch of DNA in a single experiment. The NGS gene panel introduced here, could sequence all then known genes for the condition of interest (cardiomyopathy) simultaneously. In our study, this increased the diagnostic yield from 15\% to 40\%. In \textbf{chapter 3}, CoNVaDING is introduced, a tool to detect copy number variants (CNVs), the loss or gain of a long stretch of DNA, in NGS gene panels. By selecting samples that have similar laboratory bias as control samples, CoNVaDING enables detection of CNVs as small as a single exon, further increasing the possible diagnostic yield. This is demonstrated in \textbf{chapter 4}, where all three variant types were analyzed in a set of genes related to hereditary cancer in 2,090 anonymized patients referred for hereditary cancer diagnostics and counseling. In 10.1\% of patients, variants were detected that helped explain the cancer types that had been the reason for genetic testing, including 0.6\% because of a CNV. In addition we aimed to determine what would be found if opportunistic screening would be offered to these patients. In opportunistic screening, data produced in the context of diagnostics is additionally used for screening purposes. All patients were screened anonymously for pathogenic and likely pathogenic variants in all tumor syndrome genes present in the panel, thus deliberately hunting for secondary findings. In addition, two anonymized Dutch population cohorts were searched for (likely) pathogenic DNA variants in the same set of genes. In this population over three percent of individuals carry such genetic variants. However, currently international criteria for screening are not yet met. More information is needed, before opportunistic screening can be offered as an extension of diagnostic genetic testing.
+
+	The second part of this thesis, \textbf{chapter 5},  focuses on detection of somatic variants to provide an alternative for current diagnostic methods. Such variants are present in only some of the cells, as might be the case in cancer cells. In leukemia the presence of chromosomal variants, such as translocations, are used for diagnosis, prognosis and treatment decisions. The development of a laboratory protocol based on Targeted Locus Amplification (TLA) is described for a panel of 18 acute-leukemia associated genes. In this manner we were able to sequence DNA in the vicinity of those genes through NGS. If a translocation is present involving one of the 18 genes, DNA of the translocation chromosome that is now close-by that gene will also be sequenced and identified through an analysis workflow developed for the TLA gene panel. Even though a high correlation with conventional diagnostic techniques was achieved, further development is needed to make the panel suitable for diagnostic use.
+
+	The third part of this thesis describes the development of various algorithms for non-invasive prenatal testing (NIPT). In a pregnant woman’s blood short DNA fragments are circulating and part of these are of fetal origin. NIPT  uses  these fragments from a blood sample of an expecting mother to predict the presence of an extra chromosome in the unborn child, as is the case in for instance Down syndrome. \textbf{Chapter 6} introduces three novel algorithms that improve NIPT data analysis by enabling a more sensitive detection of the presence of the extra chromosome and give extra quality metrics to help interpret laboratory results correctly. Using these algorithms, in theory, trisomies can be detected at a percentage of fetal DNA of as little as two percent. \textbf{Chapter 7} reports on the development of \textsl{NIPTeR}, an R package that makes the new algorithms and other published algorithms for analysis of NIPT data available. To properly interpret the NIPT outcome for an individual pregnant woman, her specific situation has to be taken into account, for example her age and the characteristics of the used test. Therefore, in \textbf{chapter 8} the online tool \textsl{NIPTRIC} is introduced that can calculate a personalized posterior risk for women that have undergone NIPT, to aid clinical interpretation.
 	
-	The genome is copied from cell to cell, and is inherited from generation to generation.
-	The copying process is incredibly precise, but always makes a few little mistakes.
-	These so-called mutations cause small differences between individuals, so that natural selection and thus evolution can take place.
-	Unfortunately, mutations can also cause detrimental effects, such as genetic disorders.
-	When the function of a gene is disrupted by a mutation, a specific disorder can arise.
-	For a lot of genes it is known which disorder they can cause, but for most genes we do not know what happens when they are disrupted.
-	
-	In this thesis we research and develop various bioinformatics models, methods en systems to elucidate which genes and DNA differences can make people ill.
-	To support the research into genes, we develop a database in chapter \ref{chap:xgap}.
-	This database is useful for collecting all kinds of biological data.
-	Chapter \ref{chap:xqtl} presents software to analyze these data as an extension to this database.
-	This software can determine which region of the genome is responsible for diseases and other physical traits.
-	
-	Organisms such as rat, worm or zebrafish allow us to perform research that would be impractical or unethical on humans.
-	These studies deliver valuable biological insights, but it is often remains unclear how those insights can help us to understand human disorders.
-	In Chapter \ref{chap:wormqtl} we report the development of an interactive database that connects research into worms to the genetics of human disease.
-	Despite the fact that worms do not look much like humans, they have thousands of genes that work exactly the same way as in humans.
-	By looking at disorders, physical traits and genes in both organisms we discover new ways to use worms for research into human diseases.
-	
-	Next to understanding the genes lies the challenge to determine the harmfulness (pathogenicity) of new mutations.
-	Each individual carries many unique mutations no one else has.
-	This makes it challenging to find the causal mutation for a patient with a genetic disorder.
-	We can use our knowledge of the genome and evolution to predict how pathogenic new mutations are.
-	In chapter \ref{chap:caddmmr} we report a smart new method which predict which mutations are harmless and which cause hereditary colon cancer.
-	This works rather well and we make recommendations for the guideline that establishes diagnoses.
-	
-	Encouraged by these results we expanded our scope from just a few to thousands of disease genes in chapter \ref{chap:gavin}.
-	For this, we use DNA from individuals that have no connection to severe disorders.
-	We compared that to disease causing mutations that were found in patients.
-	By crunching the numbers for every gene, it is determined when a mutation is probably disease causing.
-	The final result is a public website where the DNA of patients can be scanned quickly and accurately for probable pathogenic mutations.
-	
-	Finally, chapter \ref{chap:frameworkforgenomics} describes how we developed a system for automated DNA analysis, including a protocol specific for genome diagnostics.
-	This protocol uses our new method but also the latest knowledge on mutations and genes.
-	Pathogenic mutations are not always responsible for the disease of a patient.
-	That is why the DNA of family members is used to determine if the genetic pieces of the patient truly fit.
-	The output is a new file format in which medically relevant information is formally expressed.
-	This file can be converted to a clear report in which the most important information is found at the top.
-	
-	One of the advantages is that we can apply this analysis without manual work to the genomes of thousands of healthy people.
-	The results act as a control that tells us how often the software returns an accidental hit in each gene.
-	By stating this information in the final report, medical experts can focus their attention on genes with the fewest accidental hits.
-	This increases the speed and confidence at which a genetic diagnosis is established for the patient.
+	In the final part of this thesis I step back and reflect on the work described in the thesis. In \textbf{chapter 9} I take an epistemological stance towards NGS data analysis and discuss the justification of our beliefs regarding the knowledge obtained through NGS experiments. The goal of NGS is to determine the DNA sequence of a specific sample, but we don’t see the DNA itself. I argue that there is sufficient ground to state that NGS can create an adequate representation of the DNA  sequence of the sample. \textbf{Chapter 10} focuses on ethical issues and I discuss the possible impact of the availability of the methods and algorithms introduced in this thesis on society. I conclude that many of the issues that can cause ethical dilemmas have to do with uncertainty. For instance, uncertainty in knowing what will be found or uncertainty regarding whether or not a disease will develop. Finally, in \textbf{chapter 11} I discuss DNA variant detection and the different sorts of noise that can prevent detection. I pose that all DNA variant detection follows the same scheme and that in all steps from input material to detected variant, bias and error can be introduced that can hamper the correct identification of variants and affect sensitivity and specificity. In addition, I discuss different NGS methods that are currently available and give perspectives on, in my opinion, what a complete DNA sequencing procedure should look like and envision single-cell whole chromosome sequencing, with a low base call error rate and the capacity to detect base modifications.
+
 	
 	\chapter{Samenvatting}
-	Alle organismen hebben een genoom dat is opgebouwd uit DNA (desoxyribonucleïnezuur).
-	Het genoom zit in bijna elke cel en is de blauwdruk voor de groei, ontwikkeling, onderhoud en herstel van het lichaam.
-	Het vervult deze functies door kleine stukjes DNA, de genen, van het genoom af te schrijven en deze te vertalen naar eiwitten.
-	Deze eiwitten zijn de werkpaardjes van het lichaam die voedsel afbreken, botten hun sterkte geven, spieren laten bewegen, hersenen laten denken, enzovoort.
-	Er zijn vele duizenden verschillende genen en eiwitten met allemaal hun eigen taak.
+	Een belangrijk doel van genoomdiagnostiek is het detecteren van varianten die de aanwezigheid van een aandoening van een patiënt of binnen een familie kunnen verklaren. In \textbf{hoofdstuk 1} introduceer ik de verschillende typen genetische varianten en de beschikbare technieken om deze te detecteren. Dit proefschrift beschrijft de ontwikkeling en validatie van verscheidene nieuwe tools en algoritmes voor DNA variant detectie in next-generation sequencing (NGS) data.
 	
-	Het genoom wordt gekopieerd van cel naar cel, en wordt overgeërfd van generatie op generatie.
-	Het kopieerproces is ongelofelijk precies, maar maakt altijd wel een paar foutjes.
-	Deze zogeheten mutaties zorgen voor kleine verschillen tussen individuen, waardoor natuurlijke selectie en dus evolutie kan plaatsvinden.
-	Helaas kunnen mutaties ook nadelige effecten veroorzaken, zoals erfelijke ziektes.
-	Wanneer de werking van een gen verstoord wordt door een mutatie kan een bepaalde ziekte optreden.
-	Van een hoop genen is bekend welke ziekte ze kunnen veroorzaken, maar van de meeste genen weten we niet wat er gebeurt wanneer ze verstoord worden.
+	In het eerste deel van dit proefschrift licht de focus op de detectie van germline varianten. \textbf{Hoofdstuk 2} beschrijft de ontwikkeling van een op NGS gebaseerd genpanel, gericht op alle exonen van de geïncludeerde genen, en de validatie daarvan als op zichzelf staande diagnostische test voor de detectie van \textsl{single nucleotide variants} (SNVs) en inserties of deleties van een of enkele nucleotiden (indels). Eerdere methoden om deze typen varianten te detecteren konden alleen een kort stuk DNA in een enkel experiment sequencen. Het NGS panel dat hier wordt geïntroduceerd, kon alle destijds bekende genen voor de aandoening van interesse (cardiomyopathie) tegelijkertijd sequencen. In onze studie verhoogde dit  de diagnostische opbrengst van 15\% tot 40\%. In \textbf{hoofdstuk 3}, wordt CoNVaDING geïntroduceerd, een tool om \textsl{copy number variants} (CNVs), het verlies van een lang stukje DNA of de dubbele aanwezigheid daarvan, in NGS panels. Door monsters te selecteren met een vergelijkbare in het laboratorium veroorzaakte systematische afwijking als controle monsters, kan CoNVaDING CNVs detecteren van slechts een enkel exon, waardoor de mogelijke diagnostische opbrengst nog verder stijgt. Dit wordt aangetoond in \textbf{hoofdstuk 4}, waar alle drie de varianttypen werden geanalyseerd in een aan erfelijke kanker gerelateerde groep genen in 2,090 geanonimiseerde patiënten die zijn verwezen voor verschillende typen erfelijke kanker. Van alle patiënten kon voor 10.1\% een genetische diagnose gesteld worden, waarvan 0.6\% vanwege een CNV. Daarnaast wilden wij bepalen wat zou worden gevonden wanneer opportunistische screening zou worden aangeboden aan deze patiënten. Bij opportunistische screening wordt data die is geproduceerd in diagnostische context aanvullend gebruikt voor screeningsdoeleinden. Alle patiënten werden anoniem gescreend voor pathogene en waarschijnlijk pathogene varianten in alle aan tumorsyndroom gerelateerde genen die aanwezig waren in het panel. Op deze manier werd dus met opzet naar secundaire bevindingen gezocht. Daarnaast werd in twee geanonimiseerde Nederlandse populatie cohorten gezocht naar (waarschijnlijk) pathogene DNA varianten in dezelfde set genen. In deze populaties was meer dan drie procent van de individuen drager van dergelijke genetische varianten. Op het moment wordt echter nog niet voldaan aan internationale screeningscriteria. Voordat opportunistische screening kan worden aangeboden als uitbreiding van diagnostische genetische testen, is meer onderzoek nodig.
 	
-	In dit proefschrift onderzoeken en ontwikkelen we verscheidene bioinformatica modellen, methoden en systemen om op te helderen welke genen en DNA verschillen mensen ziek kunnen maken.
-	Om het onderzoek naar genen te ondersteunen, ontwikkelen we een database in hoofdstuk \ref{chap:xgap}.
-	Deze database is handig voor het verzamelen van allerlei biologische gegevens.
-	Als uitbreiding op deze database presenteert hoofdstuk \ref{chap:xqtl} software voor de analyse van deze gegevens.
-	Deze software kan bepalen welk gebied van het genoom verantwoordelijk is voor ziektes en andere uiterlijke kenmerken.
+	Het tweede deel van dit proefschrift, \textbf{hoofdstuk 5}, focust zich op de detectie van somatische varianten met behulp van NGS om een alternatief te bieden voor huidige diagnostische methoden. Dergelijke varianten zijn slechts in een deel van de cellen aanwezig. Bij leukemieën wordt de aanwezigheid van chromosomale varianten, zoals translocaties, gebruikt voor diagnose, prognose en beslissingen over de behandeling van de patiënt. De ontwikkeling van een op \textsl{Targeted Locus Amplification} (TLA) gebaseerd laboratoriumprotocol wordt beschreven voor een panel van 18 genen die zijn geassocieerd met acute leukemie. Op deze manier konden we het DNA rondom deze genen sequencen met behulp van NGS. Wanneer een translocatie aanwezig is waarbij een van de 18 genen is betrokken, wordt DNA van het translocatiechromosoom dat nu dichtbij dat gen ligt ook gesequenced en geïdentificeerd via een analyse workflow dat is ontworpen voor het TLA genpanel. Hoewel er een hoge correlatie met conventionele diagnostische methoden was bereikt, is verdere ontwikkeling nodig om het panel geschikt te maken voor gebruik in de diagnostiek.
 	
-	Dieren zoals rat, worm en zebravis stellen ons in staat om onderzoek te doen die onpraktisch of onethisch zou zijn op mensen.
-	Deze onderzoeken leveren waardevolle biologische inzichten op, maar het blijft vaak onduidelijk hoe die inzichten ons kunnen helpen om ziektes in de mens te begrijpen.
-	In hoofdstuk \ref{chap:wormqtl} rapporteren we de ontwikkeling van een interactieve database die het onderzoek naar wormen verbindt aan de genetica van menselijke ziektes.
-	Ondanks het feit dat wormen niet echt op mensen lijken, hebben zij duizenden genen die precies hetzelfde werken als bij mensen.
-	Door te kijken naar ziektes, uiterlijke kenmerken en genen in beide organismen ontdekken we nieuwe manieren om wormen te gebruiken voor onderzoek naar menselijke ziektes.
+	Het derde deel van dit proefschrift beschrijft de ontwikkeling van verscheidene algoritmes voor niet-invasieve prenatale testen (NIPT). In het bloed van een zwangere vrouw circuleren korte DNA fragmenten en een deel daarvan is van foetale oorsprong. NIPT maakt gebruik van deze fragmenten via een buis bloed van de aanstaande moeder om een voorspelling te doen over de aanwezigheid van een extra chromosoom bij het ongeboren kind, zoals bijvoorbeeld bij Down syndroom. \textbf{Hoofdstuk 6} introduceert drie nieuwe algoritmes die NIPT data analyse verbeteren door een gevoeliger detectie mogelijk te maken van de aanwezigheid van het extra chromosoom en door extra kwaliteitsparameters te geven om laboratoriumresultaten correct te interpreteren. Met behulp van deze algoritmes kunnen, in theorie, trisomies worden gedetecteerd bij een percentage foetaal DNA van slechts twee procent. \textbf{Hoofdstuk 7} rapporteert over de ontwikkeling van \textsl{NIPTeR}, een R package dat de nieuwe algoritmes en andere gepubliceerde algoritmes voor NIPT data-analyse beschikbaar maakt. Om voor een individuele zwangere vrouw de uitslag van een NIPT correct te kunnen interpreteren, moet er rekening worden gehouden met haar specifieke situatie, zoals bijvoorbeeld haar leeftijd en de karakteristieken van de gebruikte test. Daarom wordt in \textbf{hoofdstuk 8} de online tool \textsl{NIPTRIC} geïntroduceerd die een gepersonaliseerd \textsl{a posteriori} risico kan berekenen voor vrouwen die een NIPT hebben ondergaan, om klinische interpretatie te ondersteunen.
 	
-	Naast het begrijpen van de genen ligt de uitdaging om de schadelijkheid (pathogeniciteit) van nieuwe mutaties te bepalen.
-	Ieder individu draagt vele unieke mutaties die niemand anders heeft.
-	Dit maakt het een uitdaging om de schuldige mutatie te vinden bij een patient met een genetische ziekte.
-	We kunnen onze kennis van het genoom en de evolutie inzetten om te voorspellen hoe pathogeen nieuwe mutaties zijn.
-	In hoofdstuk \ref{chap:caddmmr} rapporteren we een slimme nieuwe methode die voorspelt welke mutaties ongevaarlijk zijn en welke erfelijke darmkanker veroorzaken.
-	Dit blijkt vrij goed te kunnen en we doen aanbevelingen voor de richtlijn die diagnoses stelt.
+	In het laatste deel van dit proefschrift zet ik een stap terug en reflecteer op het werk dat in dit proefschrift wordt beschreven. In \textbf{hoofdstuk 9} neem ik een epistemologische houding tegenover NGS data-analyse en bediscussieer de rechtvaardiging van onze overtuigingen met betrekking tot de kennis die is vergregen via NGS experimenten. Het doel van NGS is het bepalen van de DNA-volgorde van een specifiek monster, maar we zien het DNA niet zelf. Ik beargumenteer dat er voldoende grond is om te stellen dat NGS een adequate representatie kan geven van de DNA-volgorde van het monster. \textbf{Hoofdstuk 10} focust op ethische kwesties en ik bediscussieer de mogelijke invloed op de maatschappij van de beschikbaarheid van de methoden en algoritmes die in dit proefschrift worden geïntroduceerd. Ik concludeer dat veel van de kwesties die ethische dilemma’s kunnen veroorzaken te maken hebben met onzekerheid, bijvoorbeeld onzekerheid over wat er zal worden gevonden of onzekerheid over of een ziekte zich wel of niet zal ontwikkelen. Tot slot bespreek ik in \textbf{hoofdstuk 11} DNA-variantdetectie. Ik stel dat alle DNA-variantdetectie hetzelfde schema volgt en dat in alle stappen vanaf het startmateriaal tot aan de gedetecteerde variant, systematische afwijkingen en fouten kunnen worden geïntroduceerd. Hierdoor kan de correcte identificatie van varianten worden belemmerd en de sensitiviteit en specificiteit van de test worden beperkt. Daarnaast bediscussieer ik verschillende NGS methoden die momenteel beschikbaar zijn en geef mijn perspectief op hoe een complete DNA-sequencing procedure er uit zou moeten zien. Ik stel me een methode voor waarbij het hele genoom in per cel kan worden bepaald, waarin weinig fouten worden gemaakt bij het benoemen van de basen en met de mogelijkheid om base-modificaties te detecteren.
 	
-	Aangemoedigd door deze resultaten zijn we onze speelruimte gaan uitbreiden van slechts een paar tot wel duizenden ziektegenen in hoofdstuk \ref{chap:gavin}.
-	Hiervoor gebruiken we DNA van mensen die geen verband hebben met ernstige ziektes.
-	Dat vergelijken we met ziekteverwekkende mutaties die bij patienten gevonden zijn.
-	Met het nodige rekenwerk voor ieder gen wordt bepaald wanneer een mutatie waarschijnlijk ziekteverwekkend is.
-	Het resultaat is een openbare website waar het DNA van patienten snel en accuraat gescand kan worden op mogelijk pathogene mutaties.
-	
-	Tenslotte beschrijft hoofdstuk \ref{chap:frameworkforgenomics} hoe we een systeem voor geautomatiseerde DNA analyse ontwikkeld hebben, inclusief een protocol specifiek voor genoom diagnostiek.
-	Dit protocol gebruikt onze nieuwe methode maar ook de laatste kennis over mutaties en genen.
-	Pathogene mutaties zijn niet altijd verantwoordelijk voor de ziekte van een patient.
-	Daarom wordt het DNA van familieleden gebruikt om te bepalen of het genetische plaatje bij de patient ook echt klopt.
-	De uitvoer is een nieuw bestandsformaat waarin medisch relevante informatie formeel wordt uitgedrukt.
-	Dit bestand kan worden omgezet naar een overzichtelijk rapport waarin de meest belangrijke informatie bovenaan staat.
-	
-	Eén van de voordelen is dat we deze analyse zonder handwerk kunnen toepassen op de genomen van duizenden gezonde mensen.
-	De uitkomst hiervan dient als controle die ons verteld hoe vaak de software een toevalstreffer heeft in elk gen.
-	Door deze informatie in het uiteindelijke rapport te vermelden kunnen medisch experts hun aandacht richten op genen met de minste toevalstreffers.
-	Hiermee wordt de snelheid en zekerheid waarmee een genetische diagnose bij de patient wordt vastgesteld, verhoogd.
 	
 	\chapter{Acknowledgements}
 	
