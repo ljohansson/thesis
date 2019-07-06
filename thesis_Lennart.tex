@@ -10,6 +10,7 @@
 \input{usepackages.tex} % load required packages
 \raggedbottom % prevent spreading out paragraphs with lots of whitespace inbetween
 
+
 \begin{document}
 
 \pagestyle{empty}
@@ -18,11 +19,9 @@
 
 \input{preamble.tex}
 
- \makeatletter %Next three lines added to create double lines in the table of contents in case of long titles
-	\def\@pnumwidth{3em}
-\makeatother
-
+\addtocontents{toc}{\protect\thispagestyle{empty}}
 \tableofcontents
+\thispagestyle{empty}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -45,6 +44,7 @@
 \input{NIPTeR.tex}
 \input{NIPTRIC.tex}
 \input{Part4.tex}
+\markboth{PART 4: REFLECTION AND DISCUSSION}{}
 \addcontentsline{toc}{chapter}{Part 4: Reflection and discussion}
 \input{chapter9.tex}
 \input{chapter10.tex}
