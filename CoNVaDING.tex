@@ -62,7 +62,7 @@ Several methods for detecting exon deletion and duplication using next-generatio
 With the exception of those using read depth approaches, these methods rely on information from sequence reads spanning the breakpoints. 
 For targeted NGS data, however, only a read depth approach can be successfully applied \cite{Tan_2014}. 
 Existing tools using this approach are XHMM \cite{Fromer_2012}, CoNIFER \cite{Krumm_2012}, CONTRA \cite{Li_2012}, and CODEX \cite{Jiang_2015}. 
-All four consider all control samples equally informative even though there are sample to sample variations caused by differences in PCR and capturing efficiency, which lead to variations in coverage patterns that complicate the determination of expected read depths \cite{Aird_2011}\cite{Zhao_2013}. 
+All four consider all control samples equally informative even though there are sample to sample variations caused by differences in PCR and capturing efficiency, which lead to variations in coverage patterns that complicate the determination of expected read depths \cite{Aird_2011,Zhao_2013}. 
 In the four existing tools, this increases the risk of false-negative (FN) or false-positive (FP) results for exons with a high read depth variation, giving either a low sensitivity and specificity for single exon copy-number variation (CNV) detection or limiting the analysis to detection of variations that span multiple exons. 
 This has meant that, until now, additional experiments were needed to identify single exon CNVs, including multiplex ligation-dependent probe amplification (MLPA) \cite{Schouten_2002}, Q-PCR \cite{Ebenazer_2013}, or array comparative hybridization \cite{Vasson_2013}. 
 These additional experiments are, however, costly and usually only applied to genes known to frequently harbor deletions or duplications. 
@@ -225,9 +225,9 @@ This is in line with CoNIFER QC as described in Krumm et al. (2012)\cite{Krumm_2
 CNV calls in samples that passed Sample QC were interpreted as positive results. 
 
 XHMM analysis yielded the best results using a CNV rate of 1x10\textsuperscript{–6} and a mean number of targets in CNV of 2. 
-Filter settings during the \textsl{{{-}{-}matrix} step \cite{Fromer_2012b} were set to 1000 for \textsl{maxMeanSampleRD} and 1500 for \textsl{maxMeanTargetRD}. 
+Filter settings during the \textsl{{-}{-}matrix} step \cite{Fromer_2012b} were set to 1000 for \textsl{maxMeanSampleRD} and 1500 for \textsl{maxMeanTargetRD}. 
 For all other parameters default settings were used. 
-Samples excluded during analysis with the \textsl{{-}{-}matrix} \textsl{{-}{-}}excludeSamples} parameter \cite{Fromer_2012b} were interpreted as samples failing Sample QC, whereas targets excluded during analysis with the \textsl{{-}{-}matrix} \textsl{{-}{-}excludeTargets} parameter \cite{Fromer_2012b} were interpreted as failing Target QC. 
+Samples excluded during analysis with the \textsl{{-}{-}matrix} \textsl{{-}{-}excludeSamples} parameter \cite{Fromer_2012b} were interpreted as samples failing Sample QC, whereas targets excluded during analysis with the \textsl{{-}{-}matrix} \textsl{{-}{-}excludeTargets} parameter \cite{Fromer_2012b} were interpreted as failing Target QC. 
 
 We tested CODEX using default settings. 
 CODEX sample QC checks for samples with a low on-target read count and target QC filters exons in case of a low coverage (median \textless20x), exon length (\textless20 bp), low mappability (\textless0.9), or an extreme GC content (outside the 20–80\% range). 
